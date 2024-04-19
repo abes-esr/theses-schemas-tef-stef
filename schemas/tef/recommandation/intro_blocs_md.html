@@ -1,0 +1,239 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Les blocs de m&eacute;tadonn&eacute;es</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="prev" href="intro_fileSec.html" title="L'inventaire des fichiers (mets:fileSec)">
+      <link rel="next" href="intro_desc_these.html" title="Les m&eacute;tadonn&eacute;es descriptives de la th&egrave;se :&#xA;        tef_desc_these">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Les blocs de m&eacute;tadonn&eacute;es</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="intro_fileSec.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">TEF en XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="intro_desc_these.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="intro_blocs_md"></a>Les blocs de m&eacute;tadonn&eacute;es
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>Chaque ensemble de m&eacute;tadonn&eacute;es identifi&eacute; plus haut (<a href="intro_tef_xml.html#tableau_synthese">tableau de synth&egrave;se</a>) correspond &agrave; un
+                    bloc particulier dans la structure METS.
+         </p>
+         <p>METS distingue diff&eacute;rentes cat&eacute;gories de m&eacute;tadonn&eacute;es, selon une
+                    nomenclature qui ne correspond pas exactement aux besoins de TEF. Si
+                    METS distingue bien entre m&eacute;tadonn&eacute;es descriptives (<span class="bold"><strong>
+                              <a href="mets_dmdSec.html" title="mets:dmdSec">mets:dmdSec</a>
+                            </strong></span>) et m&eacute;tadonn&eacute;es de gestion (mets:amdSec), s'il pr&eacute;voit
+                    bien la cat&eacute;gorie des m&eacute;tadonn&eacute;es de droits et la cat&eacute;gorie des
+                    m&eacute;tadonn&eacute;es techniques (notamment pour la conservation), on ne trouve
+                    pas d'&eacute;quivalent &agrave; la notion de m&eacute;tadonn&eacute;es administratives au sens
+                    utilis&eacute; dans cette recommandation. A d&eacute;faut, ces m&eacute;tadonn&eacute;es
+                    administratives seront rapproch&eacute;es des m&eacute;tadonn&eacute;es techniques.
+         </p>
+         <div class="sect2" lang="fr">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="d0e1303"></a>Les blocs de m&eacute;tadonn&eacute;es descriptives
+                     </h3>
+                  </div>
+               </div>
+            </div>
+            <p>Chaque bloc de <span class="bold"><strong>m&eacute;tadonn&eacute;es
+                               descriptives</strong></span> se pr&eacute;sente sous cette forme :
+            </p>
+            <p>
+                           
+            </p><pre class="programlisting">&lt;<span class="bold"><strong>mets:dmdSec</strong></span>&gt;
+ &lt;mets:mdWrap ID="ZZZZ" MDTYPE="OTHER" <span class="bold"><strong>OTHERMDTYPE="tef_desc_XXXX"</strong></span>&gt;
+  &lt;mets:xmlData&gt;
+   <span class="bold"><strong>&lt;tef:YYYY&gt;</strong></span>
+     (...)
+   <span class="bold"><strong>&lt;/tef:YYYY&gt;</strong></span>
+  &lt;/mets:xmlData&gt;
+ &lt;/mets:mdWrap&gt;
+&lt;<span class="bold"><strong>/mets:dmdSec</strong></span>&gt;</pre><p>
+                         
+            </p>
+            <p>A la place de "tef_desc_XXX", on trouvera l'une de ces valeurs
+                         :
+            </p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p>tef_desc_these</p>
+                  </li>
+                  <li>
+                     <p>tef_desc_version</p>
+                  </li>
+                  <li>
+                     <p>tef_desc_edition</p>
+                  </li>
+               </ul>
+            </div>
+            <p>Il y a donc bien trois types diff&eacute;rents de m&eacute;tadonn&eacute;es
+                         descriptives, se rapportant chacun &agrave; une entit&eacute; TEF
+                         diff&eacute;rente.
+            </p>
+            <p>Chacun de ces types correspond &agrave; un sch&eacute;ma XML
+                         diff&eacute;rent.
+            </p>
+            <p>Le lien entre un bloc de m&eacute;tadonn&eacute;es et l'entit&eacute; TEF
+                         correspondante se fait gr&acirc;ce &agrave; l'attribut ID de mets:mdWrap.
+            </p>
+            <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+               <h3 class="title"><a name="noteID"></a>Important
+               </h3>
+               <p>En XML, un attribut de type ID ob&eacute;it &agrave; des contraintes
+                              particuli&egrave;res. Sa valeur doit &ecirc;tre unique &agrave; l'&eacute;chelle du document
+                              XML, c'est-&agrave;-dire de la notice TEF. En d'autres termes, deux
+                              documents XML peuvent poss&eacute;der la m&ecirc;me valeur pour l'attribut de
+                              type ID.
+               </p>
+               <p>Un tel identifiant doit commencer par une lettre. Il peut
+                              aussi contenir des chiffres, des tirets (_) ou des points
+                              (.).
+               </p>
+            </div>
+            <p>
+                           
+            </p><pre class="programlisting">&lt;mets:mets&gt;
+...
+ &lt;mets:dmdSec ID="<span class="bold"><strong>zerto</strong></span>"&gt;
+  &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_desc_these</strong></span>"&gt;
+   &lt;mets:xmlData&gt;
+    &lt;tef:thesisRecord&gt;
+        ...
+    &lt;/tef:thesisRecord&gt;
+   &lt;/mets:xmlData&gt;
+  &lt;/mets:mdWrap&gt;
+ &lt;/mets:dmdSec&gt;
+...
+ &lt;mets:structMap TYPE="logical"&gt;
+  &lt;mets:div LABEL="<span class="bold"><strong>THESE</strong></span>" DMDID="<span class="bold"><strong>zerto</strong></span>"&gt;
+ &lt;/mets:structMap&gt;
+...
+&lt;/mets:mets&gt;</pre><p>
+                         
+            </p>
+         </div>
+         <div class="sect2" lang="fr">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="d0e1371"></a>Les blocs de m&eacute;tadonn&eacute;es de gestion
+                     </h3>
+                  </div>
+               </div>
+            </div>
+            <p>Tous les blocs de <span class="bold"><strong>m&eacute;tadonn&eacute;es de
+                               gestion</strong></span> sont englob&eacute;s dans l'&eacute;l&eacute;ment mets:amdSec.
+            </p>
+            <p>Sous mets:amdSec, on trouve soit <span class="bold"><strong>
+                                   <a href="mets_techMD.html" title="mets:techMD">mets:techMD</a>
+                                 </strong></span> (pour chaque bloc de m&eacute;tadonn&eacute;es administratives ou de
+                         m&eacute;tadonn&eacute;es de conservation), soit <span class="bold"><strong>
+                                   <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                 </strong></span> (pour chaque bloc de m&eacute;tadonn&eacute;es de droits).
+            </p>
+            <p>En r&eacute;sum&eacute;, les m&eacute;tadonn&eacute;es de gestion s'organisent ainsi
+                         :
+            </p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p>mets:amdSec</p>
+                     <div class="itemizedlist">
+                        <ul type="circle">
+                           <li>
+                              <p><span class="bold"><strong>
+                                                             <a href="mets_techMD.html" title="mets:techMD">mets:techMD</a>
+                                                           </strong></span> ( de type <a href="adminMeta.html" title="Les m&eacute;tadonn&eacute;es administratives de la th&egrave;se :&#xA;        tef_admin_these">tef_admin_these)</a> - non
+                                                   r&eacute;p&eacute;table
+                              </p>
+                           </li>
+                           <li>
+                              <p><span class="bold"><strong>
+                                                             <a href="mets_techMD.html" title="mets:techMD">mets:techMD</a>
+                                                           </strong></span> (de type <a href="introtechMeta.html" title="Les m&eacute;tadonn&eacute;es de conservation de fichier :&#xA;        tef_tech_fichier">tef_tech_fichier</a>) -
+                                                   r&eacute;p&eacute;table
+                              </p>
+                           </li>
+                           <li>
+                              <p><span class="bold"><strong>
+                                                             <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                           </strong></span> (de type <a href="intro_tef_droits_etablissement_these.html" title="Les m&eacute;tadonn&eacute;es de droits &eacute;manant de l'&eacute;tablissement de&#xA;        soutenance : tef_droits_etablissement_these">tef_droits_etablissement_these</a>)
+                                                   - non r&eacute;p&eacute;table
+                              </p>
+                           </li>
+                           <li>
+                              <p><span class="bold"><strong>
+                                                             <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                           </strong></span> (de type <a href="intro_tef_droits_auteur_these.html" title="Les m&eacute;tadonn&eacute;es de droits &eacute;manant de l'auteur :&#xA;        tef_droits_auteur_these">tef_droits_auteur_these</a>)
+                                                   - non r&eacute;p&eacute;table
+                              </p>
+                           </li>
+                           <li>
+                              <p><span class="bold"><strong>
+                                                             <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                           </strong></span> (de type <a href="intro_tef_droits_externe.html" title="Les m&eacute;tadonn&eacute;es de droits &eacute;manant de l'ayant droit d'une&#xA;        ressource externe : tef_droits_externe">tef_droits_externe</a>)
+                                                   - r&eacute;p&eacute;table
+                              </p>
+                           </li>
+                           <li>
+                              <p><span class="bold"><strong>
+                                                             <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                           </strong></span> (de type <a href="intro_tef_droits_version.html" title="Les m&eacute;tadonn&eacute;es de droits de version :&#xA;        tef_droits_version">tef_droits_version</a>)
+                                                   - non r&eacute;p&eacute;table
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <p>Comme pour les m&eacute;tadonn&eacute;es descriptives, le lien entre un bloc
+                         de m&eacute;tadonn&eacute;es et l'entit&eacute; TEF &agrave; laquelle il s'applique passe par
+                         les identifiants XML.
+            </p>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="intro_fileSec.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="TEF_en_XML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="intro_desc_these.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">L'inventaire des fichiers (mets:fileSec)&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Les m&eacute;tadonn&eacute;es descriptives de la th&egrave;se :
+                          tef_desc_these
+               </td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

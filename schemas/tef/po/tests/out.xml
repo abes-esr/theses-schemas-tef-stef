@@ -1,0 +1,10 @@
+<html xmlns:srw="http://www.loc.gov/zing/srw/" xmlns:cql="http://www.loc.gov/zing/cql/xcql/" xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   </head>
+   <body style="background-image: url(http://www.abes.fr/abes2006/images/siteWeb/bandeau.gif); border-top-style: none; border-right-style: none; border-left-style: none; border-bottom-style: none;" scroll="no">
+      <h2 style="font-size: 20px;">Filtrer sur l'auteur</h2>
+      <h2 style="font-size: 20px;">Filtrer sur la date</h2>
+      <p style="font-size: 15px;"><a href="http://www.abes.fr/abes/">2004</a></p>
+   </body>
+</html>

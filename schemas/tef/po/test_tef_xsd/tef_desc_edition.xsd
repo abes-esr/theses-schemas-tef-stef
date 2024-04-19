@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.abes.fr/abes/documents/tef"
+	xmlns:tef="http://www.abes.fr/abes/documents/tef"
+	targetNamespace="http://www.abes.fr/abes/documents/tef"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/" elementFormDefault="unqualified"
+	attributeFormDefault="unqualified">
+	<xs:include schemaLocation="tef_types.xsd"/>
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+	<xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+	<!-- Schéma comprenant les métadonnées descriptives associées à une édition 	-->
+	<xs:element name="edition">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dcterms:medium" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="dcterms:extent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="dc:identifier" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="dcterms:issued" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="dcterms:replaces" minOccurs="0" maxOccurs="unbounded"/>
+				<!-- dcterms:replaces quand une édition en écrase une autre
+					Le dc:replaces renvoie à un URI identifiant une édition. 
+					Cet URI est dans l'attribut CONTENTIDS du div de type EDITION -->
+				<xs:element ref="editeur"  minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="editeur">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tef:nom"/>
+				<xs:element ref="tef:place" maxOccurs="unbounded"/>
+				<xs:choice minOccurs="0">
+					<xs:element name="autoriteInterne" type="xs:IDREF"/>
+					<xs:element ref="autoriteExterne"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="place" type="non_empty_token"/>
+</xs:schema>

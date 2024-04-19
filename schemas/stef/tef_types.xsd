@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+ xmlns="http://www.abes.fr/abes/documents/tef"
+ xmlns:tef="http://www.abes.fr/abes/documents/tef"
+ targetNamespace="http://www.abes.fr/abes/documents/tef"
+ xmlns:mads="http://www.loc.gov/mads/"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ >
+ <xs:import
+  namespace="http://www.w3.org/XML/1998/namespace"
+  schemaLocation="xml.xsd"
+  />
+ <xs:import
+  namespace="http://www.loc.gov/mads/"
+  schemaLocation="mads.xsd"
+  />
+  <!-- on peut utiliser les deux méthodes autorités conjointement. Plus à choisir.  -->
+  <!--  ===================================================================
+       Types relatifs aux personnes physiques, aux personnes morales et à leurs autorités
+       ===================================================================  -->
+  <xs:complexType name="AvecCorpAuthority">
+    <xs:sequence>
+      <xs:element ref="nom"/>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="autoriteInterne" type="xs:IDREF"/>
+        <xs:element ref="autoriteExterne" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PossCorpAuthority">
+    <xs:sequence>
+      <xs:element ref="nom"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="autoriteInterne" type="xs:IDREF"/>
+        <xs:element ref="autoriteExterne" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PossPhysAuthority">
+    <xs:sequence>
+      <xs:element ref="nom"/>
+      <xs:element ref="prenom"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="autoriteInterne" type="xs:IDREF"/>
+        <xs:element ref="autoriteExterne" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AvecPhysAuthority">
+    <xs:sequence>
+      <xs:element ref="nom"/>
+      <xs:element ref="prenom"/>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="autoriteInterne" type="xs:IDREF"/>
+        <xs:element ref="autoriteExterne" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="autoriteExterne">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="non_empty_token">
+          <xs:attribute name="autoriteSource" type="non_empty_token" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nom" type="non_empty_token"/>
+  <xs:element name="prenom" type="non_empty_token"/>
+  <xs:element name="MADSAuthority">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="personMADS" type="mads:nameType"/>
+      </xs:sequence>
+      <xs:attribute name="authorityID" type="xs:ID" use="required"/>
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="non_empty_token">
+            <xs:enumeration value="personal"/>
+            <xs:enumeration value="corporate"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--      ==================================================
+        Types relatifs aux attributs de schéma d'encodage et de langue
+        ==================================================  -->
+  <xs:complexType name="PossLangType">
+    <xs:simpleContent>
+      <xs:extension base="non_empty_token">
+        <xs:attribute ref="xml:lang" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AvecLangType">
+    <xs:simpleContent>
+      <xs:extension base="non_empty_token">
+        <xs:attribute ref="xml:lang" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AvecFrLangType">
+    <xs:simpleContent>
+      <xs:restriction base="AvecLangType">
+        <xs:attribute ref="xml:lang" use="required" fixed="fr"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AvecEnLangType">
+    <xs:simpleContent>
+      <xs:restriction base="AvecLangType">
+        <xs:attribute ref="xml:lang" use="required" fixed="en"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AvecSchemeType">
+    <xs:simpleContent>
+      <xs:extension base="non_empty_token">
+        <xs:attribute name="scheme" type="non_empty_token" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PossSchemeType">
+    <xs:simpleContent>
+      <xs:extension base="non_empty_token">
+        <xs:attribute name="scheme" type="non_empty_token" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PossLangSchemeType">
+    <xs:simpleContent>
+      <xs:extension base="non_empty_token">
+        <xs:attribute ref="xml:lang" use="optional"/>
+        <xs:attribute name="scheme" type="non_empty_token" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!-- ==================================================
+        Types fondamentaux relatifs aux chaînes de caractère
+        ==================================================  -->
+  <xs:simpleType name="non_empty_token">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="non_empty_string">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

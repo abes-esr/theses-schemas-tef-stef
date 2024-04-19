@@ -1,0 +1,111 @@
+<?xml version="1.0" standalone="no"?>
+<mets:mets 
+	xmlns:tef="http://www.abes.fr/tef" 
+	xmlns:mets="http://www.loc.gov/METS/" 
+	xmlns:xlink="http://www.w3.org/TR/xlink" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	LABEL="expression">
+	<mets:metsHdr>
+		<mets:agent>
+			<mets:name>Rick Beaubien</mets:name>
+		</mets:agent>
+	</mets:metsHdr>
+	<mets:dmdSec ID="DM3">
+		<mets:mdWrap MDTYPE="description-de-expression">
+			<mets:xmlData>
+				<tef:title>letitre</tef:title>
+				<tef:creator>lauteur</tef:creator>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:amdSec>
+		<mets:rightsMD ID="DroitsM6">
+			<mets:mdWrap MDTYPE="droits-sur-expression">
+				<mets:xmlData>
+					<tef:diffusion>Libre</tef:diffusion>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="DroitsM4xml">
+			<mets:mdWrap MDTYPE="droits-sur-edition">
+				<mets:xmlData>
+					<tef:ed-droits>Cines</tef:ed-droits>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="DroitsM4pdf">
+			<mets:mdWrap MDTYPE="droits-sur-edition">
+				<mets:xmlData>
+					<tef:ed-droits>Internet</tef:ed-droits>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:techMD ID="DroitsEditionM5xml">
+			<mets:mdWrap MDTYPE="description-sur-edition">
+				<mets:xmlData>
+					<tef:ed-desc>archivage</tef:ed-desc>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="DroitsEditionM5pdf">
+			<mets:mdWrap MDTYPE="description-sur-edition">
+				<mets:xmlData>
+					<tef:ed-desc>diffusion</tef:ed-desc>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="FileM5xml">
+			<mets:mdWrap MDTYPE="description-sur-fichier">
+				<mets:xmlData>
+					<tef:name>these.xml</tef:name>
+					<tef:extension>xml</tef:extension>
+					<tef:path>these\xml\body</tef:path>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="FileM5jpg">
+			<mets:mdWrap MDTYPE="description-sur-fichier">
+				<mets:xmlData>
+					<tef:name>image.jpg</tef:name>
+					<tef:extension>jpeg</tef:extension>
+					<tef:path>these\xml\images</tef:path>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="FileM5pdf">
+			<mets:mdWrap MDTYPE="description-sur-fichier">
+				<mets:xmlData>
+					<tef:name>these.pdf</tef:name>
+					<tef:extension>pdf</tef:extension>
+					<tef:path>these\pdf\body</tef:path>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+	</mets:amdSec>
+	<mets:fileSec>
+		<mets:fileGrp USE="archive">
+			<mets:file ID="FID2" MIMETYPE="xml">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these\xml\body"/>
+			</mets:file>
+			<mets:file ID="FID3" MIMETYPE="jpg">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these\xml\images"/>
+			</mets:file>
+		</mets:fileGrp>
+		<mets:fileGrp USE="diffusion">
+			<mets:file ID="FID8" MIMETYPE="pdf">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these\pdf\body"/>
+			</mets:file>
+		</mets:fileGrp>
+	</mets:fileSec>
+	<mets:structMap TYPE="logical">
+		<mets:div LABEL="expression" DMDID="DM1 DM2 DM3">
+			<mets:div ORDER="1" TYPE="map" LABEL="edition xml" DMDID="DM4">
+				<mets:fptr FILEID="FID2"/>
+				<mets:fptr FILEID="FID3"/>
+			</mets:div>
+			<mets:div ORDER="2" TYPE="map" LABEL="edition pdf" DMDID="DM5">
+				<mets:fptr FILEID="FID8"/>
+			</mets:div>
+		</mets:div>
+	</mets:structMap>
+</mets:mets>

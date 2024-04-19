@@ -1,0 +1,95 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Exemple 3</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="exemples.html" title="Annexe&nbsp;A.&nbsp;Exemples de r&eacute;f&eacute;rence">
+      <link rel="prev" href="ex2.html" title="Exemple 2">
+      <link rel="next" href="ex4.html" title="Exemple 4">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Exemple 3</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="ex2.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Annexe&nbsp;A.&nbsp;Exemples de r&eacute;f&eacute;rence</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="ex4.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="ex3"></a>Exemple 3
+                  </h2>
+               </div>
+               <div>
+                  <h3 class="subtitle">
+                             <a href="ex3_theseSurTravaux.xml" target="_top">Une th&egrave;se sur travaux</a>
+                           
+                  </h3>
+               </div>
+            </div>
+         </div>
+         <p>Une th&egrave;se sur travaux, incorporant trois articles pr&eacute;c&eacute;demment
+            publi&eacute;s par l'auteur (et des collaborateurs). On suppose que les ayants
+            droit de ces articles (les &eacute;diteurs) n'ont pas autoris&eacute; l'auteur &agrave; les
+            r&eacute;utiliser dans sa th&egrave;se. C'est pourquoi cette notice TEF d&eacute;crit deux
+            versions de la m&ecirc;me th&egrave;se : une version compl&egrave;te, non diffusable en
+                  raison du refus des &eacute;diteurs ; une version incompl&egrave;te, expurg&eacute;e des
+                  trois articles, diffusable.
+         </p>
+         <p>Dans cet exemple, les trois TRAVAUX sont regroup&eacute;s :</p><pre class="programlisting">&lt;mets:div TYPE="RESSOURCES_EXTERNES" <span class="bold"><strong>ID="travaux"</strong></span>&gt;
+ &lt;mets:div TYPE="TRAVAUX" DMDID="desc_travaux_1" ADMID="droits_travaux_1"/&gt;
+ &lt;mets:div TYPE="TRAVAUX" DMDID="desc_travaux_2" ADMID="droits_travaux_2"/&gt;
+ &lt;mets:div TYPE="TRAVAUX" DMDID="desc_travaux_3" ADMID="droits_travaux_3"/&gt;
+&lt;/mets:div&gt;</pre><p>Ce regroupement permet d'&eacute;crire de mani&egrave;re
+                  &eacute;conomique :
+         </p><pre class="programlisting">&lt;tef:manque&gt;
+ &lt;tef:ressourceID&gt;<span class="bold"><strong>travaux</strong></span>&lt;/tef:ressourceID&gt;
+&lt;/tef:manque&gt;</pre><p>Si les travaux n'avaient pas &eacute;t&eacute;
+                  regroup&eacute;s, il aurait fallu r&eacute;p&eacute;ter trois fois l'&eacute;l&eacute;ment
+                  tef:manque.
+         </p>
+         <p>Si les trois travaux avaient eu les m&ecirc;mes conditions juridiques,
+                  on aurait pu associer les m&eacute;tadonn&eacute;es tef_droits_externe au regroupement
+                  de travaux lui-m&ecirc;me :
+         </p>
+         <p>
+                    
+         </p><pre class="programlisting">&lt;mets:div TYPE="RESSOURCES_EXTERNES" ID="travaux" <span class="bold"><strong>ADMID="droits_travaux"</strong></span>&gt;
+ &lt;mets:div TYPE="TRAVAUX" DMDID="desc_travaux_1"/&gt;
+ &lt;mets:div TYPE="TRAVAUX" DMDID="desc_travaux_2"/&gt;
+ &lt;mets:div TYPE="TRAVAUX" DMDID="desc_travaux_3"/&gt;
+&lt;/mets:div&gt;</pre><p>
+                  
+         </p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="ex2.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="exemples.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="ex4.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Exemple 2&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Exemple 4</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

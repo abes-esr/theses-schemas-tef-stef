@@ -1,0 +1,189 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>L'inventaire des fichiers (mets:fileSec)</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="prev" href="intro_structMap.html" title="L'arbre des entit&eacute;s TEF (mets:structMap)">
+      <link rel="next" href="intro_blocs_md.html" title="Les blocs de m&eacute;tadonn&eacute;es">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">L'inventaire des fichiers (mets:fileSec)</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="intro_structMap.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">TEF en XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="intro_blocs_md.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="intro_fileSec"></a>L'inventaire des fichiers (mets:fileSec)
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>Cette section sert &agrave; lister des groupes de fichiers, chacun de
+            ces groupes correspondant &agrave; une &eacute;dition de la th&egrave;se. Chaque groupe de
+                    premier niveau comprend tous les fichiers qui constituent une
+                    &eacute;dition.
+         </p>
+         <p><span class="bold"><strong>Seule l'&eacute;dition d'archivage doit
+                          obligatoirement &ecirc;tre repr&eacute;sent&eacute;e dans cette section.</strong></span> Cette
+                    pr&eacute;sence est facultative pour les autres &eacute;ditions.
+         </p><pre class="programlisting">&lt;<span class="bold"><strong>mets:fileSec</strong></span>&gt;
+ &lt;<span class="bold"><strong>mets:fileGrp</strong></span> ID="<span class="bold"><strong>FGrID1</strong></span>" USE="<span class="bold"><strong>archive_et_diffusion</strong></span>"&gt;
+  &lt;<span class="bold"><strong>mets:file</strong></span> <span class="bold"><strong>ID="FID2"</strong></span> <span class="bold"><strong>ADMID="file_ed1_pdf"</strong></span>&gt;
+   &lt;mets:FLocat LOCTYPE="URL" xlink:href="these\pdf\body\these.pdf"/&gt;
+  &lt;/mets:file&gt;
+ &lt;/mets:fileGrp&gt;
+&lt;/mets:fileSec&gt;
+</pre><p>Dans cet exemple, on retrouve un groupe de fichiers
+                    (mets:fileGrp) ayant pour identifiant "FGrID1". C'est celui-l&agrave; m&ecirc;me
+                    qui &eacute;tait associ&eacute;, dans la carte de structure, &agrave; une des &eacute;ditions
+                    :
+         </p><pre class="programlisting">...
+&lt;mets:div TYPE="<span class="bold"><strong>EDITION</strong></span>" DMDID="desc_ed1"&gt;
+<span class="bold"><strong> &lt;mets:fptr FILEID="FGrID1"/&gt;</strong></span>
+&lt;/mets:div&gt;
+...</pre><p>Cet &eacute;l&eacute;ment <span class="bold"><strong>
+                              <a href="mets_fileGrp.html" title="mets:fileGrp">mets:fileGrp</a>
+                            </strong></span> peut contenir soit les fichiers individuels (<span class="bold"><strong>
+                              <a href="mets_file.html" title="mets:file">mets:file</a>
+                            </strong></span>), soit d'autres groupes de fichiers qui contiennent
+                    eux-m&ecirc;mes des fichiers ou des groupes de fichiers. Seul un <span class="bold"><strong>
+                              <a href="mets_fileGrp.html" title="mets:fileGrp">mets:fileGrp</a>
+                            </strong></span> de premier niveau correspond &agrave; une &eacute;dition.
+         </p>
+         <p>M&ecirc;me si la section <span class="bold"><strong>
+                              <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                            </strong></span> peut ne concerner que l'&eacute;dition d'archivage, elle peut
+                    aussi repr&eacute;senter les autres &eacute;ditions, destin&eacute;es &agrave; la diffusion.
+                    Comment distinguer ces deux types d'&eacute;ditions ? C'est l'attribut USE
+                    qui op&egrave;re cette distinction. Le groupe de fichiers qui correspond &agrave;
+                    une &eacute;dition d'archivage poss&egrave;de l'un de ces deux attributs :
+         </p><pre class="programlisting"> USE="<span class="bold"><strong>archive</strong></span>"</pre><p>
+                    
+         </p><pre class="programlisting"> USE="<span class="bold"><strong>archive</strong></span><span class="bold"><strong>_et_diffusion</strong></span>"</pre><p>Cette
+                    deuxi&egrave;me valeur de l'attribut USE permet de qualifier une &eacute;dition
+                    destin&eacute;e &agrave; la fois &agrave; l'archivage et &agrave; la diffusion, comme une &eacute;dition
+                    PDF peut l'&ecirc;tre.
+         </p>
+         <p>Chaque <span class="bold"><strong>fichier</strong></span> (<span class="bold"><strong>
+                              <a href="mets_file.html" title="mets:file">mets:file</a>
+                            </strong></span>) poss&egrave;de un attribut ADMID qui renvoie &agrave; un bloc de
+                    m&eacute;tadonn&eacute;es de conservation.
+         </p>
+         <p>Au niveau <span class="bold"><strong>
+                              <a href="mets_file.html" title="mets:file">mets:file</a>
+                            </strong></span>, l'attribut USE indique s'il s'agit ou non du fichier
+                    ma&icirc;tre (USE="maitre"). Le fichier ma&icirc;tre est le fichier qu'il faut
+                    ouvrir en premier pour acc&eacute;der &agrave; l'ensemble d'un document. Une &eacute;dition
+                    HTML a pour fichier ma&icirc;tre un fichier HTML, qui par convention se
+                    nomme souvent "index.html". Si une &eacute;dition PDF est en plusieurs
+                    fichiers, il faut aussi pr&eacute;ciser quel en est le fichier
+                    ma&icirc;tre.
+         </p><pre class="programlisting">&lt;<span class="bold"><strong>mets:fileSec</strong></span>&gt;
+ &lt;<span class="bold"><strong>mets:fileGrp</strong></span> ID="<span class="bold"><strong>FGrID1</strong></span>" USE="<span class="bold"><strong>diffusion</strong></span>"&gt;
+  &lt;<span class="bold"><strong>mets:file</strong></span> <span class="bold"><strong>ID="FID9"</strong></span> <span class="bold"><strong>ADMID="fil9_html" USE="maitre"</strong></span>&gt;
+   &lt;mets:FLocat LOCTYPE="URL" xlink:href="these\html\body\index.html"/&gt;
+  &lt;/mets:file&gt;
+ &lt;/mets:fileGrp&gt;
+&lt;/mets:fileSec&gt;</pre><p>Pour faire le lien entre la description d'un fichier et le
+                    fichier lui-m&ecirc;me, <span class="bold"><strong>
+                              <a href="mets_file.html" title="mets:file">mets:file</a>
+                            </strong></span> a pour enfant l'&eacute;l&eacute;ment mets:FLocat qui permet de donner
+                    l'adresse physique du fichier. Il peut s'agir d'une URL ou d'un chemin
+                    vers un r&eacute;pertoire local, comme dans cet exemple :
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">&lt;mets:FLocat LOCTYPE="URL" xlink:href="these\pdf\body\these.pdf"/&gt;</pre><p>
+                    
+         </p>
+         <p>
+                      <span class="optional">Chaque fichier (mets:file) peut poss&eacute;der un attribut ID,
+                         qui lui associe un identifiant unique. Cet identifiant permet
+                         d'&eacute;tablir un lien entre une ressource externe et un fichier.
+                         Lorsqu'une ressource externe, par exemple une image ou un graphique,
+                         est isol&eacute;e dans un fichier &agrave; part, la gestion du document peut en
+                         &ecirc;tre facilit&eacute;e. Par exemple, il devient possible d'extraire
+                         automatiquement cette ressource externe pour g&eacute;n&eacute;rer une version
+                         incompl&egrave;te de la th&egrave;se, amput&eacute;e de ses parties ob&eacute;issant par exemple
+                         &agrave; un r&eacute;gime juridique diff&eacute;rent.</span>
+                    
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">...
+<span class="bold"><strong>&lt;mets:fileSec&gt;</strong></span>
+ &lt;mets:fileGrp USE="archive" ID="FGrID1"&gt;
+  &lt;mets:file ID="FID2" ADMID="file_ed1_xml_1"&gt;
+   &lt;mets:FLocat LOCTYPE="URL" xlink:href="these\xml\body\these.xml"/&gt;
+  &lt;/mets:file&gt;
+  &lt;mets:file <span class="bold"><strong>ID="FID3"</strong></span> ADMID="file_ed1_jpg_2"&gt;
+   &lt;mets:FLocat LOCTYPE="URL" xlink:href="these\xml\images\these.jpg"/&gt;
+  &lt;/mets:file&gt;
+ &lt;/mets:fileGrp&gt;
+&lt;/mets:fileSec&gt;
+...
+<span class="bold"><strong>&lt;mets:structMap</strong></span> TYPE="logical"&gt;
+ &lt;mets:div TYPE="THESE"&gt;
+  &lt;mets:div TYPE="<span class="bold"><strong>RESSOURCE_TIERS</strong></span>" ...&gt;
+   &lt;mets:fptr <span class="bold"><strong>FILEID="FID3"</strong></span>/&gt;
+  &lt;/mets:div&gt;
+ &lt;/mets:div&gt;
+&lt;/mets:structMap&gt;
+...</pre><p>
+                    
+         </p>
+         <p>
+                      <span class="optional">Cette possibilit&eacute; n'est pas g&eacute;n&eacute;ralisable &agrave; toutes les
+                         th&egrave;ses. Par exemple, elle n'est pas disponible dans le cas des
+                         &eacute;ditions PDF o&ugrave; tout est compris dans un seul fichier ou dans le cas
+                         des ressources externes textuelles, rarement s&eacute;par&eacute;es du reste du
+                         texte de la th&egrave;se. Quand un tel lien est impossible, la ressource
+                         externe est seulement mentionn&eacute;e dans la carte de structure,
+                         associ&eacute;e &agrave; ses m&eacute;tadonn&eacute;es, mais elle n'est pas reli&eacute;e &agrave; un fichier
+                         ou un groupe de fichiers.</span>
+                    
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">...
+  &lt;mets:div TYPE="<span class="bold"><strong>RESSOURCE_TIERS</strong></span>" DMDID="xerft" ADMID="rdt5yj"/&gt;
+...
+</pre><p>
+                    
+         </p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="intro_structMap.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="TEF_en_XML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="intro_blocs_md.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">L'arbre des entit&eacute;s TEF (mets:structMap)&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Les blocs de m&eacute;tadonn&eacute;es</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

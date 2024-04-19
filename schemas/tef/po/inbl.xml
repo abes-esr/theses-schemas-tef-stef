@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" encoding="utf-8" href="xslBL.xml"?>
+<SRW:searchRetrieveResponse xmlns:SRW="http://www.loc.gov/zing/srw/"
+	xmlns:DIAG="http://www.loc.gov/zing/srw/diagnostic/" xmlns:zng="urn:z3950:zng_prototype1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<SRW:version>1.1</SRW:version>
+	<SRW:numberOfRecords>2</SRW:numberOfRecords>
+	<SRW:records xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+		xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+		xmlns:tel="http://krait.kb.nl/coop/tel/handbook/telterms.html"
+		xmlns:mods="http://www.loc.gov/mods" xmlns:cld="http://www.ukoln.ac.uk/metadata/rslp/schema/"
+		xmlns:blap="http://labs.bl.uk/metadata/blap/terms.html">
+		<SRW:record>
+			<SRW:recordSchema>dc_record</SRW:recordSchema>
+			<SRW:recordPacking>xml</SRW:recordPacking>
+			<SRW:recordData>
+				<dcx>
+					<dc:title>Phased array antenna handbook</dc:title>
+					<dc:creator>Mailloux Robert </dc:creator>
+					<dc:subject>Phased array antennas</dc:subject>
+					<dc:subject xsi:type="dcterms:DDC">621 3 824</dc:subject>
+					<dc:publisher>Boston, Mass. ; London : Artech House, 2005.</dc:publisher>
+					<dcterms:issued>2005</dcterms:issued>
+					<dcterms:extent>460 p. : ill. ; 26 cm.</dcterms:extent>
+					<dc:description>Previous ed.: 1994.. </dc:description>
+					<mods:location>British Library : DSC : m05/.22667</mods:location>
+					<dc:language xsi:type="ISO639-2">eng</dc:language>
+					<dc:identifier xsi:type="lib:ISBN">1580536891 (hbk.) : £91.00</dc:identifier>
+					<tel:recordId
+						xlink:href="http://catalogue.bl.uk/F/-?func=direct-doc-set&amp;doc_number=013085956&amp;l_base=BLL01&amp;from=TELgateway"
+						>013085956</tel:recordId>
+					<tel:recordId xsi:type="dcterms:URI"
+						>http://catalogue.bl.uk/F/-?func=direct-doc-set&amp;doc_number=013085956&amp;l_base=BLL01&amp;from=TELgateway</tel:recordId>
+					<dc:type>text</dc:type>
+					<dc:type>language materials</dc:type>
+					<dc:type>monograph</dc:type>
+				</dcx>
+			</SRW:recordData>
+			<SRW:recordPosition>1</SRW:recordPosition>
+		</SRW:record>
+	</SRW:records>
+	<SRW:nextRecordPosition>2</SRW:nextRecordPosition>
+	<SRW:echoedSearchRetrieveRequest>
+		<SRW:version>1.1</SRW:version>
+		<SRW:stylesheet>http://herbie.bl.uk:9080/allbrief4.xml</SRW:stylesheet>
+		<SRW:extraRequestData>
+			<x-cset>utf-8</x-cset>
+		</SRW:extraRequestData>
+		<SRW:query>Phased array antenna handbook</SRW:query>
+		<SRW:startRecord>1</SRW:startRecord>
+		<SRW:maximumRecords>1</SRW:maximumRecords>
+		<SRW:recordSchema>dc_record</SRW:recordSchema>
+	</SRW:echoedSearchRetrieveRequest>
+	<SRW:extraResponseData>
+		<version>Base version 7 (10/06/05) -- re-factored version, ILS version 1 (3/9/04)</version>
+		<databaseURI>http://herbie.bl.uk:9080/cgi-bin/blils.cgi</databaseURI>
+		<databaseBriefTitle>BL</databaseBriefTitle>
+		<databaseFullTitle>BL Integrated Catalog</databaseFullTitle>
+		<databaseLogo>http://herbie.bl.uk:9080/images/logo68web.gif</databaseLogo>
+		<databaseHelp>http://herbie.bl.uk:9080/databases/blpc.html</databaseHelp>
+		<nextRecordURI>&amp;startRecord=2&amp;maximumRecords=1</nextRecordURI>
+		<URIparameters>?operation=searchRetrieve&amp;version=1.1&amp;query=Phased array antenna
+			handbook&amp;recordSchema=dc_record</URIparameters>
+	</SRW:extraResponseData>
+</SRW:searchRetrieveResponse>

@@ -1,0 +1,354 @@
+<?xml version="1.0" standalone="no"?>
+<!--<?oxygen SCHSchema="regles.sch"?>-->
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:mets="http://www.loc.gov/METS/"
+	xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/"
+	xmlns:mads="http://www.loc.gov/mads/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="  http://www.loc.gov/METS/ tef_schemas.xsd">
+	<!-- 	Exemple de notice TEF :
+		Thèse sur travaux, incorporant trois articles précédemment publiés par l'auteur (et des collaborateurs)
+		On suppose que les ayants droit de ces articles (les éditeurs) n'ont pas autorisé l'auteur à les réutiliser dans sa thèse.
+		C'est pourquoi cette notice TEF décrit deux versions de la même thèse :
+			. une version complète, non diffusable en raison du refus des éditeurs.
+			. une version incomplète, expurgée des trois articles, largement diffusable.
+-->
+	<mets:metsHdr ID="xxx789538"/>
+	<mets:dmdSec ID="desc_expr">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_these">
+			<mets:xmlData>
+				<tef:thesisRecord>
+					<dc:title xml:lang="fr">Méthodes d'analyse et Propriétés Physiques des Sytèmes Absorbants
+						dans le Spectre des Quasars</dc:title>
+					<dc:subject xml:lang="fr">Quasar, spectre</dc:subject>
+					<dc:subject xml:lang="fr">Milieu intergalactique [MIG]</dc:subject>
+					<dc:subject xml:lang="fr">Raies, absorption</dc:subject>
+					<dcterms:abstract xml:lang="fr">Au cours de cette thèse, mon travail s'est principalement
+						porté sur l'analyse de spectres de quasars...nous avons montré qu'à un décalage spectral
+						d'environ z~1, les absorbants... Mpc.</dcterms:abstract>
+					<dcterms:abstract xml:lang="en"> ..............english summary ..............</dcterms:abstract>
+					<dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
+					<dc:type>Electronic Thesis or Dissertation</dc:type>
+					<dc:language xsi:type="dcterms:RFC3066">fr</dc:language>
+				</tef:thesisRecord>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+<!-- 	Le bloc qui suit indique que cette version est amputée de l'ensemble des travaux.
+	Cet ensemble de travaux a pour identifiant "travaux".
+-->
+	<mets:dmdSec ID="desc_version2">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_version">
+			<mets:xmlData>
+				<tef:version>
+					<tef:manque>
+						<tef:ressourceID>travaux</tef:ressourceID>
+					</tef:manque>
+				</tef:version>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_ed1">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">text/xml</dcterms:medium>
+					<dcterms:extent>2 : 3 Mo, 20 Ko</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI"
+					>http://www.bius.jussieu.fr/sdx/theses/paris6/aracil</dc:identifier>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_ed2">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">application/pdf</dcterms:medium>
+					<dcterms:extent>1 : 5 Mo</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://www.bius.jussieu.fr/sdx/theses/paris6/aracil.pdf</dc:identifier>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<!-- Suivent 3 blocs de métadonnées descriptives se rapportant chacun à un des TRAVAUX -->
+	<mets:dmdSec ID="desc_travaux_1">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_externe">
+			<mets:xmlData>
+				<tef:ressourceExterneDescription>
+					<dc:title>The warm-hot intergalactic medium at z~2.2 : Metal enrichment and ionization
+						source</dc:title>
+					<dc:creator>Bergeron, Jacqueline</dc:creator>
+					<dc:creator>Aracil, Bastien</dc:creator>
+					<dc:creator>Petitjean, Patrick</dc:creator>
+					<dc:type>text</dc:type>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://www.edpsciences.org/articles/aa/pdf/2002/47/aaej104.pdf</dc:identifier>
+					<dc:identifier xsi:type="dcterms:URI">10.1051/0004-6361:20021611</dc:identifier>
+				</tef:ressourceExterneDescription>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_travaux_2">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_externe">
+			<mets:xmlData>
+				<tef:ressourceExterneDescription>
+					<dc:title>Metals in the intergalactic medium</dc:title>
+					<dc:creator>Aracil, Bastien</dc:creator>
+					<dc:creator>Petitjean, Patrick</dc:creator>
+					<dc:creator>Pichon, Christophe</dc:creator>
+					<dc:type>text</dc:type>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://www.edpsciences.org/articles/aa/pdf/2004/21/aa0346.pdf</dc:identifier>
+					<dc:identifier xsi:type="dcterms:URI">10.1051/0004-6361:20034346</dc:identifier>
+				</tef:ressourceExterneDescription>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_travaux_3">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_externe">
+			<mets:xmlData>
+				<tef:ressourceExterneDescription>
+					<dc:title>HST STIS observations of four QSO pairs</dc:title>
+					<dc:creator>Aracil, Bastien</dc:creator>
+					<dc:creator>Petitjean, Patrick</dc:creator>
+					<dc:creator>Smette, Alain</dc:creator>
+					<dc:type>text</dc:type>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://www.edpsciences.org/articles/aa/pdf/2002/31/aah3320.pdf</dc:identifier>
+					<dc:identifier xsi:type="dcterms:URI">10.1051/0004-6361:20020733</dc:identifier>
+				</tef:ressourceExterneDescription>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:amdSec>
+		<mets:techMD ID="admin_expr">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_admin_these">
+				<mets:xmlData>
+					<tef:thesisAdmin>
+						<tef:auteur>
+							<tef:nom>Aracil</tef:nom>
+							<tef:prenom>Bastien</tef:prenom>
+							<tef:dateNaissance>1900-01-01</tef:dateNaissance>
+							<tef:nationalite scheme="ISO-3166-1">FR</tef:nationalite>
+							<tef:autoriteExterne autoriteSource="Sudoc">089024729</tef:autoriteExterne>
+						</tef:auteur>
+						<dc:identifier xsi:type="tef:NNT">2004PA066509</dc:identifier>
+						<dcterms:dateAccepted xsi:type="dcterms:W3CDTF">2004-01-26</dcterms:dateAccepted>
+						<tef:thesis.degree>
+							<tef:thesis.degree.discipline xml:lang="fr">Astrophysique</tef:thesis.degree.discipline>
+							<tef:thesis.degree.grantor>
+								<tef:nom>Paris 6</tef:nom>
+								<tef:autoriteExterne autoriteSource="Sudoc">027787087</tef:autoriteExterne>
+							</tef:thesis.degree.grantor>
+							<tef:thesis.degree.level>Doctorat</tef:thesis.degree.level>
+						</tef:thesis.degree>
+				<!-- Suit un élément qui indique qu'il s'agit d'une thèse sur travaux -->
+						<tef:theseSurTravaux>oui</tef:theseSurTravaux>
+						<tef:avisJury>oui</tef:avisJury>
+						<tef:directeurThese>
+							<tef:nom>Petitjean</tef:nom>
+							<tef:prenom>Patrick</tef:prenom>
+							<tef:autoriteExterne autoriteSource="Sudoc">089024753</tef:autoriteExterne>
+						</tef:directeurThese>
+						<tef:presidentJury>
+							<tef:nom>Boissé</tef:nom>
+							<tef:prenom>Patrick</tef:prenom>
+						</tef:presidentJury>
+						<tef:membreJury>
+							<tef:nom>Omont</tef:nom>
+							<tef:prenom>Alain</tef:prenom>
+						</tef:membreJury>
+						<tef:rapporteur>
+							<tef:nom>Le Fèvre</tef:nom>
+							<tef:prenom>Olivier</tef:prenom>
+						</tef:rapporteur>
+						<tef:rapporteur>
+							<tef:nom>Rauch</tef:nom>
+							<tef:prenom>Michael</tef:prenom>
+						</tef:rapporteur>
+						<tef:ecoleDoctorale>
+							<tef:nom>Astrophysique et techniques spatiales</tef:nom>
+						</tef:ecoleDoctorale>
+						<tef:partenaireRecherche type="laboratoire">
+							<tef:nom>Institut d'Astrophysique de Paris</tef:nom>
+						</tef:partenaireRecherche>
+						<tef:oaiSetSpec>ddc:530</tef:oaiSetSpec>
+					</tef:thesisAdmin>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="file_ed1_xml_1">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_tech_fichier">
+				<mets:xmlData>
+					<tef:meta_fichier>
+						<tef:encodage>ASCII</tef:encodage>
+						<tef:formatFichier>XML</tef:formatFichier>
+						<tef:taille>55555</tef:taille>
+					</tef:meta_fichier>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="file_ed1_jpg_2">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_tech_fichier">
+				<mets:xmlData>
+					<tef:meta_fichier>
+						<tef:encodage>ASCII</tef:encodage>
+						<tef:formatFichier>JPEG</tef:formatFichier>
+						<tef:taille>800000</tef:taille>
+					</tef:meta_fichier>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:rightsMD ID="dr_expr_univ">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_etablissement_these">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="true" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								PRINT="true"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="dr_expr_thesard">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_auteur_these">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DISCOVER="true" DISPLAY="true" DUPLICATE="false"
+								MODIFY="false" PRINT="true" DELETE="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<!-- 	Suivent trois blocs de métadonnées de droits se rapportant chacun à un des TRAVAUX.
+		Ces métadonnées de droits indiquent si l'auteur a obtenu les droits nécessaires pour exploiter 
+		ces TRAVAUX antérieurs dans sa thèse.
+		-->
+		<mets:rightsMD ID="droits_travaux_1">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_externe">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:RightsHolder RIGHTSHOLDERID="Auteur01">
+							<metsRights:RightsHolderName>Nom de l'éditeur</metsRights:RightsHolderName>
+							<metsRights:RightsHolderContact>
+								<metsRights:RightsHolderContactAddress>2, rue
+								Sigisui</metsRights:RightsHolderContactAddress>
+							</metsRights:RightsHolderContact>
+						</metsRights:RightsHolder>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DELETE="false" DISCOVER="false" DISPLAY="false"
+								DUPLICATE="false" MODIFY="false" PRINT="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="droits_travaux_2">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_externe">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD
+						xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/">
+						<metsRights:RightsHolder RIGHTSHOLDERID="Auteur02">
+							<metsRights:RightsHolderName>EDP Sciences</metsRights:RightsHolderName>
+							<metsRights:RightsHolderContact>
+								<metsRights:RightsHolderContactAddress>17, avenue du Hoggar - Parc d'activités de
+									Courtaboeuf - BP 112 - F-91944 Les Ulis Cedex A -
+								France</metsRights:RightsHolderContactAddress>
+							</metsRights:RightsHolderContact>
+						</metsRights:RightsHolder>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DELETE="false" DISCOVER="false" DISPLAY="false"
+								DUPLICATE="false" MODIFY="false" PRINT="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="droits_travaux_3">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_externe">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:RightsHolder RIGHTSHOLDERID="Auteur03">
+							<metsRights:RightsHolderName>EDP Sciences</metsRights:RightsHolderName>
+							<metsRights:RightsHolderContact>
+								<metsRights:RightsHolderContactAddress>17, avenue du Hoggar - Parc d'activités de
+									Courtaboeuf - BP 112 - F-91944 Les Ulis Cedex A -
+								France</metsRights:RightsHolderContactAddress>
+							</metsRights:RightsHolderContact>
+						</metsRights:RightsHolder>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DELETE="false" DISCOVER="false" DISPLAY="false"
+								DUPLICATE="false" MODIFY="false" PRINT="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<!-- 	Suit un bloc de métadonnées de droits indiquant le statut juridique de la version complète.
+		Cette version s'avère impossible à exploiter, et en particulier impossible à diffuser sur le Web, 
+		puisqu'elle contient des parties (les TRAVAUX) pour lesquelles toutes les permissions ont été refusées.
+-->
+		<mets:rightsMD ID="droits_version1">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_version">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DELETE="false" DISCOVER="false" DISPLAY="false"
+								DUPLICATE="false" MODIFY="false" PRINT="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<!-- 	Suit un bloc de métadonnées de droits indiquant le statut juridique de la version incomplète.
+		Cette version s'avère exploitable, et en particulier diffusable sur le Web, puisqu'elle ne contient plus 
+		les parties (les TRAVAUX) pour lesquelles toutes les permissions ont été refusées.
+-->
+		<mets:rightsMD ID="droits_version2">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_version">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DISCOVER="true" DISPLAY="true" DUPLICATE="false"
+								MODIFY="false" PRINT="true" DELETE="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+	</mets:amdSec>
+	<mets:fileSec>
+		<mets:fileGrp USE="archive" ID="FGrID1">
+			<mets:file ID="FID2" MIMETYPE="xml" ADMID="file_ed1_xml_1">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these/xml/body/these.xml"/>
+			</mets:file>
+			<mets:file ID="FID3" MIMETYPE="jpg" ADMID="file_ed1_jpg_2">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these/xml/images/image.jpg"/>
+			</mets:file>
+		</mets:fileGrp>
+	</mets:fileSec>
+	<mets:structMap TYPE="logical">
+		<mets:div TYPE="THESE" DMDID="desc_expr" ADMID="admin_expr dr_expr_univ    dr_expr_thesard"
+			CONTENTIDS="info:ark/aaaaaaaa">
+			<mets:div TYPE="VERSION_COMPLETE" ADMID="droits_version1" CONTENTIDS="info:ark/aaaaaaaa">
+				<mets:div TYPE="EDITION" DMDID="desc_ed1" CONTENTIDS="info:ark/aaaaaaaa">
+					<mets:fptr FILEID="FGrID1"/>
+				</mets:div>
+			</mets:div>
+			<mets:div TYPE="VERSION_INCOMPLETE" DMDID="desc_version2" ADMID="droits_version2"
+				CONTENTIDS="info:ark/aaaaaaaa">
+				<mets:div TYPE="EDITION" DMDID="desc_ed2" CONTENTIDS="info:ark/aaaaaaaa"/>
+			</mets:div>
+			<mets:div TYPE="RESSOURCES_EXTERNES" ID="travaux">
+				<mets:div TYPE="TRAVAUX" DMDID="desc_travaux_1" ADMID="droits_travaux_1"/>
+				<mets:div TYPE="TRAVAUX" DMDID="desc_travaux_2" ADMID="droits_travaux_2"/>
+				<mets:div TYPE="TRAVAUX" DMDID="desc_travaux_3" ADMID="droits_travaux_3"/>
+			</mets:div>
+		</mets:div>
+	</mets:structMap>
+</mets:mets>

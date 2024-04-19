@@ -1,0 +1,325 @@
+<?xml version="1.0" standalone="no"?>
+<!--<?oxygen SCHSchema="regles.sch"?>-->
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:mets="http://www.loc.gov/METS/"
+	xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/"
+	xmlns:mads="http://www.loc.gov/mads/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="  http://www.loc.gov/METS/ tef_schemas.xsd">
+	<!-- 
+		Exemple de notice TEF :
+		Une thèse incorporant une ressource tiers, provenant d'un autre ouvrage.
+		En l'occurrence, il s'agit des cartes provenant d'un ouvrage publié.
+	-->
+	<mets:metsHdr ID="xxx789538" CREATEDATE="2002-12-07T12:20:46" LASTMODDATE="2002-12-07T12:20:46"
+		RECORDSTATUS="complet">
+		<mets:agent ROLE="CREATOR">
+			<mets:name>BIU Jussieu</mets:name>
+			<mets:note>Note</mets:note>
+		</mets:agent>
+		<mets:agent ROLE="DISSEMINATOR">
+			<mets:name>ABES</mets:name>
+		</mets:agent>
+		<mets:altRecordID ID="xxx59872" TYPE="BIU Jussieu"/>
+	</mets:metsHdr>
+	<mets:dmdSec ID="desc_expr" CREATED="2002-12-07T12:20:46">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_these">
+			<mets:xmlData>
+				<tef:thesisRecord>
+					<dc:title xml:lang="fr">Géographie du bal en France : diversité régionale</dc:title>
+					<dcterms:alternative xml:lang="en">Dancing in France</dcterms:alternative>
+					<dc:subject xml:lang="fr">pouvoirs locaux</dc:subject>
+					<dc:subject xml:lang="fr">danse</dc:subject>
+					<dc:subject xml:lang="en">local government</dc:subject>
+					<dc:subject xml:lang="en">dancing</dc:subject>
+					<dc:subject xsi:type="tef:oaiSetLang" xml:lang="en">Ethnology</dc:subject>
+					<tef:sujetRameau>
+						<tef:vedetteRameauNomCommun>
+							<tef:elementdEntree autoriteExterne="028650727" autoriteSource="Sudoc">Bals</tef:elementdEntree>
+							<tef:subdivision type="subdivisionGeographique" autoriteSource="Sudoc"
+								autoriteExterne="027226794">France</tef:subdivision>
+						</tef:vedetteRameauNomCommun>
+					</tef:sujetRameau>
+					<dcterms:abstract xml:lang="fr">La sortie au bal concerne chaque année 30 % des français,
+						le double dans plusieurs régions. A rebours (...) est bien plus avancée qu'on le croit
+						généralement.</dcterms:abstract>
+					<dcterms:abstract xml:lang="en">30 % of the French go out dancing every year - twice as
+						many in some regions. Though (...) is far more advanced than is usually thought.</dcterms:abstract>
+					<dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
+					<dc:type>Electronic Thesis or Dissertation</dc:type>
+					<dc:language xsi:type="dcterms:RFC3066">FR</dc:language>
+					<dcterms:spatial xml:lang="fr">France</dcterms:spatial>
+				</tef:thesisRecord>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_version2">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_version">
+			<mets:xmlData>
+				<tef:version>
+					<tef:manque>
+						<tef:ressourceID>tiers1</tef:ressourceID>
+						<tef:noteVersion>Manquent les cartes issues de cette ressource externe</tef:noteVersion>
+					</tef:manque>
+				</tef:version>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_ed1">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">text/xml</dcterms:medium>
+					<dcterms:extent>2 : 1 Mo, 20 Ko</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://demeter.univ-lyon2.fr:8080/sdx/theses/lyon2/1998/dcrozat.xml</dc:identifier>
+					<dcterms:issued xsi:type="dcterms:W3CDTF">1999-01-04</dcterms:issued>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_ed2">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">text/html</dcterms:medium>
+					<dcterms:extent>2 : 1 Mo, 20 Ko</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://demeter.univ-lyon2.fr:8080/sdx/theses/lyon2/1998/dcrozat.html</dc:identifier>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_ed3">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">application/pdf</dcterms:medium>
+					<dcterms:extent>1 : 3 Mo</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI"
+						>http://demeter.univ-lyon2.fr:8080/sdx/theses/lyon2/1998/dcrozat.pdf</dc:identifier>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="desc_expr_tiers_1">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_externe">
+			<mets:xmlData>
+				<tef:ressourceExterneDescription>
+					<dc:creator>HERVIEU, B</dc:creator>
+					<dc:creator>VIARD, J</dc:creator>
+					<dc:title>Au bonheur des campagnes (et des provinces)</dc:title>
+					<dc:date>1996</dc:date>
+					<dc:publisher>Ed. de l’Aube</dc:publisher>
+				</tef:ressourceExterneDescription>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:amdSec>
+		<mets:techMD ID="admin_expr">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_admin_these">
+				<mets:xmlData>
+					<tef:thesisAdmin>
+						<tef:auteur>
+							<tef:nom>Ciron</tef:nom>
+							<tef:prenom>Michelle</tef:prenom>
+							<tef:nomDeNaissance>Morand</tef:nomDeNaissance>
+							<tef:dateNaissance>1900-12-12</tef:dateNaissance>
+							<tef:nationalite scheme="ISO-3166-1">FR</tef:nationalite>
+							<tef:autoriteExterne autoriteSource="Sudoc">123456789</tef:autoriteExterne>
+						</tef:auteur>
+						<dc:identifier xsi:type="tef:NNT">1998LY020073</dc:identifier>
+						<dc:identifier xsi:type="tef:nationalThesisPID"
+							>http://www.abes.fr/?URL=ark:/20775/1998LY020073</dc:identifier>
+						<dcterms:dateAccepted xsi:type="dcterms:W3CDTF">1998-12-04</dcterms:dateAccepted>
+						<tef:thesis.degree>
+							<tef:thesis.degree.discipline xml:lang="fr">Géographie</tef:thesis.degree.discipline>
+							<tef:thesis.degree.grantor>
+								<tef:nom>Lyon 2</tef:nom>
+								<tef:autoriteExterne autoriteSource="Sudoc">ppn</tef:autoriteExterne>
+							</tef:thesis.degree.grantor>
+							<tef:thesis.degree.level>Doctorat</tef:thesis.degree.level>
+						</tef:thesis.degree>
+						<tef:theseSurTravaux>non</tef:theseSurTravaux>
+						<tef:avisJury>oui</tef:avisJury>
+						<tef:directeurThese>
+							<tef:nom>Houssel</tef:nom>
+							<tef:prenom>Jean-Pierre</tef:prenom>
+							<tef:autoriteExterne autoriteSource="Sudoc">026925508</tef:autoriteExterne>
+						</tef:directeurThese>
+						<tef:presidentJury>
+							<tef:nom>Simmel</tef:nom>
+							<tef:prenom>Georg</tef:prenom>
+							<tef:autoriteExterne autoriteSource="Sudoc">027138739</tef:autoriteExterne>
+						</tef:presidentJury>
+						<tef:membreJury>
+							<tef:nom>Simiand</tef:nom>
+							<tef:prenom>François</tef:prenom>
+							<tef:autoriteInterne>opjud</tef:autoriteInterne>
+						</tef:membreJury>
+						<tef:rapporteur>
+							<tef:nom>Sombart</tef:nom>
+							<tef:prenom>Werner</tef:prenom>
+							<tef:autoriteExterne autoriteSource="Sudoc">028516982</tef:autoriteExterne>
+						</tef:rapporteur>
+						<tef:ecoleDoctorale>
+							<tef:nom>SHS</tef:nom>
+							<tef:autoriteExterne autoriteSource="EcoDoc">1527</tef:autoriteExterne>
+						</tef:ecoleDoctorale>
+						<tef:partenaireRecherche type="laboratoire">
+							<tef:nom>Laboratoire d'ethnodanse</tef:nom>
+							<tef:autoriteExterne autoriteSource="Labintel">54521</tef:autoriteExterne>
+						</tef:partenaireRecherche>
+						<tef:partenaireRecherche type="entreprise">
+							<tef:nom>Compagnie générale du rythme</tef:nom>
+							<tef:autoriteExterne autoriteSource="Siren">54684</tef:autoriteExterne>
+						</tef:partenaireRecherche>
+						<tef:partenaireRecherche type="fondation">
+							<tef:nom>Fondation pour les danses traditionnelles</tef:nom>
+							<tef:autoriteExterne autoriteSource="Fondi">96582</tef:autoriteExterne>
+						</tef:partenaireRecherche>
+						<tef:oaiSetSpec>ddc:390</tef:oaiSetSpec>
+						<tef:MADSAuthority authorityID="opjud" type="personal">
+							<tef:personMADS>
+								<mads:namePart type="family">Simiand</mads:namePart>
+								<mads:namePart type="given">François</mads:namePart>
+								<mads:namePart type="date">1873-1935</mads:namePart>
+								<mads:description>Economiste. Sociologue.</mads:description>
+							</tef:personMADS>
+						</tef:MADSAuthority>
+					</tef:thesisAdmin>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="file_ed1_xml_1">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_tech_fichier">
+				<mets:xmlData>
+					<tef:meta_fichier>
+						<tef:encodage>Unicode</tef:encodage>
+						<tef:formatFichier>XML</tef:formatFichier>
+						<tef:taille>1000000</tef:taille>
+					</tef:meta_fichier>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:techMD ID="file_ed1_jpg_2">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_tech_fichier">
+				<mets:xmlData>
+					<tef:meta_fichier>
+						<tef:encodage>ASCII</tef:encodage>
+						<tef:formatFichier>JPEG</tef:formatFichier>
+						<tef:noteFichier>blabla</tef:noteFichier>
+						<tef:structureFichier>blabla</tef:structureFichier>
+						<tef:taille>520</tef:taille>
+					</tef:meta_fichier>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:rightsMD ID="dr_expr_univ">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_etablissement_these">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="true" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								PRINT="true"/>
+							<metsRights:Constraints CONSTRAINTTYPE="TIME">
+								<metsRights:ConstraintDescription>confidentialité 2006-01-01
+								2006-12-12</metsRights:ConstraintDescription>
+							</metsRights:Constraints>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="dr_expr_thesard">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_auteur_these">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:RightsDeclaration>http://www.untel-univ.fr/theses/contrat</metsRights:RightsDeclaration>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="true" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								PRINT="true"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="droits_expr_tiers_1">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_externe">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:RightsHolder>
+							<metsRights:RightsHolderName>Orange Publishing</metsRights:RightsHolderName>
+						</metsRights:RightsHolder>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DISCOVER="false" DISPLAY="false"
+								DUPLICATE="false" PRINT="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="droits_version1">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_version">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DISCOVER="false" DISPLAY="false"
+								DUPLICATE="false" PRINT="false"/>
+							<metsRights:Constraints CONSTRAINTTYPE="TIME">
+								<metsRights:ConstraintDescription>restriction 2006-01-01
+								2006-12-12</metsRights:ConstraintDescription>
+							</metsRights:Constraints>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="droits_version2">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_version">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="true" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								PRINT="true"/>
+							<metsRights:Constraints CONSTRAINTTYPE="TIME">
+								<metsRights:ConstraintDescription>restriction 2006-01-01
+								2006-12-12</metsRights:ConstraintDescription>
+							</metsRights:Constraints>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+	</mets:amdSec>
+	<mets:fileSec>
+		<mets:fileGrp USE="archive" ID="FGrID1">
+			<mets:file ID="FID2" MIMETYPE="text/xml" ADMID="file_ed1_xml_1" USE="maitre">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these/xml/body/these.xml"/>
+			</mets:file>
+			<mets:file ID="FID3" MIMETYPE="image/jpg" ADMID="file_ed1_jpg_2">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these/xml/images/image.jpg"/>
+			</mets:file>
+		</mets:fileGrp>
+	</mets:fileSec>
+	<mets:structMap TYPE="logical">
+		<mets:div TYPE="THESE" DMDID="desc_expr" ADMID=" dr_expr_univ dr_expr_thesard admin_expr"
+			CONTENTIDS="CyberdocsLyon2:th_croza">
+			<mets:div TYPE="VERSION_COMPLETE" ADMID="droits_version1"
+				CONTENTIDS="CyberdocsLyon2:th_croza1">
+				<mets:div TYPE="EDITION" DMDID="desc_ed1" CONTENTIDS="CyberdocsLyon2:th_croza1_1">
+					<mets:fptr FILEID="FGrID1"/>
+				</mets:div>
+				<mets:div TYPE="EDITION" DMDID="desc_ed2" CONTENTIDS="CyberdocsLyon2:th_croza1_2"/>
+			</mets:div>
+			<mets:div TYPE="VERSION_INCOMPLETE" DMDID="desc_version2" ADMID="droits_version2"
+				CONTENTIDS="CyberdocsLyon2:th_croza2">
+				<mets:div TYPE="EDITION" DMDID="desc_ed3" CONTENTIDS="CyberdocsLyon2:th_croza2_1"/>
+			</mets:div>
+			<mets:div TYPE="RESSOURCE_TIERS" DMDID="desc_expr_tiers_1" ADMID="droits_expr_tiers_1"
+				ID="tiers1">
+				<mets:fptr FILEID="FID2"/>
+			</mets:div>
+		</mets:div>
+	</mets:structMap>
+</mets:mets>

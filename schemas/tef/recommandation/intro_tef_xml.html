@@ -1,0 +1,455 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>La structure g&eacute;n&eacute;rale de TEF en XML</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="prev" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="next" href="intro_entete_mets.html" title="L'en-t&ecirc;te METS (mets:metsHdr)">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">La structure g&eacute;n&eacute;rale de TEF en XML</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="TEF_en_XML.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">TEF en XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="intro_entete_mets.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="intro_tef_xml"></a>La structure g&eacute;n&eacute;rale de TEF en XML
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>Dans le <a href="raison_d_etre.html" title="Raison d'&ecirc;tre de la recommandation">premier chapitre</a>,
+                    une distinction a &eacute;t&eacute; introduite entre quatre types de m&eacute;tadonn&eacute;es
+                    :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>m&eacute;tadonn&eacute;es descriptives (bibliographiques)</p>
+               </li>
+               <li>
+                  <p>m&eacute;tadonn&eacute;es administratives</p>
+               </li>
+               <li>
+                  <p>m&eacute;tadonn&eacute;es de droits</p>
+               </li>
+               <li>
+                  <p>m&eacute;tadonn&eacute;es de conservation</p>
+               </li>
+            </ul>
+         </div>
+         <p>Dans le chapitre 2, une autre distinction a &eacute;t&eacute; introduite pour
+                    expliciter les diff&eacute;rentes entit&eacute;s confus&eacute;ment m&ecirc;l&eacute;es dans la notion
+                    de th&egrave;se :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>la th&egrave;se en tant qu'oeuvre</p>
+               </li>
+               <li>
+                  <p>les versions</p>
+               </li>
+               <li>
+                  <p>les &eacute;ditions</p>
+               </li>
+               <li>
+                  <p>les fichiers</p>
+               </li>
+               <li>
+                  <p>les ressources externes</p>
+               </li>
+            </ul>
+         </div>
+         <p>Si on croise ces deux distinctions, on obtient un tableau &agrave; deux
+                    entr&eacute;es. Chaque cellule correspond &agrave; un ensemble de m&eacute;tadonn&eacute;es,
+                    caract&eacute;ris&eacute;es par leur fonction et par la nature de l'entit&eacute; &agrave;
+                    laquelle elles se rapportent.
+         </p>
+         <div class="informaltable"><a name="tableau_synthese"></a><table width="100%" border="1">
+               <colgroup>
+                  <col width="16%">
+                  <col width="17%">
+                  <col width="17%">
+                  <col width="16%">
+                  <col width="17%">
+                  <col width="17%">
+               </colgroup>
+               <tbody>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <td align="center">th&egrave;se</td>
+                     <td align="center">version</td>
+                     <td align="center">&eacute;dition</td>
+                     <td align="center">fichier</td>
+                     <td align="center">ressource externe</td>
+                  </tr>
+                  <tr>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>MD descriptives</td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_desc_these</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_desc_version</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_desc_edition</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>&nbsp;</td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_desc_externe</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>MD administratives</td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_admin_these</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>&nbsp;</td>
+                     <td>&nbsp;</td>
+                     <td>&nbsp;</td>
+                     <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>MD de droits</td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_droits_etablissement_these</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_droits_auteur_these</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_droits_version</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>&nbsp;</td>
+                     <td>&nbsp;</td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_droits_externe</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>MD de conservation</td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>&nbsp;</td>
+                     <td>&nbsp;</td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td></td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td>
+                                          
+                        <table class="simplelist" border="0" summary="Simple list">
+                           <tr>
+                              <td>
+                                                       <span class="bold"><strong>tef_tech_fichier</strong></span>
+                                                     
+                              </td>
+                           </tr>
+                        </table>
+                                        
+                     </td>
+                     <td class="auto-generated">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <p>Concevoir un format XML pour les m&eacute;tadonn&eacute;es de th&egrave;se
+                    &eacute;lectronique revient &agrave; traduire ce tableau en une structure XML. Cette
+                    structure doit bien identifier chacun de ces blocs de m&eacute;tadonn&eacute;es tout
+                    en le rattachant &agrave; l'entit&eacute; qui convient, ce que montre le sch&eacute;ma qui
+                    suit.
+         </p>
+         <p>
+                      
+         </p>
+         <div class="mediaobject"><img src="ComplexeMeta.jpg" alt="Figure 4. Les entit&eacute;s TEF et leurs m&eacute;tadonn&eacute;es&#xA;              (http://www.abes.fr/abes/documents/tef/recommandation/ComplexeMeta.jpg)"><div class="caption">
+               <p>Figure 4. Les entit&eacute;s TEF et leurs m&eacute;tadonn&eacute;es</p>
+            </div>
+         </div>
+         <p>
+                    
+         </p>
+         <p>METS (<span class="emphasis"><em>
+                              <a href="http://www.loc.gov/standards/mets/" target="_top">Metadata Encoding
+                                 and Transmission Standard</a>
+                            </em></span>) est un standard maintenu par la Biblioth&egrave;que du
+                    Congr&egrave;s. C'est un vocabulaire XML qui permet d'organiser des
+                    m&eacute;tadonn&eacute;es vari&eacute;es se rapportant &agrave; un objet num&eacute;rique complexe
+                    (revues num&eacute;riques, sites Web...).
+         </p>
+         <p>Dans la perspective de TEF, METS pr&eacute;sente quatre
+                    caract&eacute;ristiques particuli&egrave;rement int&eacute;ressantes :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>la carte de structure (<a href="mets_structMap.html" title="mets:structMap">
+                                        <span class="bold"><strong>mets:structMap</strong></span>
+                                      </a>) qui permet d'inventorier les diff&eacute;rentes composantes
+                                 logiques ou physiques d'un objet num&eacute;rique complexe
+                  </p>
+               </li>
+               <li>
+                  <p>la section des fichiers (<span class="bold"><strong>
+                                           <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                                         </strong></span>) qui permet d'inventorier les fichiers et de
+                                 consigner leur mode d'organisation physique
+                  </p>
+               </li>
+               <li>
+                  <p>le fait que METS ne prescrive aucun langage de m&eacute;tadonn&eacute;es
+                                 particulier. C'est une enveloppe vide dans laquelle tout type de
+                                 m&eacute;tadonn&eacute;es peut &ecirc;tre utilis&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>l'organisation modulaire des m&eacute;tadonn&eacute;es : &agrave; chaque type de
+                                 m&eacute;tadonn&eacute;es correspond un bloc XML particulier.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p>C'est pourquoi la structure XML de TEF repose sur METS.</p>
+         <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+            <h3 class="title"><a name="TEF_METS"></a>Important
+            </h3>
+            <p>
+                           <span class="bold"><strong>TEF et METS</strong></span>
+                         
+            </p>
+            <p>Toute notice TEF est un document METS valide. L'inverse n'est
+                         pas vrai. Si un document METS ne respecte pas les contraintes
+                         propres &agrave; TEF, alors il ne s'agit pas d'une notice TEF. La
+                         recommandation livre des outils XML qui permettent de v&eacute;rifier
+                         automatiquement la conformit&eacute; &agrave; TEF (<a href="validation.html" title="Validation XML"><span class="emphasis"><em>cf.</em></span> Section
+                            13</a>).
+            </p>
+            <p>TEF n'utilise pas toutes les possibilit&eacute;s offertes par METS.
+                         Pour autant, la plupart de ces fonctionnalit&eacute;s non exploit&eacute;es
+                         restent utilisables dans le cadre de TEF, m&ecirc;me si la recommandation
+                         n'en fait pas &eacute;tat. Ainsi, un document METS peut contenir une
+                         section mets:structLink, tr&egrave;s utile par ailleurs pour traiter des
+                         sites Web. Dans le cadre de TEF, cette section n'est pas pr&eacute;vue,
+                         mais elle n'est pas interdite.
+            </p>
+            <p>Cela signifie qu'une notice TEF peut contenir des sections,
+                         des &eacute;l&eacute;ments ou des attributs METS qui ne sont jamais envisag&eacute;s par
+                         cette recommandation. Cette possibilit&eacute; permet d'&eacute;tendre TEF et
+                         <a href="usages.html#adaptations">de l'adapter &agrave; des besoins
+                            particuliers</a>. Si ces extensions &agrave; TEF sont
+                         <span class="emphasis"><em>tol&eacute;r&eacute;es</em></span> par les <a href="validation.html" title="Validation XML">outils de validation XML</a> fournis avec la
+                         recommandation, elles demeurent ext&eacute;rieures &agrave; TEF au sens o&ugrave; un
+                         syst&egrave;me compatible TEF n'est pas cens&eacute; les interpr&eacute;ter. Il peut se
+                         contenter de les ignorer.
+            </p>
+         </div>
+         <p>Voici le squelette g&eacute;n&eacute;ral de la structure METS appliqu&eacute;e &agrave; TEF
+                    :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>Racine METS (<span class="bold"><strong>
+                                           <a href="mets_mets.html" title="mets:mets">mets:mets</a>
+                                         </strong></span>)
+                  </p>
+                  <div class="itemizedlist">
+                     <ul type="circle">
+                        <li>
+                           <p>En-t&ecirc;te METS (<span class="bold"><strong>
+                                                        <a href="mets_metsHdr.html" title="mets:metsHdr">mets:metsHdr</a>
+                                                      </strong></span>)<span class="bold"><strong></strong></span></p>
+                        </li>
+                        <li>
+                           <p>Blocs de m&eacute;tadonn&eacute;es descriptives (<span class="bold"><strong>
+                                                        <a href="mets_dmdSec.html" title="mets:dmdSec">mets:dmdSec</a>
+                                                      </strong></span>)
+                           </p>
+                        </li>
+                        <li>
+                           <p>Blocs de m&eacute;tadonn&eacute;es de gestion (<span class="bold"><strong>
+                                                        <a href="mets_techMD.html" title="mets:techMD">mets:techMD</a>
+                                                      </strong></span> ou <span class="bold"><strong>
+                                                        <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                      </strong></span>)
+                           </p>
+                        </li>
+                        <li>
+                           <p>Inventaire des fichiers (<span class="bold"><strong>
+                                                        <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                                                      </strong></span>)
+                           </p>
+                        </li>
+                        <li>
+                           <p>Arbre des entit&eacute;s TEF (<a href="mets_structMap.html" title="mets:structMap">
+                                                     <span class="bold"><strong>mets:structMap</strong></span>
+                                                   </a>)
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <p>
+                      
+         </p>
+         <div class="mediaobject"><img src="TEF_XML.jpg" alt="Figure 5. Notice TEF -- les liens entre les entit&eacute;s TEF&#xA;              et les blocs de m&eacute;tadonn&eacute;es&#xA;              (http://www.abes.fr/abes/documents/tef/recommandation/TEF_XML_grand.png)&#xA;              http://www.abes.fr/abes/documents/tef/recommandation/TEF_XML_grand.png"><div class="caption">
+               <p>Figure 5. Notice TEF -- les liens entre les entit&eacute;s TEF et
+                                les blocs de m&eacute;tadonn&eacute;es (<a href="http://www.abes.fr/abes/documents/tef/recommandation/TEF_XML_grand.png" target="_top">zoom</a>)
+               </p>
+            </div>
+         </div>
+         <p>
+                    
+         </p>
+         <p>La suite de ce chapitre contient une pr&eacute;sentation g&eacute;n&eacute;rale de
+                    chacune de ces composantes.
+         </p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="TEF_en_XML.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="TEF_en_XML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="intro_entete_mets.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">TEF en XML&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;L'en-t&ecirc;te METS (mets:metsHdr)</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

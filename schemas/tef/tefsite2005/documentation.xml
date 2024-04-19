@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE webpage SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/website.dtd">
+<webpage id="documentation">
+	<head>
+		<title>Documentation sur TEF</title>
+		<summary/>
+		<keywords>métadonnées, metadata, thèses, thesis, etd, recommandation afnor, afnor recommendation, xsl, xslt</keywords>
+	</head>
+	<note>
+		<para>Non normatif</para>
+	</note>
+	<section>
+		<title>Exemples de notices TEF (TEF 1.0)</title>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<ulink url="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_01_exemple_minimal.xml">Exemple minimal</ulink>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<ulink url="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_01_exemple_riche.xml">Exemple riche</ulink>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</section>
+	<section>
+		<title>Présentation graphique du schéma XML (TEF 1.0)</title>
+		<para>Pour un aperçu plus convivial du schéma XML de TEF, vous pouvez naviguer dans la <ulink url="http://www.abes.fr/abes/documents/tef/recommandation/xml/doc_schema/xmlspy.html">documentation graphique</ulink> générée par l'éditeur XMLSPY. Attention : cette documentation reprend l'ensemble des schémas XML appelés par TEF (schémas MADS et MODS), même si TEF n'en réutilise que quelques composants.</para>
+	</section>
+	<section>
+		<title>Présentations publiques</title>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<ulink url="http://www.abes.fr/abes/DocumentsWebAbes/07B_TEFreseau2005.ppt">Présentation de TEF aux Journées Réseau Sudoc 2005 (18 mars 2005)</ulink>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</section>
+</webpage>

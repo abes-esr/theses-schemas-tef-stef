@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE webpage SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/website.dtd">
+<webpage id="home">
+	<head>
+		<title>TEF : Métadonnées des thèses françaises</title>
+		<summary/>
+		<keywords>métadonnées, metadata, thèses, thesis, etd, recommandation afnor, afnor recommendation</keywords>
+	</head>
+	<section>
+		<title>Qu'est-ce que TEF ?</title>
+		<para>La recommandation TEF (Thèses Electroniques Françaises) définit un jeu de métadonnées pour les  thèses françaises sous forme électronique. A terme, elle comprendra des métadonnées descriptives et des métadonnées de gestion. Elle propose deux niveaux de normalisation : un ensemble de métadonnées ("vocabulaire TEF") et un schéma XML ("format TEF").</para>
+		<note>
+			<para>Cette première édition de la recommandation TEF (TEF 1.0) ne couvre que les métadonnées descriptives. La seconde édition, prévue en 2005, comprendra aussi les métadonnées de gestion.</para>
+		</note>
+		<para>Ce site donne accès à la recommandation TEF elle -même (document normatif), mais aussi à différentes ressources associées, qui n'ont pas de valeur normative, bien qu'elles aient été produites ou approuvées par le groupe de travail CG46/CN357/GE5 de l'AFNOR à l'origine de TEF. </para>
+	</section>
+	<section>
+		<title>Quel est le statut de TEF ?</title>
+		<para>TEF est une recommandation préparée sous l'égide du groupe CG46/CN357/GE5 de l'AFNOR.</para>
+		<para>Sous la rubrique "La recommandation", on trouve le texte officiel de la recommandation, dans sa version la plus récente.</para>
+	</section>
+	
+	<!--<section>
+		
+		<title>Nouveautés</title>
+		<para></para>
+	</section> -->
+</webpage>

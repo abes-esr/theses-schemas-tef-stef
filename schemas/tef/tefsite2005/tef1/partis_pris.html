@@ -1,0 +1,205 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Partis-pris de conception</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="introduction.html" title="Introduction">
+      <link rel="prev" href="compatibilte_dc.html" title="Etre compatible avec le Dublin Core">
+      <link rel="next" href="lien_aux_autorites.html" title="Deux formes de lien aux donn&eacute;es d'autorit&eacute;">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 1.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Partis-pris de conception</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="compatibilte_dc.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Introduction</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="lien_aux_autorites.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="chapter" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="partis_pris"></a>Partis-pris de conception
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <div class="toc">
+            <p><b>Table des mati&egrave;res</b></p>
+            <dl>
+               <dt><span class="sect1"><a href="partis_pris.html#elements_nouveaux">De nouveaux &eacute;l&eacute;ments</a></span></dt>
+               <dt><span class="sect1"><a href="lien_aux_autorites.html">Deux formes de lien aux donn&eacute;es d'autorit&eacute;</a></span></dt>
+               <dt><span class="sect1"><a href="notice_d_expression_FRBR.html">Une notice pour plusieurs &eacute;ditions</a></span></dt>
+            </dl>
+         </div>
+         <p>Les contraintes et les objectifs de TEF justifient certains choix techniques dans la conception du vocabulaire et du sch&eacute;ma
+            TEF.
+         </p>
+         <div class="sect1" lang="fr">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both"><a name="elements_nouveaux"></a>De nouveaux &eacute;l&eacute;ments
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <p>Plusieurs &eacute;l&eacute;ments de TEF sont originaux, au sens o&ugrave; ils ne proviennent pas d&#8217;un espace de noms connu.</p>
+            <p>Ils appartiennent &agrave; l'espace de noms TEF.</p>
+            <p></p>
+            <p>Dans certains cas, TEF doit d&eacute;clarer de nouveaux &eacute;l&eacute;ments afin d&#8217;exprimer des notions propres au cadre national fran&ccedil;ais.
+               C&#8217;est le cas de la notion d&#8217;&eacute;cole doctorale (<span class="bold"><strong>
+                     						<a href="ecoleDoctorale.html" title="ecoleDoctorale">ecoleDoctorale</a>
+                     					</strong></span>) ou de num&eacute;ro national de th&egrave;se (<span class="bold"><strong>
+                     						<a href="NNT.html" title="NNT">NNT</a>
+                     					</strong></span>).
+            </p>
+            <p>Dans d&#8217;autres cas, c&#8217;est l&#8217;exigence d&#8217;une description bibliographique riche qui oblige &agrave; d&eacute;clarer de nouveaux &eacute;l&eacute;ments. C&#8217;est
+               le cas des enfants de <span class="bold"><strong>
+                     						<a href="indexationCTRL.html" title="indexationCTRL">indexationCTRL</a>
+                     					</strong></span> qui permettent de construire une indexation mati&egrave;re structur&eacute;e selon les principes de Rameau.
+            </p>
+            <p>Parfois, c&#8217;est l&#8217;exigence d&#8217;un sch&eacute;ma XML complet qui oblige &agrave; cr&eacute;er de nouveaux &eacute;l&eacute;ments (<a href="validation_maximale.html" title="Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes">voir plus haut</a>).
+            </p>
+            <p>Techniquement, dans TEF, les &eacute;l&eacute;ments commen&ccedil;ant par "dc.", "dcterms.", "marc." et "thesis.degree." sont aussi des &eacute;l&eacute;ments
+               appartenant &agrave; l'espace de noms TEF. Ils sont tous d&eacute;clar&eacute;s par le sch&eacute;ma XML de TEF. Pourtant, chacun reconna&icirc;t dans ces &eacute;l&eacute;ments
+               des &eacute;l&eacute;ments issus du Dublin Core, du format bibliographique MARC 21 et du jeu de m&eacute;tadonn&eacute;es ETD-MS. D'ailleurs, tous ces
+               &eacute;l&eacute;ments "emprunt&eacute;s" conservent dans TEF leur signification d'origine. C'est pr&eacute;cis&eacute;ment pour cette raison que TEF les nomme
+               en signalant de cette mani&egrave;re leur espace de noms d'origine.
+            </p>
+            <div class="informaltable">
+               <table border="1">
+                  <colgroup>
+                     <col width="33%">
+                     <col width="67%">
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Pr&eacute;fixe de l'&eacute;l&eacute;ment</th>
+                        <th>Espace de noms</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>dc.</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>Dublin Core Element Set (Dublin Core simple)</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>dcterms.</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>DCMI Metadata Terms (Dublin Core qualifi&eacute;)</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>marc.</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>MARC 21</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>thesis.degree.</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                        <td>
+                           									
+                           <table class="simplelist" border="0" summary="Simple list">
+                              <tr>
+                                 <td>ETD-MS</td>
+                              </tr>
+                           </table>
+                           								
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <p>En r&eacute;sum&eacute;, par leur signification, <span class="bold"><strong>
+                     						<a href="dc_creator.html" title="dc.creator">dc.creator</a>
+                     					</strong></span> appartient au Dublin Core, mais ici, d'un point de vue syntaxique, il rel&egrave;ve de TEF puisqu'il est d&eacute;clar&eacute; par le sch&eacute;ma TEF.
+            </p>
+            <p>L&agrave; encore, ce sont les deux objectifs prioritaires de TEF (description riche, contr&ocirc;le de validit&eacute; fin) qui justifient de
+               red&eacute;clarer localement dans TEF des &eacute;l&eacute;ments Dublin Core, au lieu de les exploiter tels qu'ils sont d&eacute;finis par les sch&eacute;mas
+               XML du DCMI. Au contraire, les &eacute;l&eacute;ments du sch&eacute;ma MADS ont bien &eacute;t&eacute; import&eacute;s dans TEF, mais pas d&eacute;clar&eacute;s &agrave; nouveau dans TEF.
+               Ils appartiennent au seul espace de noms MADS, tant d'un point de vue s&eacute;mantique que d'un point de vue syntaxique.
+            </p>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="compatibilte_dc.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="introduction.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="lien_aux_autorites.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Etre compatible avec le Dublin Core&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Deux formes de lien aux donn&eacute;es d'autorit&eacute;</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

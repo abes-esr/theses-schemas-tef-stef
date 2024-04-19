@@ -1,0 +1,237 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Remarque sur la pr&eacute;sentation des &eacute;l&eacute;ments</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="elements.html" title="Les &eacute;l&eacute;ments de TEF">
+      <link rel="prev" href="elements.html" title="Les &eacute;l&eacute;ments de TEF">
+      <link rel="next" href="thesisRecord.html" title="thesisRecord">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 1.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Remarque sur la pr&eacute;sentation des &eacute;l&eacute;ments</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="elements.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Les &eacute;l&eacute;ments de TEF</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="thesisRecord.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="chapter" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="presentation_elements"></a>Remarque sur la pr&eacute;sentation des &eacute;l&eacute;ments
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>Chaque &eacute;l&eacute;ment de TEF se caract&eacute;rise par diff&eacute;rentes propri&eacute;t&eacute;s comme son libell&eacute; en clair, son nom (utilis&eacute; surtout dans
+            le code XML), sa cardinalit&eacute; (est-il obligatoire ? est-il r&eacute;p&eacute;table ?), son sch&eacute;ma d'encodage<a href="glossaire.html#GlossDCencsch">**</a>, ses attributs, son ou ses &eacute;l&eacute;ment(s) parent(s), ses enfants, les r&egrave;gles qui r&eacute;gissent l'&eacute;criture de ses valeurs et, enfin,
+            son &eacute;quivalent en UNIMARC. Une zone de commentaire permet de pr&eacute;ciser, si n&eacute;cessaire, les sp&eacute;cificit&eacute;s d'un &eacute;l&eacute;ment.
+         </p>
+         <p>Une zone d'exemple montre les valeurs que peut prendre chaque &eacute;l&eacute;ment TEF. Dans la zone suivante, ces exemples sont repris
+            en utilisant une syntaxe XML conforme au sch&eacute;ma XML TEF, ce qui permet de se familiariser progressivement avec le format XML
+            TEF<a href="glossaire.html#GlossTEFformat">**</a>. Si l'on agr&egrave;ge ces nombreux morceaux de code XML, on obtient la notice compl&egrave;te de r&eacute;f&eacute;rence qui suit :
+         </p>
+         <p>
+            				
+         </p><pre class="programlisting">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;thesisRecord 
+   date="2005-01-15" institution="Abes" recordID="123456789" systeme="AppliTheses"
+   xmlns="http://www.abes.fr/abes/documents/tef"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:mads="http://www.loc.gov/mads/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.abes.fr/abes/documents/tef
+  http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_schema_01.xsd"&gt;
+  &lt;dc.title&gt;
+    &lt;mainTitle xml:lang="fr"&gt;G&eacute;ographie du bal en France : 
+    diversit&eacute; r&eacute;gionale&lt;/mainTitle&gt;
+	&lt;dcterms.alternative xml:lang="en"&gt;Dancing in France&lt;/dcterms.alternative&gt;
+  &lt;/dc.title&gt;
+  &lt;dc.creator&gt;
+    &lt;name&gt;B&eacute;din, Paul&lt;/name&gt;
+    &lt;autoriteInterne&gt;crea1&lt;/autoriteInterne&gt;
+  &lt;/dc.creator&gt;
+  &lt;thesisID&gt;
+    &lt;NNT&gt;1998LY020073&lt;/NNT&gt;
+    &lt;nationalThesisPID scheme="selonSystemeABESretenu"&gt;
+       urn:tef:1998LY020073&lt;/nationalThesisPID&gt;
+  &lt;/thesisID&gt;
+  &lt;dc.subject&gt;
+     &lt;indexationCTRL scheme="Rameau" xml:lang="fr"&gt;
+       Bals -- France -- Th&egrave;ses et &eacute;crits acad&eacute;miques&lt;/indexationCTRL&gt;
+    &lt;indexationCTRL scheme="Rameau" xml:lang="fr"&gt;
+      &lt;vedetteRameauNomCommun scheme="Rameau"&gt;
+        &lt;elementdEntree autoriteExterne="028650727" autoriteSource="Sudoc"&gt;
+          Bals&lt;/elementdEntree&gt;
+        &lt;subdivision type="subdivisionGeographique" autoriteExterne="027226794"
+          autoriteSource="Sudoc"&gt;France&lt;/subdivision&gt;
+        &lt;subdivision type="subdivisionDeForme" autoriteExterne="027253139"
+        autoriteSource="Sudoc"&gt;Th&egrave;ses et &eacute;crits
+         acad&eacute;miques&lt;/subdivision&gt;
+    &lt;/vedetteRameauNomCommun&gt;
+    &lt;/indexationCTRL&gt;
+    &lt;keyWordF xml:lang="fr"&gt;bals&lt;/keyWordF&gt;
+    &lt;keyWordF xml:lang="fr"&gt;pouvoirs locaux&lt;/keyWordF&gt;
+    &lt;keyWordOther xml:lang="en"&gt;public dance&lt;/keyWordOther&gt;
+    &lt;keyWordOther xml:lang="en"&gt;local government&lt;/keyWordOther&gt;
+  &lt;/dc.subject&gt;
+  &lt;dc.description&gt;
+    &lt;abstractF xml:lang="fr"&gt;La sortie au bal concerne chaque ann&eacute;e 30 % (...)
+      plus avanc&eacute;e qu'on le croit g&eacute;n&eacute;ralement.&lt;/abstractF&gt;
+    &lt;abstractE xml:lang="en"&gt;30 % of the French (...)
+      than is usually thought.&lt;/abstractE&gt;
+    &lt;abstractOther xml:lang="es"&gt;La salida al baile concierne cada a&ntilde;o a 30% (...)
+      es bastante m&aacute;s alto que lo que se cree generalmente.&lt;/abstractOther&gt;
+   &lt;dcterms.tableOfContents&gt;Introduction 
+     1&egrave;re partie Poser le bal comme objet g&eacute;ographique 
+     2e partie La diversit&eacute; du bal et son public 
+     3e partieBals r&eacute;publicains et bals clos 
+     4e partieLes territoires du bal 
+    Conclusion 
+    Bibliographie&lt;/dcterms.tableOfContents&gt;
+  &lt;/dc.description&gt;
+  &lt;dc.contributor&gt;
+    &lt;marc.thesisAdvisor&gt;
+      &lt;name&gt;Houssel, Jean-Pierre&lt;/name&gt;
+      &lt;autoriteExterne autoriteSource="Sudoc"&gt;9026925508&lt;/autoriteExterne&gt;
+    &lt;/marc.thesisAdvisor&gt;
+    &lt;marc.opponent&gt;
+      &lt;name&gt;Weber, Max&lt;/name&gt;
+    &lt;/marc.opponent&gt;
+    &lt;marc.opponent&gt;
+      &lt;name&gt;Simmel, Georg&lt;/name&gt;
+    &lt;/marc.opponent&gt;
+    &lt;marc.opponent&gt;
+      &lt;name&gt;Olivier, Eva&lt;/name&gt;
+      &lt;autoriteInterne&gt;oppo3&lt;/autoriteInterne&gt;
+    &lt;/marc.opponent&gt;
+    &lt;ecoleDoctorale&gt;
+      &lt;name&gt;Ecole doctorale Sciences Humaines et Sociales&lt;/name&gt;
+    &lt;/ecoleDoctorale&gt;
+    &lt;marc.researcher&gt;
+      &lt;name&gt;Environnement, Ville, Soci&eacute;t&eacute; (UMR 5600)&lt;/name&gt;
+    &lt;/marc.researcher&gt;
+  &lt;/dc.contributor&gt;
+  &lt;dc.date&gt;
+    &lt;dcterms.dateAccepted scheme="dcterms:W3C-DTF"&gt;
+      1998-12-04&lt;/dcterms.dateAccepted&gt;
+  &lt;/dc.date&gt;
+  &lt;dc.type scheme="dcterms:DCMIType"&gt;Text&lt;/dc.type&gt;
+  &lt;dc.type scheme="ETD-MS"&gt;Electronic Thesis or Dissertation&lt;/dc.type&gt;
+  &lt;editionsGroupe&gt;
+    &lt;edition&gt;
+      &lt;dcterms.medium scheme="IMT"&gt;text/html&lt;/dcterms.medium&gt;
+      &lt;dcterms.extent&gt;2 : 3 Mo, 20 Ko&lt;/dcterms.extent&gt;
+      &lt;URI type="URL"&gt;
+       http://demeter.univ-lyon2.fr:8080/sdx/theses/lyon2/1998/dcrozat&lt;/URI&gt;
+    &lt;/edition&gt;
+    &lt;edition&gt;
+      &lt;dcterms.medium scheme="IMT"&gt;text/pdf&lt;/dcterms.medium&gt;
+      &lt;dcterms.extent&gt;1 : 2 Mo&lt;/dcterms.extent&gt;
+      &lt;URI type="URL"&gt;http://tel.ccsd.cnrs.fr/archives-tel-00009999.pdf&lt;/URI&gt;
+      &lt;otherEditionID scheme="http://tel.ccsd.cnrs.fr/"&gt;
+        tel-00009999&lt;/otherEditionID&gt;
+    &lt;/edition&gt;
+   &lt;/editionsGroupe&gt;
+  &lt;dc.publisher&gt;
+    &lt;name&gt;Universit&eacute; Lyon 2&lt;/name&gt;
+    &lt;place&gt;Lyon&lt;/place&gt;
+  &lt;/dc.publisher&gt;
+  &lt;dc.language scheme="ISO639-1"&gt;fr&lt;/dc.language&gt;
+  &lt;dc.relation&gt;
+    &lt;dcterms.hasFormat scheme="dcterms:URI"&gt;
+     http://mitpress.mit.edu/bedin_dancing&lt;/dcterms.hasFormat&gt;
+    &lt;dcterms.hasFormat scheme="isbn"&gt;2711616940&lt;/dcterms.hasFormat&gt;
+  &lt;/dc.relation&gt;
+  &lt;dc.coverage&gt;
+    &lt;dcterms.spatial xml:lang="de"&gt;Frankreich&lt;/dcterms.spatial&gt;
+    &lt;dcterms.temporal xml:lang="fr"&gt;Vingti&egrave;me si&egrave;cle&lt;/dcterms.temporal&gt;
+  &lt;/dc.coverage&gt;
+  &lt;dc.rights&gt;Publication autoris&eacute;e par le jury&lt;/dc.rights&gt;
+  &lt;thesis.degree&gt;
+    &lt;thesis.degree.discipline xml:lang="fr"&gt;G&eacute;ographie&lt;/thesis.degree.discipline&gt;
+    &lt;thesis.degree.grantor&gt;
+      &lt;name&gt;Lyon 2&lt;/name&gt;
+      &lt;autoriteInterne&gt;bcr&lt;/autoriteInterne&gt;
+    &lt;/thesis.degree.grantor&gt;
+    &lt;thesis.degree.level&gt;Doctorat&lt;/thesis.degree.level&gt;
+    &lt;thesis.degree.name&gt;Docteur&lt;/thesis.degree.name&gt;
+  &lt;/thesis.degree&gt;
+  &lt;MADSAuthority authorityID="crea1" type="personal"&gt;
+    &lt;personMADS&gt;
+      &lt;mads:namePart type="family"&gt;B&eacute;din&lt;/mads:namePart&gt;
+      &lt;mads:namePart type="given"&gt;Paul&lt;/mads:namePart&gt;
+    &lt;/personMADS&gt;
+  &lt;/MADSAuthority&gt;
+  &lt;MADSAuthority authorityID="oppo3" type="personal"&gt;
+    &lt;personMADS&gt;
+      &lt;mads:namePart type="family"&gt;Olivier&lt;/mads:namePart&gt;
+      &lt;mads:namePart type="given"&gt;Eva&lt;/mads:namePart&gt;
+      &lt;mads:namePart type="date"&gt;1963-03-26&lt;/mads:namePart&gt;
+      &lt;mads:namePart type="termsOfAddress"&gt;Lady&lt;/mads:namePart&gt;
+      &lt;mads:description&gt;
+        Sociologue et anthropologue des danses populaires&lt;/mads:description&gt;
+    &lt;/personMADS&gt;
+  &lt;/MADSAuthority&gt;
+  &lt;MADSAuthority authorityID="bcr" type="corporate"&gt;
+    &lt;personMADS&gt;
+      &lt;mads:namePart&gt;Universit&eacute; Lumi&egrave;re (Lyon)&lt;/mads:namePart&gt;
+    &lt;/personMADS&gt;
+  &lt;/MADSAuthority&gt;
+  &lt;recordInfo&gt;
+    &lt;recordCreation 
+    creationDate="2004-12-13" institution="Lyon 2" 
+    systeme="Cyberdocs" recordID="012345678"/&gt;
+    &lt;recordOrigin importDate="2004-12-25" recordID="012345678" 
+    institution="Lyon 2" systeme="Cyberdocs"/&gt;
+    &lt;recordModification modificationDate="2005-01-11" 
+    institution="Abes" systeme="AppliTheses" recordID="123456789"/&gt;
+  &lt;/recordInfo&gt;
+&lt;/thesisRecord&gt;
+</pre><p>
+            			
+         </p>
+         <p>Cette notice est tr&egrave;s riche car sa vocation est d'illustrer l'ensemble des &eacute;l&eacute;ments de TEF. On peut l'afficher en tant qu'instance
+            XML &agrave; l'adresse suivante :
+         </p>
+         <p>
+            				<a href="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_01_exemple_riche.xml" target="_top">http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_01_exemple_riche.xml</a>.
+         </p>
+         <p> On trouvera, <span class="emphasis"><em>a contrario</em></span> un exemple de notice minimale &agrave; l'adresse suivante :
+         </p>
+         <p>
+            				<a href="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_01_exemple_minimal.xml" target="_top">http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_01_exemple_minimal.xml</a>.
+         </p>
+         <p> TEF autorise de nombreux degr&eacute;s de pr&eacute;cision entre cette notice compl&egrave;te et cette notice minimale.</p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="elements.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="elements.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="thesisRecord.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Les &eacute;l&eacute;ments de TEF&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;thesisRecord</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

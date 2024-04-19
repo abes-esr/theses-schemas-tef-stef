@@ -1,0 +1,576 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Les m&eacute;tadonn&eacute;es de droits</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="prev" href="introtechMeta.html" title="Les m&eacute;tadonn&eacute;es de conservation de fichier :&#xA;        tef_tech_fichier">
+      <link rel="next" href="intro_tef_droits_etablissement_these.html" title="Les m&eacute;tadonn&eacute;es de droits &eacute;manant de l'&eacute;tablissement de&#xA;        soutenance : tef_droits_etablissement_these">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Les m&eacute;tadonn&eacute;es de droits</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="introtechMeta.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">TEF en XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="intro_tef_droits_etablissement_these.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="rightsMeta"></a>Les m&eacute;tadonn&eacute;es de droits
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>En tant qu'oeuvre de l'esprit et document administratif, une
+            th&egrave;se est soumise &agrave; des conditions juridiques, qu'elles soient
+            l&eacute;gales, contractuelles ou r&eacute;glementaires. Ces contraintes juridiques
+            rel&egrave;vent essentiellement du droit de la propri&eacute;t&eacute; intellectuelle et du
+            droit administratif. Toute exploitation d'une th&egrave;se doit respecter ces
+            contraintes. Pour les respecter, il faut les conna&icirc;tre. C'est pourquoi
+            TEF comprend des m&eacute;tadonn&eacute;es de droits qui doivent permettre de
+            d&eacute;terminer quels usages d'une th&egrave;se sont autoris&eacute;s, dans quel
+            contexte, &agrave; quel moment, &agrave; quelles conditions... Une notice TEF n'a en
+            elle-m&ecirc;me aucun statut juridique : ce n'est ni un acte administratif,
+            ni un contrat de cession de droits. En revanche, une notice TEF doit
+             exprimer le contenu juridique de tels documents, qui existent par
+                    ailleurs sous une forme officielle.
+         </p>
+         <p>TEF doit exprimer les contraintes juridiques suivantes :</p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>l'autorisation du chef d'&eacute;tablissement</p>
+               </li>
+               <li>
+                  <p>l'autorisation de l'auteur</p>
+               </li>
+               <li>
+                  <p>l'autorisation des ayant droits sur les ressources
+                                 externes
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p>Comment structurer ce type d'informations ? En l'absence de
+                    contrat-type, cette structuration doit rester ouverte. Il est trop t&ocirc;t
+                    pour utiliser un langage d'expression des droits tr&egrave;s fin et tr&egrave;s
+                    structur&eacute; comme ODRL (qui s'appuie explicitement sur les FRBR) ou
+                    REL<sup>[<a name="d0e2328" href="#ftn.d0e2328">10</a>]</sup> . La structuration tr&egrave;s forte de ces formats XML vise &agrave;
+                    automatiser la gestion des oeuvres soumises &agrave; droits. Il n'est pas s&ucirc;r
+                    qu'une automatisation tr&egrave;s pouss&eacute;e soit utile dans le cas des th&egrave;ses.
+                    Pour autant, il appara&icirc;t insuffisant d'exprimer ces contraintes
+                    juridiques par du simple texte libre.
+         </p>
+         <p>Entre ces deux solutions, TEF propose une structuration
+                    interm&eacute;diaire des donn&eacute;es, en ayant recours au sch&eacute;ma XML METS Rights.
+                    Comme son nom l'indique, ce sch&eacute;ma est pr&eacute;vu pour structurer des
+                    m&eacute;tadonn&eacute;es de droits dans le contexte d'un document METS.
+         </p>
+         <p>Ce bloc de m&eacute;tadonn&eacute;es de droits :</p><pre class="programlisting">&lt;<span class="bold"><strong>mets:rightsMD</strong></span> ID="a121"&gt;
+ &lt;mets:mdWrap MDTYPE="OTHER" 
+     OTHERMDTYPE="<span class="bold"><strong>tef_droits_etablissement_these</strong></span>"&gt;
+  &lt;mets:xmlData&gt;
+   <span class="bold"><strong>&lt;metsRights:RightsDeclarationMD&gt;</strong></span>
+    &lt;metsRights:Context CONTEXTCLASS="<span class="bold"><strong>GENERAL PUBLIC</strong></span>"&gt;
+     &lt;metsRights:Permissions <span class="bold"><strong>DISPLAY="true" DUPLICATE="true"</strong></span>/&gt;
+    &lt;/metsRights:Context&gt;
+   <span class="bold"><strong>&lt;/metsRights:RightsDeclarationMD&gt;</strong></span>
+  &lt;/mets:xmlData&gt;
+ &lt;/mets:mdWrap&gt;
+&lt;/mets:rightsMD&gt;</pre><p>signifie que le chef d'&eacute;tablissement o&ugrave;
+                    la th&egrave;se a &eacute;t&eacute; soutenue donne l'autorisation de la diffuser aupr&egrave;s du
+                    grand public ("GENERAL PUBLIC"), mais aussi de la reproduire. En
+                    d'autres termes, il autorise sa diffusion (repr&eacute;sentation et
+                    reproduction). TEF s'int&eacute;ressant aux th&egrave;ses &eacute;lectroniques, "GENERAL
+                    PUBLIC" est interpr&eacute;t&eacute; comme signifiant "Internet".
+         </p>
+         <p>Une instance METS Rights permet essentiellement &agrave; un ayant
+                    droits d'autoriser (metsRights:permissions) un groupe d'utilisateurs
+                    (CONTEXTCLASS) &agrave; faire certains usages d'une ressource.
+         </p>
+         <p>Parmi les <span class="bold"><strong>groupes
+                          d'utilisateurs</strong></span> pr&eacute;vus par le sch&eacute;ma, deux d'entre eux
+                    int&eacute;ressent TEF tout particuli&egrave;rement :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>GENERAL PUBLIC (= internet)</p>
+               </li>
+               <li>
+                  <p>INSTITUTIONAL AFFILIATE (membres de l'institution =
+                                 Intranet)<span class="bold"><strong></strong></span></p>
+                  <p>Les autres groupes pr&eacute;vus sont :</p>
+               </li>
+               <li>
+                  <p>REPOSITORY MGR (= gestionnaire de la base)</p>
+               </li>
+               <li>
+                  <p>MANAGED GRP (&agrave; d&eacute;finir par convention)</p>
+               </li>
+               <li>
+                  <p>ACADEMIC USER (= groupe des enseignants et
+                                 chercheurs)
+                  </p>
+               </li>
+               <li>
+                  <p>OTHER (autre type de groupe ; &agrave; pr&eacute;ciser avec l'attribut
+                                 OTHERCONTEXTTYPE)
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p>METS Rights permet aussi de d&eacute;finir ses propres groupes
+                    d'utilisateurs (avec l'attribut OTHERCONTEXTTYPE).
+         </p>
+         <p>Les types d'<span class="bold"><strong>usages</strong></span> pr&eacute;vus sont
+                    :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>DISCOVER (r&eacute;f&eacute;rencement - acc&egrave;s aux m&eacute;tadonn&eacute;es)</p>
+               </li>
+               <li>
+                  <p>DISPLAY (affichage)</p>
+               </li>
+               <li>
+                  <p>COPY (r&eacute;utilisation)</p>
+               </li>
+               <li>
+                  <p>DUPLICATE (reproduction)</p>
+               </li>
+               <li>
+                  <p>MODIFY (modification)</p>
+               </li>
+               <li>
+                  <p>DELETE (suppression)</p>
+               </li>
+               <li>
+                  <p>PRINT (impression)</p>
+               </li>
+            </ul>
+         </div>
+         <p>On peut aussi d&eacute;finir un nouveau type d'usage (avec l'attribut
+                    OTHERPERMITTYPE).
+         </p>
+         <p>Toute autorisation doit &ecirc;tre explicite. Si un des usages n'est
+                    pas mentionn&eacute;, il est pr&eacute;sum&eacute; ne pas avoir &eacute;t&eacute; c&eacute;d&eacute;. En d'autres
+                    termes, l'absence de l'attribut DELETE, par exemple, &eacute;quivaut &agrave; la
+                    pr&eacute;sence de : DELETE="false".
+         </p>
+         <p>Enfin, METS Rights permet d'apporter des restrictions aux
+                    autorisations accord&eacute;es. Il pr&eacute;voit diff&eacute;rents types de <span class="bold"><strong>restrictions</strong></span> :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>QUALITY (qualit&eacute;)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>FORMAT (format)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>UNIT (unit&eacute;)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>WATERMARK (filigrane)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>PAYMENT (facturation)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>COUNT (quantit&eacute;)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>ATTRIBUTION (attribution de paternit&eacute;)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>RE-USE (usage d&eacute;riv&eacute;)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>TIME (temps)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>TRANSFERPERMISSIONS (transfert des droits &agrave; un tiers)</p>
+               </li>
+            </ul>
+         </div>
+         <p>Ces nombreux types de restrictions permettent d'exprimer des
+                    conditions juridiques tr&egrave;s subtiles. Pourtant, la formulation de la
+                    restriction elle-m&ecirc;me se fait en texte libre. En raison de cette
+                    absence de structuration, les restrictions compromettent toute
+                    exploitation automatique de ces m&eacute;tadonn&eacute;es de droits. C'est pourquoi
+                    TEF se propose de normaliser l'expression des restrictions de type
+                    temporel (TIME) car elles concernent notamment la question cruciale de
+                    la confidentialit&eacute;.
+         </p>
+         <p>Ainsi, la p&eacute;riode de confidentialit&eacute; impos&eacute;e par le chef
+                    d'&eacute;tablissement s'exprimera de la mani&egrave;re suivante :
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">&lt;metsRights:<span class="bold"><strong>Constraints</strong></span> CONSTRAINTTYPE="<span class="bold"><strong>TIME</strong></span>"&gt;
+ &lt;metsRights:ConstraintDescription&gt;<span class="bold"><strong>confidentialit&eacute; 2006-01-01 2006-12-31</strong></span>
+ &lt;/metsRights:ConstraintDescription&gt;
+&lt;/metsRights:Constraints&gt;</pre><p>
+                    
+         </p>
+         <p>De m&ecirc;me, une restriction temporelle impos&eacute;e par l'auteur ou un
+                    ayant droits sur une ressource externe s'exprimera ainsi
+                    :
+         </p><pre class="programlisting">&lt;metsRights:<span class="bold"><strong>Constraints</strong></span> CONSTRAINTTYPE="<span class="bold"><strong>TIME</strong></span>"&gt;
+ &lt;metsRights:ConstraintDescription&gt;<span class="bold"><strong>restriction 2007-01-01 2008-06-30</strong></span>
+ &lt;/metsRights:ConstraintDescription&gt;
+&lt;/metsRights:Constraints&gt;</pre><p>Cette structuration <span class="emphasis"><em>a minima</em></span> doit permettre
+                    &agrave; un syst&egrave;me de gestion de documents &eacute;lectroniques d'identifier
+                    automatiquement les th&egrave;ses dont la p&eacute;riode de confidentialit&eacute; arrive &agrave;
+                    terme. Si, demain, il existe &agrave; l'&eacute;chelle nationale des contrats-types,
+                    il sera possible de pousser plus avant la structuration et de
+                    faciliter ainsi une gestion automatis&eacute;e plus fine.
+         </p>
+         <p>En compl&eacute;ment, il est possible d'exprimer toutes ces conditions
+                    juridiques en texte libre, gr&acirc;ce &agrave; l'&eacute;l&eacute;ment
+                    metsRights:RightsDeclaration. Cet &eacute;l&eacute;ment peut aussi contenir, par
+                    exemple, un lien hypertexte vers le contrat de cession type utilis&eacute;
+                    par l'&eacute;tablissement.
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">    (...)
+&lt;metsRights:RightsDeclarationMD&gt;
+ <span class="bold"><strong>&lt;</strong></span><span class="bold"><strong>metsRights:RightsDeclaration</strong></span>&gt;L'auteur autorise l'affichage,
+  la reproduction et l'impression de la pr&eacute;sente th&egrave;se sur Internet.
+  La r&eacute;utilisation (COPY) n'est pas autoris&eacute;e......
+<span class="bold"><strong> &lt;/metsRights:RightsDeclaration&gt;</strong></span>
+ &lt;<span class="bold"><strong>metsRights:RightsDeclaration</strong></span>&gt;
+  http://www.untel-univ.fr/theses/contrat<span class="bold"><strong>
+ &lt;/metsRights:RightsDeclaration&gt;</strong></span>
+ &lt;metsRights:Context CONTEXTCLASS="GENERAL PUBLIC"&gt;
+  &lt;metsRights:Permissions 
+    COPY="false" DISPLAY="true" DUPLICATE="true" PRINT="true"/&gt;
+ &lt;/metsRights:Context&gt;
+&lt;/metsRights:RightsDeclarationMD&gt;
+  (...)</pre><p>
+                    
+         </p>
+         <p>
+                      <span class="bold"><strong>Comment consolider les diff&eacute;rentes contraintes
+                            juridiques qui portent sur une th&egrave;se ?</strong></span>
+                    
+         </p>
+         <p>Les autorisations accord&eacute;es par le chef d'&eacute;tablissement,
+                    l'auteur et les tiers peuvent entrer en conflit les unes avec les
+                    autres. Il suffit que l'une des parties s'oppose &agrave; tel ou tel usage
+                    pour que les autorisations accord&eacute;es par les autres parties soient
+                    priv&eacute;es d'effet.
+         </p>
+         <p>Il faut donc distinguer entre les autorisations qui portent sur
+                    une th&egrave;se et l'&eacute;tat juridique consolid&eacute; de cette th&egrave;se. Prenons
+                    l'exemple d'une th&egrave;se ne contenant aucune ressource externe. L'&eacute;tat
+                    juridique de la th&egrave;se ne d&eacute;pend alors que des autorisations du chef
+                    d'&eacute;tablissement et de l'auteur. Si l'un comme l'autre autorise la
+                    diffusion sur Internet sans aucune restriction, alors la th&egrave;se est
+                    diffusable sur Internet. Il suffit que l'un des deux s'y oppose pour
+                    que l'&eacute;tat juridique de la th&egrave;se s'inverse : la th&egrave;se n'est plus
+                    diffusable sur Internet.
+         </p>
+         <p>M&ecirc;me dans des cas plus complexes, il est possible de d&eacute;duire
+                    automatiquement l'&eacute;tat juridique consolid&eacute; de la th&egrave;se, &agrave; partir des
+                    autorisations. Ainsi, pour reprendre notre cas d'&eacute;cole, si le chef
+                    d'&eacute;tablissement impose la confidentialit&eacute; entre le 1er janvier 2006 et
+                    le 31 d&eacute;cembre 2006 et l'auteur une restriction entre le 1er janvier
+                    2006 et le 30 juin 2008, alors l'&eacute;tat juridique de la th&egrave;se est le
+                    suivant : pas de diffusion sur Internet entre le 1er janvier 2007 et
+                    le 30 juin 2008 :
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">&lt;metsRights:<span class="bold"><strong>Constraints</strong></span> CONSTRAINTTYPE="<span class="bold"><strong>TIME</strong></span>"&gt;
+ &lt;metsRights:ConstraintDescription&gt;<span class="bold"><strong>restriction 2006-01-01 2008-06-30
+ </strong></span>&lt;/metsRights:ConstraintDescription&gt;
+&lt;/metsRights:Constraints&gt;</pre><p>
+                    
+         </p>
+         <p>Cet &eacute;tat juridique consolid&eacute; est exprim&eacute; dans un nouveau bloc
+                    MetsRights.
+         </p>
+         <p>Si des restrictions autres que temporelles sont utilis&eacute;es, il
+                    devient impossible de d&eacute;duire automatiquement l'&eacute;tat juridique
+                    consolid&eacute; &agrave; partir des diff&eacute;rentes autorisations.
+         </p>
+         <p>
+                      <span class="bold"><strong>Calcul des droits en pr&eacute;sence de ressources
+                            externes</strong></span>
+                    
+         </p>
+         <p>La pr&eacute;sence ou l'absence des ressources externes vient
+                    compliquer la situation. Pour diffuser une th&egrave;se sur travaux, en
+                    effet, il faut obtenir l'autorisation des &eacute;diteurs des articles
+                    (TRAVAUX) qui composent la th&egrave;se. De m&ecirc;me, si une th&egrave;se int&egrave;gre des
+                    images appartenant &agrave; un tiers (RESSOURCE_TIERS), l'autorisation de ce
+                    dernier est n&eacute;cessaire. Pour conna&icirc;tre l'&eacute;tat juridique consolid&eacute; de
+                    la th&egrave;se, il faut donc prendre en compte les autorisations accord&eacute;es
+                    ou non par les tiers. En th&eacute;orie, m&ecirc;me si le chef d'&eacute;tablissement et
+                    l'auteur accordent toutes leurs autorisations, mais que le
+                    propri&eacute;taire d'une seule image int&eacute;gr&eacute;e &agrave; la th&egrave;se les refuse, la
+                    diffusion de la th&egrave;se est bloqu&eacute;e.
+         </p>
+         <p>C'est pr&eacute;cis&eacute;ment pour &eacute;viter ces cons&eacute;quences qu'on peut
+                    choisir de produire une version incompl&egrave;te de la th&egrave;se, en l'amputant
+                    de l'image externe. D&egrave;s lors, rien ne s'oppose &agrave; la diffusion de la
+                    version incompl&egrave;te de la th&egrave;se.
+         </p>
+         <p>C'est pourquoi <span class="bold"><strong>l'&eacute;tat juridique consolid&eacute;
+                          ne porte pas sur la th&egrave;se en tant que telle, mais sur chacune de ses
+                          versions</strong></span>. En effet, comme l'&eacute;tat juridique d'une th&egrave;se
+                    d&eacute;pend de son contenu, il peut diff&eacute;rer en fonction de la version
+                    consid&eacute;r&eacute;e.
+         </p>
+         <p>Cette logique g&eacute;n&eacute;rale bas&eacute;e sur le contenu pr&eacute;suppose que deux
+                    &eacute;ditions d'une m&ecirc;me version ont n&eacute;cessairement le m&ecirc;me &eacute;tat juridique.
+                    L'exp&eacute;rience dira si ce parti pris est viable ou non.
+         </p>
+         <p>Le sch&eacute;ma qui suit r&eacute;sume cette logique.</p>
+         <p>
+                      
+         </p><pre class="programlisting"> <span class="bold"><strong>tef_droits_etablissement_these</strong></span>
+    +
+ <span class="bold"><strong>tef_droits_auteur_these</strong></span>
+    +                               =&gt;           <span class="bold"><strong>tef_droits_version</strong></span>        
+ tef_desc_version
+    +
+ <span class="bold"><strong><span class="bold"><strong>tef_droits_externe</strong></span></strong></span></pre><p>
+                    
+         </p>
+         <p>S'il n'existe pas de restrictions ou seulement une restriction
+                    de type temporelle, cette logique des droits est automatisable. On
+                    peut calculer l'&eacute;tat consolid&eacute; d'une version en connaissant les
+                    diff&eacute;rentes autorisations et le contenu de chaque version. La
+                    recommandation TEF elle-m&ecirc;me ne fournit ni un algorithme ni un
+                    programme pour effectuer ce calcul.
+         </p>
+         <p>Exemple complet :</p><pre class="programlisting">&lt;mets:mets&gt;
+(...)
+                 &lt;!-- Description de la version incompl&egrave;te --&gt;
+ 
+ &lt;mets:dmdSec ID="desc_version2"&gt;
+  &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_desc_version</strong></span>"&gt;
+   &lt;mets:xmlData&gt;
+    &lt;tef:version&gt;
+     &lt;tef:manque&gt;
+      &lt;tef:ressourceID&gt;tiers1&lt;/tef:ressourceID&gt;
+      &lt;tef:noteVersion&gt;Manquent les cartes issues de cette 
+       ressource externe&lt;/tef:noteVersion&gt;
+     &lt;/tef:manque&gt;
+     &lt;tef:versionID scheme="CyberdocsLyon2"&gt;dcrozat04&lt;/tef:versionID&gt;
+    &lt;/tef:version&gt;
+   &lt;/mets:xmlData&gt;
+  &lt;/mets:mdWrap&gt;
+ &lt;/mets:dmdSec&gt;
+
+ (...)
+                   &lt;!-- Autorisations --&gt;
+
+&lt;mets:rightsMD ID="dr_expr_univ"&gt;
+   &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_droits_etablissement_these</strong></span>"&gt;
+    &lt;mets:xmlData&gt;
+     &lt;metsRights:RightsDeclarationMD&gt;
+      &lt;metsRights:Context CONTEXTCLASS="GENERAL PUBLIC"&gt;
+       &lt;metsRights:Permissions 
+        COPY="true" DISPLAY="true" DUPLICATE="true" PRINT="true"/&gt;
+       &lt;metsRights:Constraints CONSTRAINTTYPE="TIME"&gt;
+        &lt;metsRights:ConstraintDescription&gt;
+<span class="bold"><strong>         confidentialit&eacute;</strong></span> 2006-01-01 2006-12-12
+        &lt;/metsRights:ConstraintDescription&gt;
+       &lt;/metsRights:Constraints&gt;
+      &lt;/metsRights:Context&gt;
+     &lt;/metsRights:RightsDeclarationMD&gt;
+    &lt;/mets:xmlData&gt;
+   &lt;/mets:mdWrap&gt;
+  &lt;/mets:rightsMD&gt;
+
+  &lt;mets:rightsMD ID="dr_expr_thesard"&gt;
+   &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_droits_auteur_these</strong></span>"&gt;
+    &lt;mets:xmlData&gt;
+     &lt;metsRights:RightsDeclarationMD&gt;
+      &lt;metsRights:Context CONTEXTCLASS="GENERAL PUBLIC"&gt;
+       &lt;metsRights:Permissions 
+        COPY="true" DISPLAY="true" DUPLICATE="true" PRINT="true"/&gt;
+      &lt;/metsRights:Context&gt;
+      &lt;/metsRights:RightsDeclarationMD&gt;
+    &lt;/mets:xmlData&gt;
+   &lt;/mets:mdWrap&gt;
+  &lt;/mets:rightsMD&gt;
+
+  &lt;mets:rightsMD ID="droits_expr_tiers_1"&gt;
+   &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_droits_externe</strong></span>"&gt;
+    &lt;mets:xmlData&gt;
+     &lt;metsRights:RightsDeclarationMD&gt;
+      &lt;metsRights:RightsHolder&gt;
+       &lt;metsRights:RightsHolderName&gt;
+        Orange Publishing&lt;/metsRights:RightsHolderName&gt;
+      &lt;/metsRights:RightsHolder&gt;
+      &lt;metsRights:Context CONTEXTCLASS="GENERAL PUBLIC"&gt;
+       &lt;metsRights:Permissions 
+        COPY="false" DISPLAY="false" DUPLICATE="false" PRINT="false"/&gt;
+      &lt;/metsRights:Context&gt;
+      &lt;/metsRights:RightsDeclarationMD&gt;
+    &lt;/mets:xmlData&gt;
+   &lt;/mets:mdWrap&gt;
+  &lt;/mets:rightsMD&gt;
+
+                   &lt;!-- Etat juridique de la version compl&egrave;te --&gt;
+
+  &lt;mets:rightsMD ID="droits_version1"&gt;
+   &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_droits_version</strong></span>"&gt;
+    &lt;mets:xmlData&gt;
+     &lt;metsRights:RightsDeclarationMD&gt;
+      &lt;metsRights:Context CONTEXTCLASS="GENERAL PUBLIC"&gt;
+       &lt;metsRights:Permissions 
+        COPY="<span class="bold"><strong>false</strong></span>" DISPLAY="<span class="bold"><strong>false</strong></span>" DUPLICATE="<span class="bold"><strong>false</strong></span>" PRINT="<span class="bold"><strong>false</strong></span>"/&gt;
+      &lt;/metsRights:Context&gt;
+       &lt;metsRights:Constraints CONSTRAINTTYPE="TIME"&gt;
+       &lt;metsRights:ConstraintDescription&gt;<span class="bold"><strong>
+        confidentialit&eacute;</strong></span> 2006-01-01 2006-12-12
+       &lt;/metsRights:ConstraintDescription&gt;
+      &lt;/metsRights:Constraints&gt;
+     &lt;/metsRights:RightsDeclarationMD&gt;
+    &lt;/mets:xmlData&gt;
+   &lt;/mets:mdWrap&gt;
+  &lt;/mets:rightsMD&gt;
+
+                   &lt;!-- Etat juridique de la version incompl&egrave;te, 
+                        amput&eacute;e de la ressource externe --&gt;
+
+  &lt;mets:rightsMD ID="droits_version2"&gt;
+   &lt;mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="<span class="bold"><strong>tef_droits_version</strong></span>"&gt;
+    &lt;mets:xmlData&gt;
+     &lt;metsRights:RightsDeclarationMD&gt;
+      &lt;metsRights:Context CONTEXTCLASS="GENERAL PUBLIC"&gt;
+       &lt;metsRights:Permissions 
+        COPY="<span class="bold"><strong>true</strong></span>" DISPLAY="<span class="bold"><strong>true</strong></span>" DUPLICATE="<span class="bold"><strong>true</strong></span>" PRINT="<span class="bold"><strong>true</strong></span>"/&gt;
+      &lt;/metsRights:Context&gt;
+       &lt;metsRights:Constraints CONSTRAINTTYPE="TIME"&gt;
+       &lt;metsRights:ConstraintDescription&gt;
+        <span class="bold"><strong>restriction</strong></span> 2006-01-01 2006-12-12
+       &lt;/metsRights:ConstraintDescription&gt;
+      &lt;/metsRights:Constraints&gt;
+     &lt;/metsRights:RightsDeclarationMD&gt;
+    &lt;/mets:xmlData&gt;
+   &lt;/mets:mdWrap&gt;
+  &lt;/mets:rightsMD&gt;</pre><p>Dans cet exemple, la th&egrave;se comporte
+                    une ressource externe (une image JPEG). L'auteur accorde toutes les
+                    autorisations <sup>[<a name="d0e2651" href="#ftn.d0e2651">11</a>]</sup> sans aucune restriction. Le chef d'&eacute;tablissement
+                    assortit ses autorisations d'une p&eacute;riode de confidentialit&eacute;. L'&eacute;diteur
+                    refuse toutes les autorisations. La premi&egrave;re version de la th&egrave;se est
+                    compl&egrave;te : elle comprend donc l'image en question. La seconde version
+                    est amput&eacute;e de l'image. D&egrave;s lors, on peut d&eacute;duire automatiquement
+                    l'&eacute;tat juridique consolid&eacute; de chaque version :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>Version compl&egrave;te : dans le contexte d'Internet, on ne peut
+                                 ni la r&eacute;utiliser, ni l'afficher, ni la reproduire, ni l'imprimer.
+                                 La confidentialit&eacute; n'a ici aucun effet, puisqu'elle ne fait
+                                 qu'ajouter une impossibilit&eacute; provisoire &agrave; une impossibilit&eacute;
+                                 syst&eacute;matique et d&eacute;finitive.
+                  </p>
+               </li>
+               <li>
+                  <p>Version incompl&egrave;te : dans le contexte d'Internet, tous les
+                                 usages mentionn&eacute;s sont permis, pass&eacute;e la p&eacute;riode de
+                                 confidentialit&eacute; d'un an. Les interdictions de l'&eacute;diteur n'ont plus
+                                 aucun effet puisque son image a &eacute;t&eacute; retir&eacute;e.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="footnotes"><br><hr width="100" align="left">
+            <div class="footnote">
+               <p><sup>[<a name="ftn.d0e2328" href="#d0e2328">10</a>] </sup>Voir le rapport r&eacute;dig&eacute; pour la Biblioth&egrave;que du Congr&egrave;s par
+                              Karen Coyle : <span class="emphasis"><em>Rights expression languages: a report for
+                                    the Library of Congress</em></span> (2004. <a href="http://www.loc.gov/standards/relreport.pdf" target="_top">http://www.loc.gov/standards/relreport.pdf</a>).
+               </p>
+            </div>
+            <div class="footnote">
+               <p><sup>[<a name="ftn.d0e2651" href="#d0e2651">11</a>] </sup>Pour simplifier l'exemple, on a explicit&eacute; les <span class="bold"><strong>principaux</strong></span> usages de la th&egrave;se. On ne
+                              s'int&eacute;resse pas aux autres, m&ecirc;me si ne pas les mentionner revient
+                              &agrave; ne pas les autoriser.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="introtechMeta.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="TEF_en_XML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="intro_tef_droits_etablissement_these.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Les m&eacute;tadonn&eacute;es de conservation de fichier :
+                          tef_tech_fichier&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Les m&eacute;tadonn&eacute;es de droits &eacute;manant de l'&eacute;tablissement de
+                          soutenance : tef_droits_etablissement_these
+               </td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

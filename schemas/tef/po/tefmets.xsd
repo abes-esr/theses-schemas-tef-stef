@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.abes.fr/tef" xsi:schemaLocation="http://www.abes.fr/tef http://www.abes.fr/abes/documents/tef/po/tefmets.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="title" type="xs:string"></xs:element>
+	<xs:element name="creator" type="xs:string"></xs:element>
+	<xs:element name="ed-desc" type="xs:string"></xs:element>
+	<xs:element name="ed-droits" type="xs:string"></xs:element>
+	<xs:element name="name" type="xs:string"></xs:element>
+	<xs:element name="extension" type="xs:string"></xs:element>
+	<xs:element name="path" type="xs:string"></xs:element>
+	<xs:element name="diffusion" type="xs:string"></xs:element>
+</xs:schema>

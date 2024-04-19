@@ -1,0 +1,28 @@
+<!DOCTYPE webpage SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/website.dtd">
+<webpage id="convertir">
+	<head>
+		<title>Convertir</title>
+		<summary/>
+		<keywords>métadonnées, metadata, thèses, thesis, etd, recommandation afnor, afnor recommendation, xsl, xslt</keywords>
+	</head>
+	<note>
+		<para>Non normatif</para>
+	</note>
+	
+	<section>
+		<title>Convertir à partir de TEF</title>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<ulink url="http://www.abes.fr/abes/documents/tef/recommandation/xml/TEF_vers_OAI-DC.xsl">vers DC-OAI</ulink>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<ulink  url="http://www.abes.fr/abes/documents/tef/recommandation/xml/TEF_vers_UNIMARC.xsl">vers UNIMARC en XML </ulink>(bientôt ...)
+				</para>
+			</listitem>
+			
+		</itemizedlist>
+	</section>
+</webpage>

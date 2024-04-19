@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://www.abes.fr/abes/documents/tef"
+	xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	targetNamespace="http://www.abes.fr/abes/documents/tef" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="1.0">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:include schemaLocation="tef_types.xsd"/>
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+	<xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+	<!-- 	Schéma regoupant toutes les métadonnées TEF administratives. -->
+	<xs:element name="thesisAdmin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="auteur"/>
+				<xs:element ref="dc:identifier" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="dcterms:dateAccepted"/>
+				<xs:element ref="tef:thesis.degree"/>
+				<xs:element name="theseSurTravaux">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="oui"/>
+							<xs:enumeration value="non"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+<!--     Il serait plus DC d'avoir :
+		<dc:type xsi:type="tef:typeThese">thèse sur travaux</...>
+	mais cela devient impossible à documenter car le même élément type a trop d'usages -->
+				<xs:element name="avisJury">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="oui"/>
+							<xs:enumeration value="non"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="directeurThese" maxOccurs="unbounded"/>
+				<xs:element name="presidentJury" type="PossPhysAuthority" minOccurs="0"/>
+				<xs:element name="membreJury" type="PossPhysAuthority" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="rapporteur" type="PossPhysAuthority" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ecoleDoctorale" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="partenaireRecherche" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="oaiSetSpec" type="non_empty_token" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MADSAuthority" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xs:any>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- 	===================================================================
+	Contenu
+	===================================================================  -->
+	<xs:element name="auteur">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tef:nom"/>
+				<xs:element ref="tef:prenom"/>
+				<xs:element ref="tef:nomDeNaissance" minOccurs="0"/>
+				<xs:element ref="tef:dateNaissance"/>
+				<xs:element ref="tef:nationalite"/>
+				<xs:element ref="tef:autoriteExterne" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nomDeNaissance" type="non_empty_token"/>
+	<xs:element name="dateNaissance" type="xs:date"/>
+	<xs:element name="nationalite">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="non_empty_token">
+					<xs:attribute name="scheme" type="non_empty_token" fixed="ISO-3166-1" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="NNT">
+		<xs:simpleContent>
+			<xs:restriction base="dc:SimpleLiteral">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{4}[A-Z]{2}[A-Z0-9]{2}[A-Z0-9]{4}"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<xs:attribute ref="xml:lang" use="prohibited"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="nationalThesisPID">
+		<xs:simpleContent>
+			<xs:restriction base="dc:SimpleLiteral">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+				<xs:attribute ref="xml:lang" use="prohibited"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="directeurThese" type="AvecPhysAuthority"/>
+	<xs:element name="ecoleDoctorale" type="PossCorpAuthority"/>
+	<xs:element name="partenaireRecherche">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="PossCorpAuthority">
+					<xs:attribute name="type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="equipeRecherche"/>
+								<xs:enumeration value="laboratoire"/>
+								<xs:enumeration value="universite"/>
+								<xs:enumeration value="entreprise"/>
+								<xs:enumeration value="fondation"/>
+								<xs:enumeration value="autreType"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="autreType" type="xs:string"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="thesis.degree">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="thesis.degree.discipline" type="AvecLangType"/>
+				<xs:element name="thesis.degree.grantor" type="AvecCorpAuthority" maxOccurs="unbounded"/>
+				<xs:element name="thesis.degree.level" type="ListeDegreesType"/>
+				<xs:element name="thesis.degree.name" type="PossLangType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="ListeDegreesType">
+		<xs:restriction base="non_empty_token">
+			<xs:enumeration value="Doctorat d'Etat"/>
+			<xs:enumeration value="Doctorat"/>
+			<xs:enumeration value="Doctorat de troisième cycle"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

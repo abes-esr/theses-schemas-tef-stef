@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.abes.fr/abes/documents/tef"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.abes.fr/abes/documents/tef" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="tef_types.xsd"/>
+	<!-- Metadonnees de conservation de niveau fichier -->
+	<xsd:element name="meta_fichier" type="meta_fichierType"/>
+	<xsd:complexType name="meta_fichierType">
+		<xsd:sequence>
+			<xsd:element name="encodage" minOccurs="0" maxOccurs="unbounded" type="non_empty_token"/>
+			<xsd:element name="formatFichier" minOccurs="0" maxOccurs="unbounded" type="non_empty_token"/>
+			<xsd:element name="autreFormatFichier" minOccurs="0" maxOccurs="unbounded" type="non_empty_token"/>
+			<xsd:element name="noteFichier" minOccurs="0" maxOccurs="unbounded" type="non_empty_token"/>
+			<xsd:element name="structureFichier" minOccurs="0" maxOccurs="unbounded" type="non_empty_token"/>
+			<xsd:element name="taille" type="xsd:integer" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- permet d'ouvrir le schéma à n'importe quel élément extérieur -->
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

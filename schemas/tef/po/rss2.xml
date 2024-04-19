@@ -1,0 +1,33 @@
+ <rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+  <channel rdf:about="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm">
+    <title>Nouveautés du Portail Sudoc</title>
+    <link>http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm</link>
+    <description>Le portail documentaire Sudoc</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news"/>
+        <rdf:li rdf:resource="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news"/>        
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news">
+    <title>Les thèses de l'INP Toulouse</title>
+    <link>http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news</link>
+    <description>Les thèses de l'Institut National Polytechnique de Toulouse viennent d'être chargées dans la base thèses. 
+			Vous pouvez les interroger par les index courants (titre, auteur, sujet) mais également en texte intégral en 
+			passant l'écran "Recherche sur... thèses" puis texte intégral</description>
+        <dc:date>2005-09-26</dc:date>    
+  </item>
+  <item rdf:about="http://www.xml.com/pub/a/2002/12/04/som.html">
+    <title>The .NET Schema Object Model</title>
+    
+    <description>Priya Lakshminarayanan describes in detail the use of the .NET Schema Object Model for programmatic manipulation of W3C XML Schemas.</description>
+    <dc:creator>Priya Lakshminarayanan</dc:creator>
+    <dc:date>2002-12-04</dc:date>    
+  </item>
+  
+</rdf:RDF>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:prism="http://purl.org/rss/1.0/modules/prism/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://europace.oxfordjournals.org">
+<title>Europace - current issue</title>
+<link>http://europace.oxfordjournals.org</link>
+<description>Europace - RSS feed of current issue</description>
+<prism:eIssn>1532-2092</prism:eIssn>
+<prism:coverDisplayDate>March 2006</prism:coverDisplayDate>
+<prism:publicationName>Europace</prism:publicationName>
+<prism:issn>1099-5129</prism:issn>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/151?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/157?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/161?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/168?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/175?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/178?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/182?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/189?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/191?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/193?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/199?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/204?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/211?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/216?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/221?rss=1" />
+  <rdf:li rdf:resource="http://europace.oxfordjournals.org/cgi/content/short/8/3/224?rss=1" />
+ </rdf:Seq>
+</items>
+</channel>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/151?rss=1">
+<title><![CDATA[Impact of intraventricular conduction delay on coronary haemodynamics: a study with intracoronary Doppler in patients with bundle branch blocks and normal coronary arteries]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/151?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> The impact of right bundle branch block (RBBB) and left bundle branch block (LBBB) on myocardial perfusion is not completely understood as data are often blurred by underlying cardiac disease. The present study investigates whether conduction delays <I>per se</I> affect coronary perfusion-an indirect measure of myocardial oxygen demand.</p>
+<p><b>Methods and results</b> Intracoronary Doppler and ultrasound were performed in 8 patients with RBBB, 10 patients with LBBB, and 10 control subjects. All patients had angiographically normal coronary arteries and normal left ventricular function. Baseline (bAPV) and adenosine-induced hyperaemic average flow velocity and coronary flow velocity reserve (CFVR) were measured in left anterior descending arteries. Intravascular ultrasound showed no difference in lumen cross-sectional area and plaque burden between groups. Patients with RBBB and LBBB had higher bAPV values than controls (19.0&plusmn;4.9, 21.9&plusmn;5.1, and 14.6&plusmn;2.4&nbsp;cm/s, respectively; ANOVA <I>P</I>=0.003). There was no difference between patients with LBBB and RBBB compared with controls in CFVR (2.8&plusmn;0.5, 3.0&plusmn;1.0, and 3.4&plusmn;0.7, respectively; ANOVA <I>P</I>=0.21).</p>
+<p><b>Conclusion</b> Bundle branch blocks, in particular LBBB, are associated with an increased coronary flow velocity, which indicates enhanced myocardial oxygen demand on the basis of mechanoenergetic disturbance. This may contribute to the unfavourable outcome of patients with intraventricular conduction delay.</p>
+]]></description>
+<dc:creator>Wieneke, H., Sattler, K., von Birgelen, C., Bose, D., Haude, M., Rechenberg, W., Sack, S., Dagres, N., Erbel, R.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj019</dc:identifier>
+<dc:title><![CDATA[Impact of intraventricular conduction delay on coronary haemodynamics: a study with intracoronary Doppler in patients with bundle branch blocks and normal coronary arteries]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>156</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>151</prism:startingPage>
+<prism:section>CRT</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/157?rss=1">
+<title><![CDATA[Cardiac uptake of progenitor cells in patients with moderate-to-severe left ventricular failure scheduled for cardiac resynchronization therapy]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/157?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> Injury to the heart causes haematopoietic and endothelial progenitor cells (PCs) to migrate to the site of damage and to undergo PC differentiation, which may contribute to angiogenesis and myocardial tissue repair. We sought to determine the cardiac uptake of PC in patients with moderate-to-severe congestive heart failure (CHF) scheduled for cardiac resynchronization therapy.</p>
+<p><b>Methods and results</b> A total of 28 patients was included in the study. Fourteen patients had moderate-to-severe CHF with a mean left ventricular ejection fraction (LVEF) of 20&plusmn;9%. The remaining patients had a normal LVEF and served as controls. PCs (CD34<sup>+</sup> and CD34<sup>+</sup>/CD117<sup>+</sup>) were quantified using a fluorescence-activated cell sorter. In CHF patients, PCs were determined from whole blood samples taken from the aorta, the coronary sinus (CS), and the superior vena cava (SVC) during right and left heart catheterization. Cardiac PC uptake was determined as the difference in PC levels between the aorta and the CS. Differences in CD34<sup>+</sup>PC counts (0.11&plusmn;0.98<FONT FACE="arial,helvetica">x</FONT>10<sup>3</sup>&nbsp;mL<sup>&ndash;1</sup>) and relative amount of CD34<sup>+</sup>/CD117<sup>+</sup>PC (0.08&plusmn;0.31%) between the aorta and the CS were not significant. PC levels were comparable between the SVC, CS, and aorta. CD34<sup>+</sup> and PC levels did not correlate with New York Heart Association class (<I>r</I><sup>2</sup>=0.22), LVEF (<I>r</I><sup>2</sup>=0.01), LV diameter (<I>r</I><sup>2</sup>=0.05), QRS complex duration (<I>r</I><sup>2</sup>=0.1), or maximal O<SUB>2</SUB> uptake during exercise (<I>r</I><sup>2</sup>=0.08). There was no difference between patients with ischaemic cardiomyopathy (ICM) and non-ICM. Systemic PC levels were not different compared with age-matched controls without LV failure (CD34<sup>+</sup>: 4.61&plusmn;1.83<FONT FACE="arial,helvetica">x</FONT>10<sup>3</sup>&nbsp;mL<sup>&ndash;1</sup> vs. control: 5.25&plusmn;1.67<FONT FACE="arial,helvetica">x</FONT>10<sup>3</sup>&nbsp;mL<sup>&ndash;1</sup>; <I>P</I>=n.s.).</p>
+<p><b>Conclusion</b> Moderate-to-severe chronic CHF is not associated with elevated PC levels in the systemic circulation. A measurable cardiac uptake of CD34<sup>+</sup> and CD34<sup>+</sup>/CD117<sup>+</sup>PC cannot be demonstrated by FACS analysis in this cohort of patients.</p>
+]]></description>
+<dc:creator>Goette, A., Jentsch-Ullrich, K., Hammwohner, M., Trautmann, S., Franke, A., Klein, H. U., Auricchio, A.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj042</dc:identifier>
+<dc:title><![CDATA[Cardiac uptake of progenitor cells in patients with moderate-to-severe left ventricular failure scheduled for cardiac resynchronization therapy]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>160</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>157</prism:startingPage>
+<prism:section>CRT</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/161?rss=1">
+<title><![CDATA[First multi-centre evaluation of a knowledge-based implant-assistant for implantable cardioverter-defibrillators]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/161?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> Modern implantable cardioverter-defibrillators (ICDs) place increasing demands on the physician, as their complexity requires more and more knowledge and effort in handling them. To overcome this problem an implant-assistant has been developed, which transfers clinical data entered by the physician into a complete set of parameters for programming a dual-chamber ICD (Tachos-DR, Biotronik, Berlin, Germany) at DFT testing (DFT-Prog) and first permanent programming (Perm-Prog) after implant.</p>
+<p><b>Methods and results</b> Routine ICD implantations were initially evaluated by clinical experts at 19 centres in USA and Europe from 178 patient files. The rating of parameters was related to the number of parameters available in each patient. For DFT-Prog, 98.4% of parameter suggestions were identical to experts' expectations, an additional 1.0% were accepted, 0.5% were rejected, and none was considered harmful. This resulted in an overall acceptance of 94.4% of the DFT-Prog. For Perm-Prog, 96.1% of parameters were identical to those advised by experts, an additional 2.4% were accepted, 1.5% rejected, and seven parameters (0.04%) were considered potentially harmful by experts with an overall acceptance of 86.5%. Adaptation of the implant-assistant increased the overall acceptance to 100% for DFT-Prog and 90.6% for first Perm-Prog without any potentially harmful suggestions.</p>
+<p><b>Conclusion</b> The ICD implant-assistant, which allows the physician to programme ICDs directly from clinical data, is a promising method to simplify the programming of modern ICDs.</p>
+]]></description>
+<dc:creator>Diem, B. H., Lang, V., Sinha, A. M., Mlynski, M., Stellbrink, C., Ameling, W., Hanrath, P.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj028</dc:identifier>
+<dc:title><![CDATA[First multi-centre evaluation of a knowledge-based implant-assistant for implantable cardioverter-defibrillators]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>167</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>161</prism:startingPage>
+<prism:section>ICDS</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/168?rss=1">
+<title><![CDATA[Health-related quality of life of patients with implantable cardioverter defibrillators compared with that of pacemaker recipients]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/168?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> Studies indicate a poorer quality of life (QoL) for implantable cardioverter defibrillator (ICD) patients than for the general population. However, studies comparing the QoL of ICD patients with that of patients with other implantable cardiac devices are scarce. We hypothesized that ICD patients had a poorer QoL than pacemaker patients.</p>
+<p><b>Methods and results</b> All ICD patients living in Iceland at the beginning of 2002 (44 subjects), and a comparison group of 81 randomly selected patients with pacemakers were invited to participate. The Icelandic Quality of Life Questionnaire (IQL), the General Health Questionnaire (GHQ), the Beck Anxiety Inventory (BAI), and the Beck Depression Inventory (BDI) were submitted to measure QoL, psychiatric distress, and symptoms of anxiety and depression. The ICD and pacemaker groups did not differ on IQL, BAI, BDI, or GHQ scores. ICD patients were as a group more fearful of death (<I>P</I>=0.056) and showed more concerns about returning to work (<I>P</I>=0.072), although these items fell just short of statistical significance.</p>
+<p><b>Conclusion</b> Contrary to our expectations, ICD patients had a comparable QoL with pacemaker recipients and were not more likely to suffer from anxiety, depression, or general psychiatric distress. These findings are encouraging in view of expanding ICD indications.</p>
+]]></description>
+<dc:creator>Leosdottir, M., Sigurdsson, E., Reimarsdottir, G., Gottskalksson, G., Torfason, B., Vigfusdottir, M., Eggertsson, S., Arnar, D. O.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj052</dc:identifier>
+<dc:title><![CDATA[Health-related quality of life of patients with implantable cardioverter defibrillators compared with that of pacemaker recipients]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>174</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>168</prism:startingPage>
+<prism:section>ICDS</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/175?rss=1">
+<title><![CDATA[Detection of refrigerator-associated 60 Hz alternating current as ventricular fibrillation by an implantable defibrillator]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/175?rss=1</link>
+<description><![CDATA[
+<p>This report describes a patient with an implantable defibrillator who suffered an inappropriate defibrillation shock upon retrieving some food items from his inadequately earthed refrigerator. Noise typical of electrical interference can be observed in the stored electrogram of the episode. The patient was instructed to earth his home appliances, but he decided to avoid his refrigerator altogether, and has had no subsequent shocks.</p>
+]]></description>
+<dc:creator>Al Khadra, A. S., Al Jutaily, A., Al Shuhri, S.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj001</dc:identifier>
+<dc:title><![CDATA[Detection of refrigerator-associated 60 Hz alternating current as ventricular fibrillation by an implantable defibrillator]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>177</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>175</prism:startingPage>
+<prism:section>ICDS</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/178?rss=1">
+<title><![CDATA[Transient ST-segment-elevation during pulmonary vein ablation using circumferential coiled microelectrodes in a prospective multi-centre study]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/178?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> Paroxysmal atrial fibrillation (PAF) is predominantly triggered by focal ectopies located within the pulmonary veins (PV). The BITMAP Study (Breakthrough and Isolation Trial: Mapping and Ablation of Pulmonary Veins) investigated prospectively the safety and efficacy of a catheter design with circumferential mapping and ablation electrodes. We report the phenomenon of ST-segment-elevation during catheter placement in the left atrium (LA) and superior PVs in this multi-centre study.</p>
+<p><b>Methods and results</b> Forty-three patients (57&plusmn;10 years) with PAF were included in this study. Radiofrequency catheter (RFC) ablation supported by the 4F REVELATION Helix microcatheter (Cardima Inc., Freemont, CA, USA) with eight distal-coiled microelectrodes for bipolar mapping and ablation. RFC was applied at the ostial region of PV (30&nbsp;W, 45&ndash;50&deg;C) with a maximum of four RFC applications per electrode. In four of the 43 patients from three centres, we recorded the occurrence of ST-segment-elevation greater than 0.2&nbsp;mV and accompanying left thoracic discomfort. The ECG changes and the symptoms started abruptly and lasted for 4.2&plusmn;2.2&nbsp;min. Pericardial effusion could instantaneously be excluded by echocardiography in all cases. Coronary angiograms were performed in three patients with the longest episodes; no thrombotic material or air emboli were present. The symptoms and the ECG changes resolved completely in all patients.</p>
+<p><b>Conclusion</b> The phenomenon of ST-segment-elevation during LA- and PV-mapping in patients with PAF may be a common occurrence. In this prospective multi-centre trial, we demonstrated the reversibility of this phenomenon; no cardiovascular or cerebral damage was reported during both the procedure and the follow-up. Although the mechanism is still unclear, vasospasm may contribute to this phenomenon because of autonomic dysregulation.</p>
+]]></description>
+<dc:creator>Risius, T., Lewalter, T., Luderitz, B., Schwab, J. O., Spitzer, S., Schmitt, C., Vester, E., Rostock, T., Meinertz, T., Willems, S.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj013</dc:identifier>
+<dc:title><![CDATA[Transient ST-segment-elevation during pulmonary vein ablation using circumferential coiled microelectrodes in a prospective multi-centre study]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>181</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>178</prism:startingPage>
+<prism:section>ELECTROPHYSIOLOGY</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/182?rss=1">
+<title><![CDATA[Incidence, location, and cause of recovery of electrical connections between the pulmonary veins and the left atrium after pulmonary vein isolation]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/182?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> The aim of this study was to reveal the incidence, location, and cause of recovery of the electrical connections (ECs) between the left atrium and the pulmonary veins (PVs) after the segmental ostial PV isolation (PVI).</p>
+<p><b>Methods and results</b> Pulmonary vein mapping and successful PVI were performed using a computerized three-dimensional mapping system (QMS2<SUP><SMALL><SMALL>TM</SMALL></SMALL></SUP>) with a basket catheter in 167 PVs in 53 consecutive patients with atrial fibrillation (AF). In 14 patients with recurrent AF after PVI, the same PV mapping and isolation as in the first procedure were performed, and the PV potential maps constructed by QMS2 in two different procedures were compared. Forty-nine recovered ECs were observed in 27 PVs, and all were eliminated by a few local radiofrequency (RF) applications. Thirty-four (69%) of those ECs recovered at the edge of original ECs, and another 15 (31%) recovered at the mid-portion of the continuous broad original ECs.</p>
+<p><b>Conclusion</b> Electrical connection recovery occurred most commonly at the edges of original ECs and occasionally at the mid-portion of continuous broad original ECs after PVI probably due to tissue oedema neighbouring the segmental RF lesions. Further RF lesions at the edge of original ECs and linear ablation to the continuous broad ECs may help reduce AF recurrence.</p>
+]]></description>
+<dc:creator>Yamada, T., Murakami, Y., Okada, T., Okamoto, M., Shimizu, T., Toyama, J., Yoshida, Y., Tsuboi, N., Ito, T., Muto, M., Kondo, T., Inden, Y., Hirai, M., Murohara, T.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/eul002</dc:identifier>
+<dc:title><![CDATA[Incidence, location, and cause of recovery of electrical connections between the pulmonary veins and the left atrium after pulmonary vein isolation]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>188</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>182</prism:startingPage>
+<prism:section>ELECTROPHYSIOLOGY</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/189?rss=1">
+<title><![CDATA[Atrio-oesophageal fistula following circumferential pulmonary vein ablation: verification of diagnosis with multislice computed tomography]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/189?rss=1</link>
+<description><![CDATA[(No abstract is available for this citation)]]></description>
+<dc:creator>Schley, P., Gulker, H., Horlitz, M.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj050</dc:identifier>
+<dc:title><![CDATA[Atrio-oesophageal fistula following circumferential pulmonary vein ablation: verification of diagnosis with multislice computed tomography]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>190</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>189</prism:startingPage>
+<prism:section>ELECTROPHYSIOLOGY</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/191?rss=1">
+<title><![CDATA[Development of thrombus on a transseptal sheath in the left atrium during attempted electrical pulmonary vein isolation for the treatment of paroxysmal atrial fibrillation]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/191?rss=1</link>
+<description><![CDATA[(No abstract is available for this citation)]]></description>
+<dc:creator>Okuyama, Y., Kashiwase, K., Mizuno, H., Oka, T., Takeda, Y., Komatsu, S., Hirayama, A., Kodama, K.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj049</dc:identifier>
+<dc:title><![CDATA[Development of thrombus on a transseptal sheath in the left atrium during attempted electrical pulmonary vein isolation for the treatment of paroxysmal atrial fibrillation]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>192</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>191</prism:startingPage>
+<prism:section>ELECTROPHYSIOLOGY</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/193?rss=1">
+<title><![CDATA[Fluoxetine vs. propranolol in the treatment of vasovagal syncope: a prospective, randomized, placebo-controlled study]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/193?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> To compare the therapeutic efficacy of placebo, propranolol, and fluoxetine in patients with vasovagal syncope (VVS).</p>
+<p><b>Methods and results</b> Ninety-six consecutive patients with VVS were randomized to treatment with placebo, propranolol, or fluoxetine and followed-up for 6 months. Before and during treatment, they reported their syncopal and presyncopal episodes and graded their well-being, expressed as the general evaluation of life, general activities, and everyday activities (each scaled from 1=very good to 5=very bad). Two patients refused follow-up. Among the remaining 94, no difference between groups was observed regarding the distribution of time of vasovagal events (syncopes or presyncopes) during follow-up (log-rank test). No difference was also observed when syncopes and presyncopes were assessed separately. Eighteen patients discontinued therapy. Among the remaining 76 (&lsquo;on-treatment&rsquo; analysis), the mean time to a vasovagal episode (syncope or presyncope) was significantly longer in the fluoxetine group when compared with the two other groups (log-rank test, <I>P</I>&lt;0.05). A significant difference in favour of fluoxetine was also observed regarding presyncopes. The difference between groups regarding the syncope-free period was not significant. During therapy, patients' well-being was improved (decreased) only in the fluoxetine-group (13.4&plusmn;0.7 vs. 15.4&plusmn;0.9 before treatment, <I>P</I>&lt;0.01).</p>
+<p><b>Conclusion</b> Fluoxetine seems to be equivalent to propranolol and placebo in the treatment of VVS. However, it improves patients' well-being and might be more effective in reducing presyncopes and total vasovagal events in some patients with recurrent VVS.</p>
+]]></description>
+<dc:creator>Theodorakis, G. N., Leftheriotis, D., Livanis, E. G., Flevari, P., Karabela, G., Aggelopoulou, N., Kremastinos, D. Th.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj041</dc:identifier>
+<dc:title><![CDATA[Fluoxetine vs. propranolol in the treatment of vasovagal syncope: a prospective, randomized, placebo-controlled study]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>198</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>193</prism:startingPage>
+<prism:section>SYNCOPE</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/199?rss=1">
+<title><![CDATA[Cerebrovascular blood flow during the near syncopal phase of head-up tilt test: a comparative study in different types of neurally mediated syncope]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/199?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> This study analyses the changes in cerebral blood flow (CBF) velocity occurring in the near syncopal phase of head-up tilt test (HUT) to determine whether their appearance during the premonitory symptoms permits the differentiation of the different types of haemodynamic response.</p>
+<p><b>Methods and results</b> Six hundred and nineteen patients aged 35.9&plusmn;16.4 with a prior history of syncope (55%) or presyncope (45%) were studied. Head-up tilt test was positive in 585 patients. The test was interrupted before syncope, once hypotension was evident and CBF changed. A vasovagal reaction (VVR) was observed in 245 patients. They had a 59% fall in diastolic CBF velocity, whereas systolic CBF velocity decreased by 12%. Postural orthostatic tachycardia syndrome (POTS) was observed in 82, systolic and diastolic CBF velocity decreased 44 and 60%, respectively. A similar response was observed in 258 patients with the orthostatic intolerance (OI) pattern. No significant changes were observed in the negative group.</p>
+<p><b>Conclusion</b> Patients with VVR had changes in CBF velocity, which are different from those presented by patients with POTS and OI pattern. Cerebral blood flow monitoring is useful to increase the yield of HUT and may allow early interruption before syncope occurs, reducing patient discomfort.</p>
+]]></description>
+<dc:creator>Hermosillo, A. G., Jordan, J. L., Vallejo, M., Kostine, A., Marquez, M. F, Cardenas, M.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/eul001</dc:identifier>
+<dc:title><![CDATA[Cerebrovascular blood flow during the near syncopal phase of head-up tilt test: a comparative study in different types of neurally mediated syncope]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>203</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>199</prism:startingPage>
+<prism:section>SYNCOPE</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/204?rss=1">
+<title><![CDATA[Onset mechanism of paroxysmal atrial fibrillation detected by ambulatory Holter monitoring]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/204?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> The aim of this study was to evaluate the mechanisms of induction of paroxysmal atrial fibrillation (PAF) by analysis of its onset recorded on Holter monitoring (HM).</p>
+<p><b>Methods and results</b> One hundred and seven HM were evaluated in 90 patients (mean age 67.7, cardiac disease in 31.1%), with one or more self-terminating episodes of PAF, lasting &ge;30&nbsp;s. Two hundred and thirty-three episodes of PAF were detected. A triggering premature atrial complex (PAC) was present in 222/233 episodes (95.3%); 118/233 episodes were preceded by a bradyarrhythmic event (BE) or a post-extrasystolic pause (50.6%). According to the polarity of the ectopic P-wave, triggering PACs were left atrial origin in 74.3%, right atrial in 15.3%, not determined in 10.4% of cases. Coupling interval (CI) of triggering PACs was shorter in episodes preceded by BEs; it was shorter than that of non-triggering PACs. Frequency of PACs was significantly higher in the hour preceding the onset of PAF. During the day, three periods of higher frequency of PAF onsets were found from noon to 2 p.m., 6 p.m. to 2 a.m., and 4a.m. to 6 a.m. Heart rate variability analysis showed a vagal prevalence in the 5&nbsp;min preceding the onset of arrhythmia, both in the time and in the frequency domain.</p>
+<p><b>Conclusion</b> Paroxysmal atrial fibrillation is generally triggered by a PAC, with left atrial origin in two-thirds of cases: CI and neuroendocrine balance are factors affecting the induction of the arrhythmia.</p>
+]]></description>
+<dc:creator>Vincenti, A., Brambilla, R., Fumagalli, M. G., Merola, R., Pedretti, S.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj043</dc:identifier>
+<dc:title><![CDATA[Onset mechanism of paroxysmal atrial fibrillation detected by ambulatory Holter monitoring]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>210</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>204</prism:startingPage>
+<prism:section>ATRIAL FIBRILLATION</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/211?rss=1">
+<title><![CDATA[Utility of adjunctive single oral bolus propafenone therapy in patients with atrial defibrillators]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/211?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> Previous studies have demonstrated that ambulatory atrial defibrillation shocks delivered by an implantable cardioverter-defibrillator (ICD) are safe and effective, but poorly tolerated. Separate studies have demonstrated the utility of single oral bolus propafenone for conversion of recent-onset atrial fibrillation (AF); however, most patients were hospitalized, had no structural heart disease, were taking no other antiarrhythmic drugs, and were not exposed to concomitant shock. We hypothesized that a single oral bolus dose of propafenone given early after onset would be a safe and effective adjunct to ICD-based AF therapy and improve overall therapy tolerance.</p>
+<p><b>Methods and results</b> A randomized three-way crossover study design was used to compare three strategies, deployed in the ambulatory setting early after AF episode onset in 35 ICD patients with advanced, drug refractory episodic/persistent syndromes, many of whom had structural heart disease and were taking other antiarrhythmic drugs: (i) single oral bolus propafenone (600&nbsp;mg), followed by ICD shock if necessary; (ii) single oral bolus placebo, followed by ICD shock if necessary; and (iii) no oral bolus therapy and ICD shock if necessary (no bolus). Antiarrhythmic efficacy, defined by the restoration of sinus rhythm within 24&nbsp;h, was similar during propafenone (81%) and no-bolus strategies (84%); both were significantly higher than during placebo strategy (62%). Propafenone was well tolerated and not associated with proarrhythmia. Shock use was significantly lower during propafenone strategy (19%) than during no-bolus strategy (55%); this was correlated with improved patient tolerance.</p>
+<p><b>Conclusion</b> Adjunctive use of single oral bolus propafenone is safe and effective in patients with an ICD and improves patient tolerance of device-based AF therapy.</p>
+]]></description>
+<dc:creator>Schwartzman, D., Harvey, M. N., Hoyt, R. H., Koehler, J. L., Ujhelyi, M. R., Euler, D. E.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj051</dc:identifier>
+<dc:title><![CDATA[Utility of adjunctive single oral bolus propafenone therapy in patients with atrial defibrillators]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>215</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>211</prism:startingPage>
+<prism:section>ATRIAL FIBRILLATION</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/216?rss=1">
+<title><![CDATA[Role of ventricular autocapture function in increasing longevity of DDDR pacemakers: a prospective study]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/216?rss=1</link>
+<description><![CDATA[
+<p><b>Aims</b> Autocapture is an algorithm for automatic adaptation of ventricular output to capture threshold. The aim of this prospective study was to estimate the effects of ventricular Autocapture algorithm on DDD&ndash;DDDR pacemaker longevity.</p>
+<p><b>Methods and results</b> Eighty-three patients implanted with a DDD&ndash;DDDR pacemaker (Affinity or Entity; St Jude Medical, USA) were enrolled and the Autocapture function was activated pre-discharge. Ventricular pulse duration was randomly programmed at 0.3 or 0.4&nbsp;ms, with a cross-over at 8&ndash;12 weeks and again at 13&ndash;14 months. Diagnostic data were retrieved from device memory and by calculating battery current drain from long-term threshold recordings; device longevity was estimated at the following settings: Autocapture with a pulse duration of 0.3 and 0.4&nbsp;ms, respectively, standard output (3.5&nbsp;V, 0.4&nbsp;ms) and conventional low output programming (2.5&nbsp;V, 0.4&nbsp;ms). According to a series of assumptions, Autocapture was associated with a 55&ndash;60% increase in estimated device longevity compared with standard output programming and a 6&ndash;7% increase in longevity compared with low output programming. No significant differences were found between Autocapture programmed with a pulse duration of 0.3 or 0.4&nbsp;ms. In projections to a 10-year follow-up, use of the Autocapture function resulted in a 42% reduction in pacing-related estimated costs compared with standard output programming at 3.5&nbsp;V, 0.4&nbsp;ms.</p>
+<p><b>Conclusion</b> Pacing with constant adaptation of ventricular output in dual-chamber devices has the potential to increase generator longevity and to reduce sizeably pacing-related costs compared with standard programming.</p>
+]]></description>
+<dc:creator>Boriani, G., Rusconi, L., Biffi, M., Pavia, L., Sassara, M., Malfitano, D., Bongiorni, M. G., Padeletti, L., Filice, I., Sanfelici, D., Maffei, P., Vicentini, A., Branzi, A., on behalf of Autocapture Study Group</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj027</dc:identifier>
+<dc:title><![CDATA[Role of ventricular autocapture function in increasing longevity of DDDR pacemakers: a prospective study]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>220</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>216</prism:startingPage>
+<prism:section>PACING</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/221?rss=1">
+<title><![CDATA[Complete atrioventricular block associated with toxoplasma myocarditis]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/221?rss=1</link>
+<description><![CDATA[
+<p>Myocarditis has been described during and after a wide variety of infectious agents: viral, rickettsial, bacterial, protozoal, and metazoal diseases may cause cardiac inflammation. We report a case of toxoplasma myocarditis in a young healthy man.</p>
+]]></description>
+<dc:creator>Mariani, M., Pagani, M., Inserra, C., De Servi, S.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/euj046</dc:identifier>
+<dc:title><![CDATA[Complete atrioventricular block associated with toxoplasma myocarditis]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>223</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>221</prism:startingPage>
+<prism:section>PACING</prism:section>
+</item>
+
+<item rdf:about="http://europace.oxfordjournals.org/cgi/content/short/8/3/224?rss=1">
+<title><![CDATA[Determination of the spatial orientation and shape of pulmonary vein ostia by contrast-enhanced magnetic resonance angiography]]></title>
+<link>http://europace.oxfordjournals.org/cgi/content/short/8/3/224?rss=1</link>
+<description><![CDATA[(No abstract is available for this citation)]]></description>
+<dc:creator>van der Voort, P. H., van den Bosch, H., Post, J. C., Meijer, A.</dc:creator>
+<dc:date>2006-02-21</dc:date>
+<dc:identifier>info:doi/10.1093/europace/eul004</dc:identifier>
+<dc:title><![CDATA[Determination of the spatial orientation and shape of pulmonary vein ostia by contrast-enhanced magnetic resonance angiography]]></dc:title>
+<dc:publisher>European Heart Rhythm Association of the European Society of Cardiology (ESC) </dc:publisher>
+<prism:number>3</prism:number>
+<prism:volume>8</prism:volume>
+<prism:endingPage>224</prism:endingPage>
+<prism:publicationDate>2006-03-01</prism:publicationDate>
+<prism:startingPage>224</prism:startingPage>
+<prism:section>ERRATUM</prism:section>
+</item>
+
+</rdf:RDF>

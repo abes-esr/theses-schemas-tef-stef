@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Essai</title>
+    <script src="http://simile.mit.edu.nyud.net:8080/timeline/api/timeline-api.js" type="text/javascript"></script>
+  </head>
+    <body onload="onLoad();" onresize="onResize();">
+    <script type="text/javascript">
+var tl;
+function onLoad() {
+ var eventSource = new Timeline.DefaultEventSource();
+  var bandInfos = [
+    Timeline.createBandInfo({
+	eventSource:    eventSource,
+        date:           "Jan 28 1228 00:00:00 GMT",
+        width:          "80%", 
+        intervalUnit:   Timeline.DateTime.YEAR, 
+        intervalPixels: 100
+    }),
+    Timeline.createBandInfo({
+	eventSource:    eventSource,
+        date:           "Jun 28 1300 00:00:00 GMT",
+        width:          "20%", 
+        intervalUnit:   Timeline.DateTime.CENTURY, 
+        intervalPixels: 200
+    })
+  ];
+  bandInfos[1].syncWith = 0;
+  bandInfos[1].highlight = true;
+  var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
+   Timeline.loadXML("./example1.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+}
+
+var resizeTimerID = null;
+function onResize() {
+    if (resizeTimerID == null) {
+        resizeTimerID = window.setTimeout(function() {
+            resizeTimerID = null;
+            tl.layout();
+        }, 500);
+    }
+}
+    </script>
+    <h1>Frise chronologique des actes du <a href="http://elec.enc.sorbonne.fr/cartulaireblanc/tremblay/">chapitre de Tremblay-en-France</a> du <a href="http://elec.enc.sorbonne.fr/cartulaireblanc/">Cartulaire blanc</a></h1>
+    <p>Cette frise est obtenue à partir des données encodées en TEI et l'outil <a href="http://simile.mit.edu/timeline/">Timeline</a> du projet <a href="http://simile.mit.edu/">Simile</a></p>
+    <p>Cette page ne représente qu'un test (cf. le billet : <a href="http://www.lespetitescases.net/le-rdf-avenir-du-patrimoine-sur-le-web-y">le RDF, avenir du patrimoine sur le Web</a>.</p>
+    <p>Vous pouvez cliquer sur les titres des actes pour visualiser le résumé de l'acte et les personnes qui y sont citées.</p>
+    <div id="my-timeline" style="height: 500px; border: 1px solid #aaa;margin-top:100px;" />
+  </body>
+</html>

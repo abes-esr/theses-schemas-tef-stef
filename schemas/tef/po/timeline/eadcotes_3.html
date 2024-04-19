@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META name="description" content="Cotes du Museum">
+<link rel='stylesheet' href='styles.css' type='text/css' />
+
+
+<title>Cotes  du Museum</title>
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.daden.co.uk/index.rdf" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://www.daden.co.uk/atom.xml" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.daden.co.uk/rsd.xml" />
+
+<script>
+   var category="pages";
+</script>
+
+<script src="http://simile.mit.edu/timeline/api/timeline-api.js" type="text/javascript"></script>
+
+
+
+</head>
+
+<body onload="onLoad();" onresize="onResize();">
+
+<script>
+function onLoad() {
+  var eventSource = new Timeline.DefaultEventSource();
+  
+  var theme = Timeline.ClassicTheme.create();
+	    theme.event.label.width = 450; // px
+            theme.event.bubble.width = 320;
+            theme.event.bubble.height = 220;
+  
+  var bandInfos = [
+    Timeline.createBandInfo({
+        eventSource:    eventSource,
+        width:          "80%", 
+        intervalUnit:   Timeline.DateTime.YEAR, 
+        intervalPixels: 35
+    }),
+    Timeline.createBandInfo({
+        eventSource:    eventSource,
+        showEventText:  false,
+        trackHeight:    0.5,
+        trackGap:       0.2,
+        width:          "20%", 
+        intervalUnit:   Timeline.DateTime.CENTURY, 
+        intervalPixels: 200
+    })
+  ];
+  bandInfos[1].syncWith = 0;
+  bandInfos[1].highlight = true;
+  bandInfos[1].eventPainter.setLayout(bandInfos[0].eventPainter.getLayout());
+  
+  var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
+  Timeline.loadXML("museum_cotes.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+}
+</script>
+
+
+<div>
+
+<div>
+
+<div>
+
+
+    <h1>Cotes du Museum</h1>
+    <p>Sources: fichier EAD Museum</p>
+<div id="my-timeline" style="height: 1500px; border: 1px solid #aaa"></div>
+
+<div style="width: 100%">
+        <table style="text-align: center; width: 100%">
+            <tr>
+                <td><a href="javascript:centerTimeline(0);">0</a></td>
+                <td><a href="javascript:centerTimeline(10);">10</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+</div></div></div>
+
+
+
+
+
+<br clear="all" />
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Contraintes et m&eacute;thode</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="introduction.html" title="Introduction">
+      <link rel="prev" href="metadonnees_descriptives_et_gestion.html" title="M&eacute;tadonn&eacute;es descriptives et m&eacute;tadonn&eacute;es de gestion">
+      <link rel="next" href="validation_maximale.html" title="Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 1.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Contraintes et m&eacute;thode</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="metadonnees_descriptives_et_gestion.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Introduction</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="validation_maximale.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="chapter" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="contraintes_et_methode"></a>Contraintes et m&eacute;thode
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <div class="toc">
+            <p><b>Table des mati&egrave;res</b></p>
+            <dl>
+               <dt><span class="sect1"><a href="contraintes_et_methode.html#description_riche">Conserver une description aussi riche que la description actuelle dans la Bibliographie nationale des th&egrave;ses, le catalogue
+                        Sudoc</a></span></dt>
+               <dt><span class="sect1"><a href="validation_maximale.html">Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes</a></span></dt>
+               <dt><span class="sect1"><a href="compatibilte_dc.html">Etre compatible avec le Dublin Core</a></span></dt>
+            </dl>
+         </div>
+         <p>Le signalement des th&egrave;ses doit ob&eacute;ir &agrave; des objectifs et des contraintes parfois contradictoires. Il s&#8217;agit de trouver un compromis
+            entre un signalement minimal mais largement partag&eacute; sur Internet (notamment via le protocole OAI-PMH<a href="glossaire.html#GlossOAI">**</a> qui exige <span class="emphasis"><em>a minima</em></span> une description en Dublin Core simple<a href="glossaire.html#GlossDCsimple">**</a>) et le signalement plus riche qui convient &agrave; la bibliographie nationale des th&egrave;ses fran&ccedil;aises, int&eacute;gr&eacute;e dans le catalogue
+            Sudoc. En d&#8217;autres termes, au-del&agrave; des formats (XML ou ISO 2709), il s&#8217;agit de trouver un compromis entre d'une part le vocabulaire
+            Dublin Core et d'autre part les normes bibliographiques internationales et nationales (ISBD, AFNOR), les r&egrave;gles de description
+            des th&egrave;ses du r&eacute;seau Sudoc qui suivent et pr&eacute;cisent ces normes et enfin le format UNIMARC qui les encode.
+         </p>
+         <p></p>
+         <p>La solution adopt&eacute;e par cette recommandation est de r&eacute;utiliser, de compl&eacute;ter et d&#8217;adapter le vocabulaire Dublin Core en visant
+            les trois objectifs qui suivent&nbsp;:
+         </p>
+         <p></p>
+         <div class="sect1" lang="fr">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both"><a name="description_riche"></a>Conserver une description aussi riche que la description actuelle dans la Bibliographie nationale des th&egrave;ses, le catalogue
+                        Sudoc
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <p>Gr&acirc;ce &agrave; cet objectif, les notices TEF pourront sans perte &ecirc;tre converties en notices de th&egrave;se Sudoc et inversement. C'est
+               ce que permet la correspondance TEF/Unimarc int&eacute;gr&eacute;e au vocabulaire TEF<a href="glossaire.html#GlossTEFvoc">**</a>, mais aussi les programmes de transformation XSLT disponibles aux adresses qui suivent :
+            </p>
+            <p>
+               					
+            </p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p>
+                        								<a href="apreciser" target="_top">&agrave; pr&eacute;ciser</a>
+                        							
+                     </p>
+                  </li>
+                  <li>
+                     <p>
+                        								<a href="apreciser" target="_top">&agrave; pr&eacute;ciser</a>
+                        							
+                     </p>
+                  </li>
+               </ul>
+            </div>
+            <p>
+               				
+            </p>
+            <p>Quand les &eacute;l&eacute;ments Dublin Core ne suffisent pas &agrave; produire une description bibliographique aussi riche que souhait&eacute;e, TEF
+               emprunte des &eacute;l&eacute;ments &agrave; d&#8217;autres vocabulaires (ou "espaces de noms"). C&#8217;est le cas des &eacute;l&eacute;ments qui contiennent des donn&eacute;es
+               propres aux th&egrave;ses (&eacute;l&eacute;ments enfants de <span class="bold"><strong>
+                     						<a href="thesis_degree.html" title="thesis.degree">thesis.degree</a>
+                     					</strong></span>), des &eacute;l&eacute;ments qui qualifient <span class="bold"><strong>
+                     						<a href="dc_contributor.html" title="dc.contributor">dc.contributor</a>
+                     					</strong></span> en fonction des r&ocirc;les (&eacute;l&eacute;ments enfants de <span class="bold"><strong>
+                     						<a href="dc_contributor.html" title="dc.contributor">dc.contributor</a>
+                     					</strong></span> commen&ccedil;ant par "marc.") ou des &eacute;l&eacute;ments qui contiennent des donn&eacute;es d&#8217;autorit&eacute; (enfants de <span class="bold"><strong>
+                     						<a href="MADSAuthority.html" title="MADSAuthority">MADSAuthority</a>
+                     					</strong></span>). Le cas des qualificatifs de raffinement de <span class="bold"><strong>
+                     						<a href="dc_contributor.html" title="dc.contributor">dc.contributor</a>
+                     					</strong></span> est un peu particulier puisque le recours &agrave; ces &eacute;l&eacute;ments &eacute;trangers au Dublin Core est envisag&eacute;, voire recommand&eacute;, par diff&eacute;rentes
+               instances du DCMI<a href="glossaire.html#GlossDCMI">**</a>. Il s'agit d'utiliser des &eacute;l&eacute;ments MARC<sup>[<a name="d0e469" href="#ftn.d0e469">6</a>]</sup> pour qualifier un &eacute;l&eacute;ment Dublin Core.
+            </p>
+            <p>Dans certains cas, TEF a cr&eacute;&eacute; des &eacute;l&eacute;ments nouveaux, qui ne proviennent d&#8217;aucun espace de noms pr&eacute;existant, ni du Dublin Core
+               ni d&#8217;un autre.
+            </p>
+            <p></p>
+         </div>
+         <div class="footnotes"><br><hr width="100" align="left">
+            <div class="footnote">
+               <p><sup>[<a name="ftn.d0e469" href="#d0e469">6</a>] </sup>
+                  							<span class="emphasis"><em>MARC [21 ] Relators Codes</em></span> list&eacute;s &agrave; l'adresse suivante :<a href="http://www.loc.gov/marc/relators/relators.html" target="_top">http://www.loc.gov/marc/relators/relators.html</a>. Comme les &eacute;l&eacute;ments de cette liste qui sont repris dans TEF figurent aussi parmi les codes de fonction UNIMARC, ces &eacute;l&eacute;ments
+                  seront pr&eacute;fix&eacute;s par "marc.". 
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="metadonnees_descriptives_et_gestion.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="introduction.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="validation_maximale.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">M&eacute;tadonn&eacute;es descriptives et m&eacute;tadonn&eacute;es de gestion&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

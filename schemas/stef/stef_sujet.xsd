@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.theses.fr/namespace/sujets" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tef="http://www.abes.fr/abes/documents/tef" targetNamespace="http://www.theses.fr/namespace/sujets" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="vie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="soutenancePrevue" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="datePrevue"/>
+							<xs:element ref="heurePrevue" minOccurs="0"/>
+							<xs:element ref="lieuPrevu" minOccurs="0"/>
+							<xs:element ref="publiciteSoutenance" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="dateAbandon" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="derogationDixAns"/>
+			<xs:attribute name="commentDixAns"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="datePrevue"/>
+	<xs:element name="heurePrevue"/>
+	<xs:element name="lieuPrevu"/>
+	<xs:element name="publiciteSoutenance"/>
+	<xs:element name="dateAbandon"/>
+	<xs:group name="inscritpion">
+		<xs:sequence>
+			<xs:element ref="datePremiereInscriptionDoctorat"/>
+			<xs:element ref="dateInscriptionEtab"/>
+			<xs:element ref="contratDoctoral" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:element name="datePremiereInscriptionDoctorat"/>
+	<xs:element name="dateInscriptionEtab"/>
+	<xs:element name="contratDoctoral"/>
+	<xs:group name="cifre">
+		<xs:sequence>
+			<xs:element name="cifre" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="adresse">
+		<xs:sequence>
+			<xs:element name="adresseDoctorant"/>
+			<xs:element name="codePostalDoctorant"/>
+			<xs:element name="villeAdresseDoctorant"/>
+			<xs:element name="paysAdresseDoctorant"/>
+			<xs:element name="telephoneDoctorant" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+</xs:schema>

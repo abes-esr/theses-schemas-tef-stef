@@ -1,0 +1,54 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"> 
+<title>Minimal Yann XMLSpyDocEditPlugIn page</title> 
+    
+    <!-- Script for handling the ControlInitialized event --> 
+    <SCRIPT LANGUAGE="javascript" FOR=objPlugIn EVENT="ControlInitialized"> 
+       objPlugIn.SchemaLoadObject.URL = "docbookx.dtd" 
+       objPlugIn.XMLDataLoadObject.URL = "authentef.xml" 
+       objPlugIn.DesignDataLoadObject.URL = "DocBook.sps" 
+       objPlugIn.StartEditing() 
+</SCRIPT> 
+
+    <!-- Script with subroutines --> 
+<SCRIPT ID=clientEventHandlers LANGUAGE=vbscript> 
+Sub OnClickFind 
+       objPlugIn.FindDialog 
+End Sub 
+
+Sub OnClickReplace 
+       objPlugIn.ReplaceDialog 
+End Sub 
+
+Sub BtnOnSave 
+       objPlugIn.XMLDataSaveUrl = "http://www.abes.fr/abes/documents/TEF/authentic/SaveFile.xml" 
+       objPlugIn.Save 
+End Sub 
+
+Sub BtnOnTestProp 
+       If objPlugIn.IsRowInsertEnabled Then 
+             msgbox "true" 
+       Else 
+             msgbox "false" 
+       End If 
+End Sub 
+</SCRIPT> 
+</head> 
+
+<body> 
+    <!-- Object element has id with value that must be used --> 
+    <!-- as name of Authentic Browser Plug-in objects --> 
+    <!-- Classid selects the Trusted Unicode version --> 
+<OBJECT id=objPlugIn 
+    CodeBase="http://www.abes.fr/abes/documents/TEF/authentic/AuthenticBrowserEdition.cab#Version=7,0,1,0" 
+    Classid=clsid:B4628728-E3F0-44a2-BEC8-F838555AE780 width="1200" height="1050"> 
+</OBJECT> 
+<p> 
+<input type="button" value="Find" name="B4" onclick="OnClickFind()"> 
+<input type="button" value="Replace" name="B5" onclick="OnClickReplace()"> 
+<input type="button" value="Save" name="B6" onclick="BtnOnSave()"> 
+<input type="button" value="Test property" name="B7" onclick="BtnOnTestProp"> 
+</p> 
+</body> 
+</html> 

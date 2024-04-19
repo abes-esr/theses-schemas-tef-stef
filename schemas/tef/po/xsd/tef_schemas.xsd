@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 	Schéma de base TEF, qui appelle tous les autres schémas, soit directement, soit indirectement.
+	L'espace de noms de ce schéma est mets, puisque la racine d'une notice TEF est mets:mets.
+	
+	Ce schéma appelle :
+		- un schéma qui rassemble tous les schémas proprement TEF.
+		- le schéma metsRights
+		- le schéma METS (version 1.5)
+	-->
+<xs:schema targetNamespace="http://www.loc.gov/METS/" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" xmlns="http://www.loc.gov/METS/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tef="http://www.abes.fr/abes/documents/tef"
+	xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/"
+	xmlns:dcterms="http://purl.org/dc/terms/">
+	<xs:import namespace="http://www.abes.fr/abes/documents/tef" schemaLocation="tef_schemas_TEF.xsd "/>
+	<xs:import namespace="http://cosimo.stanford.edu/sdr/metsrights/" schemaLocation="metsrights.xsd"/>
+	<xs:include schemaLocation="mets1.5.xsd"/>
+	<xs:element name="mets" type="metsType"></xs:element>
+</xs:schema>

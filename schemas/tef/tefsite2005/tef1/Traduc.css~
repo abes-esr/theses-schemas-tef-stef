@@ -1,0 +1,249 @@
+body    {
+	font-family: Apolline,"Palatino Linotype",Garamond,jGaramond,UnBatang,"Bitstream Cyberbit",serif;
+	font-size: medium;
+	margin: 2%;
+	margin-top: 0%;
+	background-color: rgb(236, 231, 246);
+}
+div.book    {
+	margin-right: 12%;
+	margin-left: 12%;
+}
+
+div.part    {
+	margin-right: 12%;
+	margin-left: 12%;
+}
+
+div.chapter   {
+	margin-right: 12%;
+	margin-left: 12%;
+}
+div.sect1   {
+	margin-right: 12%;
+	margin-left: 12%;
+}
+div.chapter div.sect1   {
+	margin-right: 0%;
+	margin-left: 0%;
+}
+
+div.informaltable    {
+	border: 1;
+	width :100%
+}
+
+
+A:visited    {
+	background-color: inherit;
+	color: rgb(102, 0, 102);
+	text-decoration: none;
+}
+
+A:link    {
+	background-color: inherit;
+	color: rgb(0, 0, 153);
+	text-decoration: none;
+}
+
+div.toc    {
+	padding: 2%;
+	background-color: rgb(218, 204, 204);
+}
+
+h2.subtitle    {
+	margin-right: 0%;
+	margin-left: 0%;
+	margin-bottom: 0%;
+	background-color: rgb(228, 224, 236);
+}
+div.book h2.subtitle    {
+	margin-right: 0%;
+	margin-left: 0%;
+	margin-bottom: 0%;
+	background-color: rgb(236, 231, 246);
+}
+div.navheader    {
+	margin-right: 0%;
+	margin-left: 0%;
+	background-color: rgb(228, 224, 236);
+}
+
+div.navheader th    {
+	background-color: inherit;
+	color: rgb(228, 224, 236);
+}
+
+div.navheader th[width="60%"]    {
+	color: rgb(77, 77, 63);
+}
+
+hr    {
+	color: rgb(236, 231, 246);
+	margin-top: 0%;
+}
+
+p.othercredit  {
+	text-align: center;
+	font-weight: bold;
+	font-size: medium;
+}
+h3.corpauthor  {
+	text-align: center;
+	font-weight: bold
+}
+span.date {
+	text-align: center;
+}
+p.edition {
+	text-align: center;
+}
+p.releaseinfo {
+	color: rgb(255,0,0) ;
+}
+div.navfooter    {
+	margin-right: 0%;
+	margin-left: 0%;
+	margin-top: 1%;
+	background-color: rgb(228, 224, 236);
+	color: rgb(77, 77, 63);
+}
+div.navfooter div.table{
+	width: 100%;
+}
+
+body    {
+	font-family: Apolline,"Palatino Linotype",Garamond,jGaramond,UnBatang,"Bitstream Cyberbit",serif;
+	margin: 0%;
+	margin-top: 0%;
+	background-color: rgb(236, 231, 246);
+}
+
+
+
+div.titlepage    {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+
+
+/* Taille du texte */
+/* Text size */
+*    {
+	font-size: 100%;
+}
+
+/* Gestion des textes mis en relief imbriqu�s */
+/* Embedded emphasis */
+em    {
+	font-style: italic;
+}
+
+i    {
+	font-style: italic;
+}
+
+em em    {
+	font-style: normal;
+}
+
+i i    {
+	font-style: normal;
+}
+
+i em    {
+	font-style: normal;
+}
+
+em i    {
+	font-style: normal;
+}
+
+em em em    {
+	font-style: italic;
+}
+
+em em i    {
+	font-style: italic;
+}
+
+em i em    {
+	font-style: italic;
+}
+
+em i i    {
+	font-style: italic;
+}
+
+i em em    {
+	font-style: italic;
+}
+
+i em i    {
+	font-style: italic;
+}
+
+i i em    {
+	font-style: italic;
+}
+
+i i i    {
+	font-style: italic;
+}
+
+/* Titres */
+/* Titles */
+h1    {
+	font-size: 200%;
+	font-weight: 900;
+	text-align: center;
+	color: rgb(112, 128, 144);
+}
+
+h2    {
+	font-size: 160%;
+	font-weight: 900;
+	text-align: center;
+	color: rgb(112, 128, 144);
+}
+
+h3    {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+h4    {
+	font-size: 115%;
+	font-weight: bold;
+}
+
+h5    {
+	font-size: 108%;
+	font-weight: bold;
+}
+
+h6    {
+	font-weight: bold;
+}
+
+/* Nom de famille en petites majuscules (uniquement en fran�ais) */
+/* Last names in small caps (for French only) */
+*[class~="surname"]:lang(fr)    {
+	font-variant: small-caps;
+}
+
+/* Programmes et captures texte�: fond bleu clair */
+/* Listing and text screen snapshots: light blue background */
+
+pre.programlisting   {
+	background-color: rgb(228, 224, 236);
+	padding: 5px;
+	margin: 15px;
+}
+
+
+
+
+
+

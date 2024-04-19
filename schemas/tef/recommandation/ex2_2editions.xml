@@ -1,0 +1,162 @@
+<?xml version="1.0" standalone="no"?>
+<!--<?oxygen SCHSchema="regles.sch"?>-->
+<mets:mets xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:mets="http://www.loc.gov/METS/"
+	xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:mads="http://www.loc.gov/mads/" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/
+	tef_schemas.xsd">
+<!-- Exemple de notice TEF :
+	Une édition XML pour l'archivage et une édition HTML pour la diffusion. 
+	Les deux éditions contiennent la version complète de la thèse. 
+-->
+	<mets:dmdSec ID="a111">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_these">
+			<mets:xmlData>
+				<tef:thesisRecord>
+					<dc:title xml:lang="fr">Modélisation numérique temporelle d'un contact frottant. Mise en
+						évidence d'instabilités locales de contact - Conséquences tribologiques</dc:title>
+					<dc:subject xml:lang="fr">contact</dc:subject>
+					<dc:subject xml:lang="fr">instabilités</dc:subject>
+					<dc:subject xml:lang="fr">frottement</dc:subject>
+					<dc:subject xml:lang="fr">éléments finis</dc:subject>
+					<dc:subject xml:lang="fr">dynamique</dc:subject>
+					<dcterms:abstract xml:lang="fr">Le contact avec frottement de deux corps peut (...)
+						l'interface. </dcterms:abstract>
+					<dcterms:abstract xml:lang="en">The contact with friction pressure (...) are different
+						from one regime to another.</dcterms:abstract>
+					<dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
+					<dc:type>Electronic Thesis or Dissertation</dc:type>
+					<dc:language xsi:type="dcterms:RFC3066">FR</dc:language>
+				</tef:thesisRecord>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="xx311">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">text/xml</dcterms:medium>
+					<dcterms:extent>1 : 1 Mo</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI">http://docinsa.insa-lyon.fr/these/pont.php?id=linck</dc:identifier>
+					<dcterms:issued>2005-09-03</dcterms:issued>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:dmdSec ID="xx911">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_edition">
+			<mets:xmlData>
+				<tef:edition>
+					<dcterms:medium xsi:type="dcterms:IMT">text/html</dcterms:medium>
+					<dcterms:extent>1 : 1 Mo</dcterms:extent>
+					<dc:identifier xsi:type="dcterms:URI">http://docinsa.insa-lyon.fr/these/pont.php?id=linck</dc:identifier>
+					<dcterms:issued>2005-09-03</dcterms:issued>
+				</tef:edition>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:amdSec>
+		<mets:techMD ID="b999">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_admin_these">
+				<mets:xmlData>
+					<tef:thesisAdmin>
+						<tef:auteur>
+							<tef:nom>LINCK</tef:nom>
+							<tef:prenom>Vannina</tef:prenom>
+							<tef:dateNaissance>1978-12-13</tef:dateNaissance>
+							<tef:nationalite scheme="ISO-3166-1">FR</tef:nationalite>
+						</tef:auteur>
+						<dc:identifier xsi:type="tef:NNT">2005ISAL0048</dc:identifier>
+						<dcterms:dateAccepted xsi:type="dcterms:W3CDTF">2005-06-01</dcterms:dateAccepted>
+						<tef:thesis.degree>
+							<tef:thesis.degree.discipline xml:lang="fr">Mécanique</tef:thesis.degree.discipline>
+							<tef:thesis.degree.grantor>
+								<tef:nom>INSA de Lyon</tef:nom>
+								<tef:autoriteExterne autoriteSource="Sudoc">052444724</tef:autoriteExterne>
+							</tef:thesis.degree.grantor>
+							<tef:thesis.degree.level>Doctorat</tef:thesis.degree.level>
+						</tef:thesis.degree>
+						<tef:theseSurTravaux>non</tef:theseSurTravaux>
+						<tef:avisJury>oui</tef:avisJury>
+						<tef:directeurThese>
+							<tef:nom>Baillet</tef:nom>
+							<tef:prenom>Laurent</tef:prenom>
+							<tef:autoriteExterne autoriteSource="Sudoc">09416021X</tef:autoriteExterne>
+						</tef:directeurThese>
+						<tef:oaiSetSpec>ddc:620</tef:oaiSetSpec>
+					</tef:thesisAdmin>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+<!-- Le bloc qui suit contient les métadonnées de conservation du fichier constituant l'édition d'archivage. -->
+		<mets:techMD ID="a411">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_tech_fichier">
+				<mets:xmlData>
+					<tef:meta_fichier>
+						<tef:encodage>Unicode</tef:encodage>
+						<tef:formatFichier>XML</tef:formatFichier>
+						<tef:taille>55555</tef:taille>
+					</tef:meta_fichier>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+		<mets:rightsMD ID="a121">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_etablissement_these">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="true" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								PRINT="true" MODIFY="true"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+		<mets:rightsMD ID="a122">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_auteur_these">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								MODIFY="false" PRINT="true" DELETE="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+<!-- 	Le bloc qui suit décrit l'état juridique de la version complète.
+	Si cette version est diffusable, alors c'est aussi le cas des deux éditions qui contiennent cette version -->
+		<mets:rightsMD ID="a221">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_droits_version">
+				<mets:xmlData>
+					<metsRights:RightsDeclarationMD>
+						<metsRights:Context CONTEXTCLASS="GENERAL PUBLIC">
+							<metsRights:Permissions COPY="false" DISCOVER="true" DISPLAY="true" DUPLICATE="true"
+								MODIFY="false" PRINT="true" DELETE="false"/>
+						</metsRights:Context>
+					</metsRights:RightsDeclarationMD>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:rightsMD>
+	</mets:amdSec>
+<!-- Le bloc qui suit ne référence que l'édition d'archivage (XML) -->
+	<mets:fileSec>
+		<mets:fileGrp ID="FGrID1" USE="archive">
+			<mets:file ID="FID2" ADMID="a411" MIMETYPE="xml">
+				<mets:FLocat LOCTYPE="URL" xlink:href="these/pdf/body/these.xml"/>
+			</mets:file>
+		</mets:fileGrp>
+	</mets:fileSec>
+	<mets:structMap TYPE="logical">
+		<mets:div TYPE="THESE" ADMID="b999 a121 a122" DMDID="a111"
+			CONTENTIDS="ark:99999/star/ISAL/linck/these">
+			<mets:div TYPE="VERSION_COMPLETE" ADMID="a221" CONTENTIDS="ark:99999/star/ISAL/linck/vc">
+				<mets:div TYPE="EDITION" DMDID="xx311" CONTENTIDS="ark:99999/star/ISAL/these/linck/vc/ed1">
+					<mets:fptr FILEID="FGrID1"/>
+				</mets:div>
+				<mets:div TYPE="EDITION" DMDID="xx911" CONTENTIDS="ark:99999/star/ISAL/these/linck/vc/ed2"></mets:div>
+			</mets:div>
+		</mets:div>
+	</mets:structMap>
+</mets:mets>

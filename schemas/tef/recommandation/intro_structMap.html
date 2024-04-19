@@ -1,0 +1,197 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>L'arbre des entit&eacute;s TEF (mets:structMap)</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="prev" href="intro_entete_mets.html" title="L'en-t&ecirc;te METS (mets:metsHdr)">
+      <link rel="next" href="intro_fileSec.html" title="L'inventaire des fichiers (mets:fileSec)">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">L'arbre des entit&eacute;s TEF (mets:structMap)</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="intro_entete_mets.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">TEF en XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="intro_fileSec.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="intro_structMap"></a>L'arbre des entit&eacute;s TEF (mets:structMap)
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>TEF utilise la carte de structure METS pour inventorier sous une
+            forme arborescente les diff&eacute;rentes entit&eacute;s auxquelles se rattachent
+                    les diff&eacute;rents blocs de m&eacute;tadonn&eacute;es. Ces entit&eacute;s sont d&eacute;finies dans le
+                    <a href="modeleTEF.html" title="Mod&eacute;lisation des m&eacute;tadonn&eacute;es de th&egrave;se">mod&egrave;le de TEF</a>.
+         </p><pre class="programlisting">&lt;<span class="bold"><strong>mets:structMap</strong></span> TYPE="logical"&gt;
+ &lt;<span class="bold"><strong>mets:div</strong></span> TYPE="<span class="bold"><strong>THESE</strong></span>" ADMID="b999 a121 a122" DMDID="a111"
+                     CONTENTIDS="ark:99999/star/ISAL/linck/these"&gt;
+   &lt;<span class="bold"><strong>mets:div</strong></span> TYPE="<span class="bold"><strong>VERSION_COMPLETE</strong></span>" ADMID="a221"
+                     CONTENTIDS="ark:99999/star/ISAL/linck/vc"&gt;
+     &lt;<span class="bold"><strong>mets:div</strong></span> TYPE="<span class="bold"><strong>EDITION</strong></span>" DMDID="xx311" 
+                     CONTENTIDS="ark:99999/star/ISAL/these/linck/vc/ed1"&gt;
+       &lt;mets:fptr FILEID="FGrID1"/&gt;
+     &lt;/mets:div&gt;
+   &lt;/mets:div&gt;
+ &lt;/mets:div&gt;
+&lt;/mets:structMap&gt;</pre><p>Cette carte de structure logique
+                    repr&eacute;sente sous une forme XML ce que montre la <a href="modeleTEF.html#figure1">figure 1</a>.
+         </p>
+         <p>A chaque &eacute;l&eacute;ment <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> correspond un niveau logique (en d'autres termes, un niveau
+                    FRBR).
+         </p>
+         <p>L'attribut TYPE pr&eacute;cise de quel type d'entit&eacute; il s'agit. Les
+                    valeurs possibles pour l'attribut TYPE sont :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>THESE</p>
+               </li>
+               <li>
+                  <p>VERSION_COMPLETE</p>
+               </li>
+               <li>
+                  <p>VERSION_INCOMPLETE</p>
+               </li>
+               <li>
+                  <p>EDITION</p>
+               </li>
+               <li>
+                  <p>RESSOURCES_EXTERNES</p>
+               </li>
+               <li>
+                  <p>RESSOURCE_TIERS</p>
+               </li>
+               <li>
+                  <p>TRAVAUX</p>
+               </li>
+            </ul>
+         </div>
+         <p>L'attribut ADMID contient les identifiants des blocs de
+                    m&eacute;tadonn&eacute;es de gestion correspondants. L'attribut DMDID contient les
+                    identifiants des blocs de m&eacute;tadonn&eacute;es descriptives correspondants. Ce
+                    sont ces identifiants qui font le lien entre les m&eacute;tadonn&eacute;es et les
+                    entit&eacute;s TEF auxquelles elles s'appliquent (<span class="emphasis"><em>cf.</em></span>
+                    <a href="intro_md_desc.html" title="Les m&eacute;tadonn&eacute;es descriptives">plus loin</a>).
+         </p>
+         <p>L'attribut CONTENTIDS associe &agrave; chaque th&egrave;se, version et &eacute;dition
+                    un identifiant unique. Il ne s'agit pas d'un identifiant interne, dont
+                    l'unicit&eacute; serait restreinte &agrave; l'&eacute;chelle d'un document XML ou d'une
+                    application informatique. Il s'agit d'un URI, c'est-&agrave;-dire d'un
+                    identifiant unique &agrave; l'&eacute;chelle globale du Web. Ces identifiants jouent
+                    un r&ocirc;le essentiel dans l'&eacute;change automatis&eacute; de notices TEF. Il ne
+                    revient pas &agrave; la recommandation TEF d'indiquer la mani&egrave;re dont ces URI
+                    peuvent &ecirc;tre construits.
+         </p>
+         <p>
+                      
+         </p><pre class="programlisting">&lt;<span class="bold"><strong>mets:structMap</strong></span> TYPE="logical"&gt;
+ &lt;mets:div TYPE="<span class="bold"><strong>THESE</strong></span>" ...&gt;
+  &lt;mets:div TYPE="<span class="bold"><strong>VERSION_COMPLETE</strong></span>" ...&gt;
+   &lt;mets:div TYPE="<span class="bold"><strong>EDITION</strong></span>" ...&gt;
+     &lt;mets:fptr FILEID="FGrID1"/&gt;
+   &lt;/mets:div&gt;
+   &lt;mets:div TYPE="<span class="bold"><strong>EDITION</strong></span>" .../&gt;
+  &lt;/mets:div&gt;
+  &lt;mets:div TYPE="<span class="bold"><strong>VERSION_INCOMPLETE</strong></span>" ...&gt;
+   &lt;mets:div TYPE="<span class="bold"><strong>EDITION</strong></span>" .../&gt;
+  &lt;/mets:div&gt;
+  &lt;mets:div TYPE="<span class="bold"><strong>RESSOURCE_TIERS</strong></span>" ...&gt;
+    &lt;mets:fptr FILEID="FID2"/&gt;
+  &lt;/mets:div&gt;
+ &lt;/mets:div&gt;
+&lt;/mets:structMap&gt;</pre><p>
+                    
+         </p>
+         <p>Le <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de premier niveau est toujours de TYPE "THESE".
+         </p>
+         <p>Un <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de second niveau est de TYPE "VERSION_COMPLETE",
+                    "VERSION_INCOMPLETE", "RESSOURCES_EXTERNES", "RESSOURCE_TIERS" ou
+                    "TRAVAUX". Il ne peut y avoir qu'un seul <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de TYPE "VERSION_COMPLETE" et qu'un seul <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de type "RESSOURCES_EXTERNES". Les autres sont
+                    r&eacute;p&eacute;tables.
+         </p>
+         <p>Un <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de TYPE "VERSION_COMPLETE" ou "VERSION_INCOMPLETE" a
+                    n&eacute;cessairement pour enfant(s) un (ou plusieurs) <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de TYPE "EDITION".
+         </p>
+         <p>Le <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de type "RESSOURCES_EXTERNES" permet de regrouper plusieurs
+                    "RESSOURCE_TIERS" et/ou "TRAVAUX". Il est facultatif. Un <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de type "RESSOURCE_TIERS" ou un "TRAVAUX" peut avoir pour
+                    parent direct le <a href="mets_div.html" title="mets:div">
+                           <span class="bold"><strong>mets:div</strong></span>
+                         </a> de type "THESE", comme c'est le cas dans l'exemple
+                    ci-dessus. "RESSOURCES_EXTERNES" peut s'av&eacute;rer utile quand on veut
+                    regouper diff&eacute;rentes ressources externes qui ont les m&ecirc;mes <a href="rightsMeta.html" title="Les m&eacute;tadonn&eacute;es de droits">m&eacute;tadonn&eacute;es de droits</a> ou qui sont toutes
+                    retir&eacute;es d'une m&ecirc;me version incompl&egrave;te. Cela &eacute;vite de lier chaque
+                    ressource au m&ecirc;me bloc de m&eacute;tadonn&eacute;es ou de lister chacune des
+                    ressources qui <a href="intro_desc_version.html" title="Les m&eacute;tadonn&eacute;es descriptives de version :&#xA;        tef_desc_version">manquent &agrave; une
+                       version</a>.
+         </p><pre class="programlisting">...
+&lt;mets:div TYPE="<span class="bold"><strong>RESSOURCE_EXTERNES</strong></span>"...&gt;
+ &lt;mets:div TYPE="<span class="bold"><strong>RESSOURCE_TIERS</strong></span>" .../&gt;
+ &lt;mets:div TYPE="<span class="bold"><strong>TRAVAUX</strong></span>" .../&gt;
+&lt;/mets:div&gt;
+...</pre><p>A cet arbre des entit&eacute;s TEF, il manque les fichiers.
+                    L'inventaire des fichiers est laiss&eacute; &agrave; la section des fichiers
+                    (fileSec), dont c'est pr&eacute;cis&eacute;ment la fonction dans METS. Le lien entre
+                    la carte de structure et la section des fichiers est effectu&eacute; par
+                    l'&eacute;l&eacute;ment mets:fptr. Dans les deux premiers exemples de cette section,
+                    <span class="bold"><strong>&lt;mets:fptr FILEID="FGrID1"/&gt;</strong></span>
+                    permet de faire le lien entre une &eacute;dition (mentionn&eacute;e dans <a href="mets_structMap.html" title="mets:structMap">
+                           <span class="bold"><strong>mets:structMap</strong></span>
+                         </a>) et le groupe de fichiers qui y correspond (dans <span class="bold"><strong>
+                              <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                            </strong></span>).
+         </p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="intro_entete_mets.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="TEF_en_XML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="intro_fileSec.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">L'en-t&ecirc;te METS (mets:metsHdr)&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;L'inventaire des fichiers (mets:fileSec)</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

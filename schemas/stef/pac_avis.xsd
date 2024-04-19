@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+elementFormDefault="qualified"
+attributeFormDefault="unqualified">
+
+<xsd:element name="pac_avis">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="fr">
+                	Format des messages ou avis envoye aux interlocuteurs de PAC.
+			Le type complexe "contenu" est tres variable selon les message.
+			il peut etre interprete actuellement comme du texte libre.
+            </xsd:documentation>
+        </xsd:annotation>
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="type_serveur" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="SERVEUR_VERSEMENT"/>
+					<xsd:enumeration value="SERVEUR_STOCKAGE"/>
+					<xsd:enumeration value="SERVEUR_ACCES"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="id" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:complexType name="contenu" type="xsd:string"/>		
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>

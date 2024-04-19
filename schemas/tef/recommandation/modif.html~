@@ -1,0 +1,17 @@
+<html>
+   <head>
+      <title>Modifications à faire</title>
+   </head>
+   <body>
+	   <h2>Modifications à effectuer sur les fichiers TEF</h2>
+      <p>Rec : modifier la gestion des espaces de noms dans l'entête de l'exemple de notice TEF, pour se conformer aux instances en ligne</p>
+      <p>Rec : ajouter vedette Rameau Auteur-Titre</p>
+      <p>Rec : enlever points à la fin des titres</p>
+      <p>Rec : fraçaise</p>
+      <p>XSD : Auteur-Titre</p>
+      <p>Instances : Auteur-Titre</p>
+      <p></p>
+      <p></p>
+      <p></p>
+   </body>
+</html>

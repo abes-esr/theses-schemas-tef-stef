@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE autolayout
+  PUBLIC "-//Norman Walsh//DTD Website Autolayout V2.5.0//EN" "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/autolayout.dtd">
+<autolayout>
+<config param="navbgcolor" value="#BCD2EE"/><config param="homebanner-tabular" value="tef.jpg" altval="TEF"/><config param="banner-tabular" value="tef.jpg" altval="TEF"/><config param="homebanner" value="tef.jpg" altval="TEF"/><config param="banner" value="tef.jpg" altval="TEF"/><style src="tefsite.css" type="text/css"/><toc page="website.xml" id="home" filename="index.html">
+<title>TEF : Métadonnées des thèses françaises</title>
+<summary/>
+<tocentry page="recommandation.xml" id="recommandation" filename="recommandation.html">
+<title>La recommandation</title>
+<summary/>
+<tocentry id="toc_rec_html" href="http://www.abes.fr/abes/documents/tef/recommandation/index.html">
+<title>Edition HTML</title>
+</tocentry>
+<tocentry id="toc_rec.pdf" href="http://www.abes.fr/abes/documents/tef/recommandation/tef_01.pdf">
+<title>Edition PDF</title>
+</tocentry>
+<tocentry id="toc_rec_xsd" href="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_schema_01.xsd">
+<title>Schéma XML</title>
+</tocentry>
+</tocentry>
+<tocentry page="documentation.xml" id="documentation" filename="documentation.html">
+<title>Documentation sur TEF</title>
+<summary/>
+</tocentry>
+<tocentry page="outils.xml" id="outils" filename="outils.html">
+<title>Outils pour TEF</title>
+<summary/>
+<tocentry page="convertir.xml" id="convertir" filename="convertir.html">
+<title>Convertir</title>
+<summary/>
+</tocentry>
+</tocentry>
+</toc>
+</autolayout>

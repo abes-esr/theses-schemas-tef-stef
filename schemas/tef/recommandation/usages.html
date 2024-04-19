@@ -1,0 +1,228 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Usages de TEF</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="introduction.html" title="Introduction">
+      <link rel="prev" href="validation.html" title="Validation XML">
+      <link rel="next" href="domaine.html" title="Domaine d'application de TEF">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Usages de TEF</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="validation.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Introduction</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="domaine.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="chapter" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="usages"></a>Usages de TEF
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>TEF a pour objectif de favoriser la diffusion et la r&eacute;utilisation
+            de m&eacute;tadonn&eacute;es riches, de diverses origines et normalis&eacute;es. Cette
+            diffusion peut prendre deux formes diff&eacute;rentes : un &eacute;change de
+            m&eacute;tadonn&eacute;es entre deux syst&egrave;mes ou bien une diffusion plus large sur le
+                  Web.
+         </p>
+         <p>
+                    <span class="bold"><strong>TEF comme format d'&eacute;change</strong></span>
+                  
+         </p>
+         <p>Dans le premier cas, il s'agit d'un &eacute;change de m&eacute;tadonn&eacute;es entre
+            deux syst&egrave;mes d'information bien identifi&eacute;s, selon une proc&eacute;dure agr&eacute;&eacute;e
+                  par les deux parties. C'est pr&eacute;cis&eacute;ment ce qui est pr&eacute;vu par le
+                  dispositif national de promotion des th&egrave;ses &eacute;lectroniques. L'application
+                  STAR, g&eacute;r&eacute;e par l'ABES, recevra des m&eacute;tadonn&eacute;es TEF g&eacute;n&eacute;r&eacute;es et envoy&eacute;es
+                  par les applications de gestion des th&egrave;ses des &eacute;tablissements de
+                  soutenance. Le format XML de TEF est le <span class="bold"><strong>format
+                        d'&eacute;change</strong></span> qui permettra &agrave; ces diff&eacute;rentes applications de
+                  partager ces donn&eacute;es normalis&eacute;es. Il n'est qu'un format d'&eacute;change au
+                  sens o&ugrave; les applications locales auront &agrave; exporter du TEF et STAR &agrave; en
+                  importer. TEF n'a pas vocation &agrave; devenir un format interne, ni pour les
+                  premi&egrave;res, ni pour la seconde.
+         </p>
+         <p>Pourtant, gr&acirc;ce &agrave; sa structure modulaire, TEF peut rendre des
+                  services &agrave; l'int&eacute;rieur m&ecirc;me d'un syst&egrave;me d'information. TEF est compos&eacute;
+                  de diff&eacute;rents blocs de m&eacute;tadonn&eacute;es qui peuvent provenir d'applications
+                  et de sources diff&eacute;rentes : m&eacute;tadonn&eacute;es en provenance des outils
+                  administratifs, m&eacute;tadonn&eacute;es extraites du document lui-m&ecirc;me, m&eacute;tadonn&eacute;es
+                  g&eacute;n&eacute;r&eacute;es automatiquement (m&eacute;tadonn&eacute;es de conservation), m&eacute;tadonn&eacute;es
+                  bibliographiques saisies par les biblioth&eacute;caires... Dans le cadre d'un
+                  <span class="bold"><strong>syst&egrave;me d'information</strong></span>, les donn&eacute;es ne
+                  sont saisies qu'une fois, mais r&eacute;utilis&eacute;es plusieurs fois, dans
+                  diff&eacute;rents contextes. Etant donn&eacute; son organisation modulaire, TEF
+                  pourrait &ecirc;tre utilis&eacute; par un tel syst&egrave;me pour &eacute;changer des informations
+                  d'une application &agrave; une autre. Par exemple, le bloc des m&eacute;tadonn&eacute;es
+                  administratives (<a href="adminMeta.html" title="Les m&eacute;tadonn&eacute;es administratives de la th&egrave;se :&#xA;        tef_admin_these">tef_admin_these</a>)
+                  pourrait &ecirc;tre utilis&eacute; par l'&eacute;cole doctorale pour envoyer des
+                  informations &agrave; l'application de diffusion des th&egrave;ses. Ce mode
+                  d'utilisation de TEF <span class="bold"><strong>&agrave; l'int&eacute;rieur</strong></span> d'un
+                  syst&egrave;me d'information n'est expos&eacute; ici qu'&agrave; titre d'exemple et
+                  d'illustration de son organisation par blocs. Le point crucial reste la
+                  capacit&eacute; d'un syst&egrave;me d'information &agrave; &eacute;changer du TEF <span class="bold"><strong>avec l'ext&eacute;rieur</strong></span>.
+         </p>
+         <p>
+                    <span class="bold"><strong>TEF comme format de r&eacute;f&eacute;rence</strong></span>
+                  
+         </p>
+         <p>Le format TEF peut aussi servir de format de r&eacute;f&eacute;rence au sens o&ugrave;
+                  une institution peut souhaiter conserver ses m&eacute;tadonn&eacute;es de th&egrave;se sous
+                  une forme ind&eacute;pendante des outils informatiques qui les exploitent.
+                  Gr&acirc;ce aux technologies standard qu'il int&egrave;gre (XML, METS, Dublin Core,
+                  W3C XML Schema, Schematron), gr&acirc;ce au mod&egrave;le conceptuel d'apr&egrave;s lequel
+                  sa structure de donn&eacute;es est construite, TEF peut contribuer &agrave; la
+                  conservation &agrave; long terme d'informations strat&eacute;giques sur les th&egrave;ses.
+                  Par ailleurs, ces informations peuvent aller au-del&agrave; des m&eacute;tadonn&eacute;es
+                  explicitement pr&eacute;vues par le format TEF, puisqu'il offre un <a href="usages.html#adaptations">m&eacute;canisme d'extension</a> qui permet d'y
+                  ajouter des informations d'int&eacute;r&ecirc;t strictement local. Sur le mod&egrave;le de
+                  METS, TEF n'est pas seulement une liste achev&eacute;e d'&eacute;l&eacute;ments XML, mais
+                  aussi une enveloppe au contenu variable.
+         </p>
+         <p>
+                    <span class="bold"><strong>TEF comme outil de validation XML</strong></span>
+                  
+         </p>
+         <p>Gr&acirc;ce aux technologies XML standard, le format d'&eacute;change XML de
+                  TEF sert aussi d'<span class="bold"><strong>outil de validation</strong></span>.
+                  Les contr&ocirc;les effectu&eacute;s conjointement par les sch&eacute;mas XML de TEF et ses
+                  r&egrave;gles Schematron permettent de v&eacute;rifier qu'une instance TEF est bien
+                  conforme &agrave; la recommandation. Dans le cas o&ugrave; deux syst&egrave;mes souhaitent
+                  &eacute;changer des m&eacute;tadonn&eacute;es TEF qui ne soient pas strictement conformes,
+                  l'ensemble des r&egrave;gles Schematron peut facilement &ecirc;tre amend&eacute;. En
+                  modifiant, ajoutant ou retirant certaines r&egrave;gles, on obtient un outil de
+                  validation XML adapt&eacute; &agrave; des besoins particuliers.
+         </p>
+         <p>
+                    <span class="bold"><strong>Diss&eacute;miner des m&eacute;tadonn&eacute;es sur le Web</strong></span>
+                  
+         </p>
+         <p>A c&ocirc;t&eacute; de ces &eacute;changes proprement dit, les m&eacute;tadonn&eacute;es TEF peuvent
+                  &ecirc;tre utilis&eacute;es dans la perspective de leur diss&eacute;mination &agrave; l'&eacute;chelle
+                  globale du Web. Gr&acirc;ce au protocole OAI-PMH, par exemple, les m&eacute;tadonn&eacute;es
+                  TEF peuvent &ecirc;tre r&eacute;cup&eacute;r&eacute;es et exploit&eacute;es de mani&egrave;re tr&egrave;s libre. Le
+                  fournisseur des m&eacute;tadonn&eacute;es n'a pas besoin de conna&icirc;tre ni de s'entendre
+                  avec l'organisme qui les "moissonne" et les exploite. Un tel mode de
+                  diss&eacute;mination favorise des usages nouveaux et vari&eacute;s des m&ecirc;mes
+                  m&eacute;tadonn&eacute;es (base de la production des chercheurs d'un &eacute;tablissement ou
+                  d'un ensemble d'&eacute;tablissements, bases disciplinaires, bases de th&egrave;ses,
+                  outils infom&eacute;triques, syst&egrave;mes de pilotage de la recherche...). Plus les
+                  m&eacute;tadonn&eacute;es des th&egrave;ses seront utilis&eacute;es, et ce dans des contextes
+                  diff&eacute;rents, plus les th&egrave;ses fran&ccedil;aises seront visibles et
+                  valoris&eacute;es.
+         </p>
+         <p>L'encodage des m&eacute;tadonn&eacute;es TEF en RDF va dans le m&ecirc;me sens. Si RDF
+                  n'est pas le meilleur outil pour &eacute;changer du TEF complet et valide entre
+                  deux applications, il permettra de multiplier encore la visibilit&eacute; et la
+                  r&eacute;utilisation des m&eacute;tadonn&eacute;es TEF sur le Web. Sur ce point,
+                  <span class="emphasis"><em>cf.</em></span> <a href="TEF_en_XML.html" title="TEF en XML">l'introduction au
+                     chapitre 3</a>.
+         </p>
+         <p>
+                    <span class="bold"><strong>TEF comme format pivot</strong></span>
+                  
+         </p>
+         <p>Enfin, en tant que format pivot, TEF peut servir de point de
+                  d&eacute;part vers d'autres formats de m&eacute;tadonn&eacute;es. Par exemple, la conversion
+                  de TEF vers Dublin Core est imm&eacute;diate puisque TEF est construit autour
+                  d'un noyau Dublin Core. Il en est de m&ecirc;me pour le format ETD-MS d&eacute;di&eacute;
+                  aux th&egrave;ses ou pour les m&eacute;tadonn&eacute;es de ressources p&eacute;dagogiques.
+         </p>
+         <p>Les m&eacute;tadonn&eacute;es de th&egrave;se issues de TEF peuvent encore &ecirc;tre
+                  int&eacute;gr&eacute;es au sein m&ecirc;me des documents primaires. Avec ou sans conversion,
+                  des &eacute;l&eacute;ments TEF peuvent &ecirc;tre inclus dans une page HTML ou XHTML, dans
+                  les propri&eacute;t&eacute;s d'un document PDF, dans l'en-t&ecirc;te d'un document TEI... On
+                  peut aussi imaginer que les pages liminaires d'une th&egrave;se soient g&eacute;n&eacute;r&eacute;es
+                  automatiquement &agrave; partir d'une notice TEF.
+         </p>
+         <p><a name="adaptations"></a>
+                    <span class="bold"><strong>Adapter TEF &agrave; des besoins
+                          particuliers</strong></span>
+                  
+         </p>
+         <p>Pour r&eacute;pondre &agrave; des besoins particuliers, une institution peut
+                  d&eacute;cider de restreindre, d'&eacute;tendre ou d'adapter TEF.
+         </p>
+         <p>Restreindre TEF signifie ajouter &agrave; TEF des contraintes encore plus
+                  fortes. Il peut s'agir de rendre obligatoire un &eacute;l&eacute;ment facultatif ou
+                  d'imposer une liste de valeurs l&agrave; o&ugrave; du texte libre est autoris&eacute;. Pour
+                  ce faire, il sufffira en g&eacute;n&eacute;ral d'amender les r&egrave;gles Schematron, sans
+                  avoir &agrave; modifier les sch&eacute;mas XML METS, TEF, METS Rights ou Dublin
+                  Core.
+         </p>
+         <p>Etendre TEF signifie d'abord ajouter des sections, des &eacute;l&eacute;ments ou
+                  des attributs METS qui ne sont pas pr&eacute;vus par la recommandation TEF.
+                  Comme il est mentionn&eacute; <a href="intro_tef_xml.html#TEF_METS">plus haut</a>, TEF
+                  n'utilise pas toutes les possibilit&eacute;s de METS, mais il ne les interdit
+                  pas, sauf si elles rentrent en contradiction avec des contraintes TEF.
+                  Ainsi, &agrave; c&ocirc;t&eacute; du bloc de m&eacute;tadonn&eacute;es descriptives <a href="intro_desc_these.html" title="Les m&eacute;tadonn&eacute;es descriptives de la th&egrave;se :&#xA;        tef_desc_these">tef_desc_these</a>, rien n'interdit
+                  d'associer &agrave; la th&egrave;se un autre bloc de m&eacute;tadonn&eacute;es descriptives. Il en
+                  est de m&ecirc;me pour les m&eacute;tadonn&eacute;es administratives, ce qui permet
+                  d'utiliser TEF pour des m&eacute;tadonn&eacute;es de gestion locales qui ne sont pas
+                  pr&eacute;vues par la recommandation en tant que telles. Ce type d'extensions &agrave;
+                  TEF n'implique aucune modification des sch&eacute;mas XML ni des r&egrave;gles
+                  Schematron officielles. De telles notices TEF &eacute;tendues sont parfaitement
+                  valides. Il convient seulement de rappeler le fait que ces extensions
+                  risquent de ne pas &ecirc;tre comprises par une autre application conforme &agrave;
+                  TEF. Par d&eacute;finition, ces extensions correspondent &agrave; une pratique
+                  strictement locale ou &agrave; une convention expresse entre deux
+                  partenaires.
+         </p>
+         <p>Etendre TEF peut aussi signifier introduire dans les blocs de
+                  m&eacute;tadonn&eacute;es TEF de nouveaux &eacute;l&eacute;ments qui sont &eacute;trangers &agrave; TEF comme &agrave;
+                  METS. Dans ce cas, une notice &eacute;tendue ne sera pas conforme &agrave; TEF.
+         </p>
+         <p>Au lieu d'&eacute;tendre TEF, une application donn&eacute;e pourrait d&eacute;cider de
+                  se passer de certains &eacute;l&eacute;ments que la recommandation exige. Dans le
+                  cadre d'un workflow, par exemple, la production d'une notice TEF est
+                  divis&eacute;e en diff&eacute;rentes &eacute;tapes. Comme les applications intervenant en
+                  amont ne peuvent disposer de toutes les informations obligatoires, elles
+                  enverront vers l'aval des notices incompl&egrave;tes et donc invalides. Ces
+                  notices peuvent &ecirc;tre partiellement valides, au sens o&ugrave; les informations
+                  d&eacute;j&agrave; pr&eacute;sentes sont conformes aux prescriptions. Le vocabulaire
+                  Schematron permet d'ailleurs de regrouper les r&egrave;gles par phase. A chaque
+                  phase du workflow, on ne testera que les contraintes pertinentes. Une
+                  notice TEF peut d&egrave;s lors &ecirc;tre valide relativement &agrave; une phase donn&eacute;e,
+                  bien qu'invalide au sens strict. Ce n'est qu'en bout de cha&icirc;ne que la
+                  notice sera compl&egrave;te et valide au sens global de la recommandation TEF.
+                  Dans une autre perspective, envisag&eacute;e &agrave; la fin du chapitre suivant, un
+                  &eacute;tablissement peut d&eacute;cider d'utiliser TEF pour traiter des documents qui
+                  ne sont pas des th&egrave;ses au sens strict (<a href="domaine.html" title="Domaine d'application de TEF"><span class="emphasis"><em>cf.</em></span> le chapitre qui suit</a>).
+                  Cela suppose de modifier en profondeur les r&egrave;gles Schematron, mais pas
+                  n&eacute;cessairement le sch&eacute;ma METS ni les sch&eacute;mas TEF.
+         </p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="validation.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="introduction.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="domaine.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Validation XML&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Domaine d'application de TEF</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

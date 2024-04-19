@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Nicolas (A.B.E.S.) -->
+<xs:schema xmlns="http://www.abes.fr/abes/documents/tef" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.abes.fr/abes/documents/tef" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:include schemaLocation="tef_types.xsd"/>
+<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+	<!-- Schéma regroupant les informations descriptives sur une version de la thèse.
+	. la thèse -est-elle complète ou pas ?
+	. si incomplète, que lui manque-t-il ? Ce qui manque peut être décrit globalement dans une note libre (tef:noteVersion), 
+	ou chaque ressource extérieure peut être référencée à l'intérieur de TEF (via un id interne : tef:ressourceID)
+	et décrite par un bloc Dublin Core 
+
+	13 janvier 2006 :
+		. on supprime idversion car on a contentids
+	
+	-->
+	<xs:element name="version">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dcterms:replaces" minOccurs="0" maxOccurs="unbounded"></xs:element>
+				<!-- dcterms:replaces quand une édition en écrase ne autre -->
+				<xs:element name="complet">
+					<xs:simpleType>
+						<xs:restriction base="non_empty_token">
+							<xs:enumeration value="oui"/>
+							<xs:enumeration value="non"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="manque" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:choice minOccurs="1" maxOccurs="unbounded">
+							<xs:element name="ressourceID" type="xs:IDREF"/>
+							<xs:element name="noteVersion" type="non_empty_token"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<!-- (09.01.2005)  ressourceID peut renvoyer soit à une ressource_tiers, soit à un travaux, soit à groupe de ressources externes -->
+				<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xs:any>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="0.91">
+<channel>
+		<title>Nouveautés du Portail Sudoc</title>
+		<link>http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm</link>
+		<description>Les nouveautés du portail de l'ABES.</description>
+		<language>en-us</language>
+	
+	<image>
+		<title>Logo ABES</title>
+		<link>http://www.portail-sudoc.abes.fr/RSS/Actus/fr/abes.jpg</link>
+		<url>http://www.abes.fr</url>
+	</image>
+	<item>
+		<title>Les thèses de l'INP Toulouse</title>
+		<link>http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news</link>
+		<description>Les thèses de l'Institut National Polytechnique de Toulouse viennent d'être chargées dans la base thèses. 
+			Vous pouvez les interroger par les index courants (titre, auteur, sujet) mais également en texte intégral en passant l'écran "Recherche sur... thèses" puis texte intégral.</description>
+		<date>20050926</date>
+	</item></channel>
+</rss>

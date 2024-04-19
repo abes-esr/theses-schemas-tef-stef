@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+	<leader>00000clm0022000000004500</leader>
+	<controlfield tag="001">123456789</controlfield>
+	<datafield tag="029" ind1=" " ind2=" ">
+		<subfield code="b">1998LY020073</subfield>
+	</datafield>
+	<datafield tag="035" ind1=" " ind2=" ">
+		<subfield code="a">(Lyon 2)012345678</subfield>
+	</datafield>
+	<datafield tag="100" ind1=" " ind2=" ">
+		<subfield code="a">20041213d1998    k  y0frey010305ba</subfield>
+	</datafield>
+	<datafield tag="101" ind1=" " ind2=" ">
+		<subfield code="a">fr</subfield>
+	</datafield>
+	<datafield tag="200" ind1=" " ind2=" ">
+		<subfield code="a">Géographie du bal en France</subfield>
+		<subfield code="e">diversité régionale</subfield>
+		<subfield code="e">pomme</subfield>
+		<subfield code="f">Paul Bédin, Paul Truc</subfield>
+		<subfield code="g">Jean-Pierre Houssel, Pascal Directeur</subfield>
+	</datafield>
+	<datafield tag="210" ind1=" " ind2=" ">
+		<subfield code="a">Lyon</subfield>
+		<subfield code="c">Université Lyon 2</subfield>
+		<subfield code="a">Tygre</subfield>
+		<subfield code="c">Université Lyon 3</subfield>
+		<subfield code="d">1998</subfield>
+	</datafield>
+	<datafield tag="314" ind1=" " ind2=" ">
+		<subfield code="a">Membres du jury : Max Weber, Georg Simmel, Eva Olivier</subfield>
+	</datafield>
+	<datafield tag="314" ind1=" " ind2=" ">
+		<subfield code="a">Ecole(s) Doctorale(s) : Ecole doctorale Sciences Humaines et Sociales</subfield>
+	</datafield>
+	<datafield tag="314" ind1=" " ind2=" ">
+		<subfield code="a">Unité(s) de recherche : Environnement, Ville, Société (UMR 5600)</subfield>
+	</datafield>
+	<datafield tag="328" ind1=" " ind2="0">
+		<subfield code="b">Doctorat</subfield>
+		<subfield code="c">Géographie</subfield>
+		<subfield code="d">1998</subfield>
+		<subfield code="e">Lyon 2</subfield>
+	</datafield>
+	<datafield tag="330" ind1=" " ind2=" ">
+		<subfield code="a">La sortie au bal concerne chaque année 30 % des français, le double dans plusieurs régions. A rebours (...) est bien plus avancée qu'on le croit généralement.</subfield>
+	</datafield>
+	<datafield tag="330" ind1=" " ind2=" ">
+		<subfield code="a">30 % of the French go out dancing every year - twice as many in some regions. Though (...) is far more advanced than is usually thought.</subfield>
+	</datafield>
+	<datafield tag="330" ind1=" " ind2=" ">
+		<subfield code="a">La salida al baile concierne cada año a 30% de los franceses, o el doble en varias regiones. Al revés (...) es bastante más alto que lo que se cree generalmente.</subfield>
+	</datafield>
+	<datafield tag="359" ind1=" " ind2=" ">
+		<subfield code="a">Introduction 
+ 1ère partie Poser le bal comme objet géographique 
+ 2e partie La diversité du bal et son public 
+ 3e partieBals républicains et bals clos 
+ 4e partieLes territoires du bal 
+ Conclusion 
+ Bibliographie</subfield>
+	</datafield>
+	<datafield tag="541" ind1=" " ind2=" ">
+		<subfield code="a">Dancing in France</subfield>
+		<subfield code="z">en</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">bals</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">pouvoirs locaux</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">public dance</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">local government</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">Frankreich</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">Vingtième siècle</subfield>
+	</datafield>
+	<datafield tag="610" ind1=" " ind2=" ">
+		<subfield code="a">Bals -- France -- Thèses et écrits académiques</subfield>
+	</datafield>
+	<datafield tag="606" ind1=" " ind2=" ">
+		<subfield code="3">028650727</subfield>
+		<subfield code="a">Bals</subfield>
+		<subfield code="3">027226794</subfield>
+		<subfield code="y">France</subfield>
+		<subfield code="3">027253139</subfield>
+		<subfield code="j">Thèses et écrits académiques</subfield>
+		<subfield code="2">Rameau</subfield>
+	</datafield>
+	<datafield tag="606" ind1=" " ind2=" ">
+		<subfield code="3">028650727</subfield>
+		<subfield code="a">Bols</subfield>
+		<subfield code="3">027226794</subfield>
+		<subfield code="y">France</subfield>
+		<subfield code="3">027253139</subfield>
+		<subfield code="j">Thèses et écrits académiques</subfield>
+		<subfield code="2">Rameau</subfield>
+	</datafield>
+	<datafield tag="601" ind1=" " ind2=" ">
+		<subfield code="3">028650727</subfield>
+		<subfield code="a">CNRS</subfield>
+		<subfield code="3">027226794</subfield>
+		<subfield code="h">France</subfield>
+		<subfield code="3">027253139</subfield>
+		<subfield code="j">Thèses et écrits académiques</subfield>
+		<subfield code="2">Rameau</subfield>
+	</datafield>
+	<datafield tag="605" ind1=" " ind2=" ">
+		<subfield code="3">028650727</subfield>
+		<subfield code="a">lalalla</subfield>
+		<subfield code="3">027226794</subfield>
+		<subfield code="i">mumusique</subfield>
+		<subfield code="3">027253139</subfield>
+		<subfield code="l">Cacophonie</subfield>
+		<subfield code="2">Rameau</subfield>
+	</datafield>
+	<datafield tag="700" ind1=" " ind2=" ">
+		<subfield code="a">Bédin</subfield>
+		<subfield code="b">Paul</subfield>
+		<subfield code="4">070</subfield>
+	</datafield>
+	<datafield tag="701" ind1=" " ind2=" ">
+		<subfield code="3">987654321</subfield>
+		<subfield code="a">Truc</subfield>
+		<subfield code="b">Paul</subfield>
+		<subfield code="4">070</subfield>
+	</datafield>
+	<datafield tag="702" ind1=" " ind2=" ">
+		<subfield code="3">9026925508</subfield>
+		<subfield code="a">Houssel</subfield>
+		<subfield code="b">Jean-Pierre</subfield>
+		<subfield code="4">727</subfield>
+	</datafield>
+	<datafield tag="702" ind1=" " ind2=" ">
+		<subfield code="3">9026925508</subfield>
+		<subfield code="a">Directeur</subfield>
+		<subfield code="b">Pascal</subfield>
+		<subfield code="4">727</subfield>
+	</datafield>
+	<datafield tag="801" ind1=" " ind2="0">
+		<subfield code="b">Lyon 2</subfield>
+		<subfield code="c">20041213</subfield>
+	</datafield>
+	<datafield tag="801" ind1=" " ind2="3">
+		<subfield code="b">Lyon 2</subfield>
+		<subfield code="c">20041225</subfield>
+	</datafield>
+	<datafield tag="801" ind1=" " ind2="2">
+		<subfield code="b">Abes</subfield>
+		<subfield code="c">20050111</subfield>
+	</datafield>
+	<datafield tag="856" ind1=" " ind2=" ">
+		<subfield code="q">text/html</subfield>
+		<subfield code="s">2 fichiers : 3 Mo, 20 Ko</subfield>
+		<subfield code="u">http://demeter.univ-lyon2.fr:8080/sdx/theses/lyon2/1998/dcrozat</subfield>
+		<subfield code="u">urn:tef:1998LY020073</subfield>
+	</datafield>
+	<datafield tag="856" ind1=" " ind2=" ">
+		<subfield code="q">text/pdf</subfield>
+		<subfield code="s">1 fichier : 2 Mo</subfield>
+		<subfield code="u">http://tel.ccsd.cnrs.fr/documents/archives0/00/00/46/29/tel-00009999-01/tel-00009999.pdf</subfield>
+		<subfield code="u">urn:tef:1998LY020073</subfield>
+	</datafield>
+</record>

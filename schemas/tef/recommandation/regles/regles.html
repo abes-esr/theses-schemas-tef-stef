@@ -1,0 +1,769 @@
+<html xmlns:sch="http://www.ascc.net/xml/schematron">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+   </head>
+   <body>
+      <h1>Les r&egrave;gles de validation de <a href="http://www.abes.fr/abes/documents/tef/recommandation/index.html">TEF</a></h1>
+      <p>Le fichier source des r&egrave;gles Schematron se trouve <a href="regles.xml">ici</a>.
+      </p>
+      <h2 id="mets_mets">R&egrave;gles g&eacute;n&eacute;rales</h2>
+      <h3>mets:mets -- Quels blocs de m&eacute;tadonn&eacute;es ?</h3>
+      		
+      			
+      <p> La racine du document TEF doit &ecirc;tre mets:mets. </p>
+      			
+      <p>
+         				Il faut un et un seul bloc md de type "tef_desc_these". 
+      </p>
+      			
+      <p> Il faut
+         				au moins un bloc md de type "tef_desc_edition". 
+      </p>
+      			
+      <p> Il faut un et un seul bloc md de type "tef_admin_these". </p>
+      			
+      <p> Il faut un et un seul bloc md de type "tef_droits_etablissement_these". </p>
+      			
+      <p> Il faut un et un seul bloc md de type "tef_droits_auteur_these". </p>
+      			
+      <p>
+         				Il faut au moins un bloc md de type "tef_droits_version". 
+      </p>
+      			
+      <p> Il
+         				faut au moins un bloc md de type "tef_tech_fichier". 
+      </p>
+      			
+      <p> Il faut un bloc mets:fileSec. </p>
+      			
+      <p> Il faut un bloc mets:structMap. </p>
+      		
+      	
+      <h3>mets:mets -- ID sur chaque bloc de m&eacute;tadonn&eacute;es</h3>
+      		
+      			
+      <p> Tout bloc de m&eacute;tadonn&eacute;es poss&egrave;de un identifiant. En d'autres termes,
+         				tout &eacute;l&eacute;ment mets:dmdSec, mets:techMD ou mets:rightsMD doit poss&eacute;der un attribut ID.
+         			
+      </p>
+      		
+      	
+      <h3>mets:mets -- autorit&eacute;s</h3>
+      		
+      			
+      <p> L'&eacute;l&eacute;ment "tef:autoriteExterne" doit avoir un attribut
+         				"autoriteSource" d&eacute;signant un r&eacute;f&eacute;rentiel externe comme, par exemple, le catalogue Sudoc.
+         			
+      </p>
+      		
+      		
+      			
+      <p> L'&eacute;l&eacute;ment "tef:autoriteInterne"
+         				permet de lier l'&eacute;diteur &agrave; ses donn&eacute;es d'autorit&eacute; (du bloc "tef:MADSAuthority") au moyen de
+         				l'attribut "authorityID". "tef:autoriteInterne" doit donc avoir la m&ecirc;me valeur que cet
+         				attribut. 
+      </p>
+      		
+      	
+      <h3>mets:mets -- attributs de langue obligatoires</h3>
+      		
+      			
+      <p> Il faut un attribut de langue xml:lang ici : 
+         			
+      </p>
+      		
+      	
+      <h2 id="tef_desc_these">R&egrave;gles sur les m&eacute;tadonn&eacute;es descriptives de la th&egrave;se</h2>
+      <h3>tef_desc_these -- g&eacute;n&eacute;ral</h3>
+      		
+      			
+      <p> La racine du bloc md de type
+         				"tef_desc_these" doit &ecirc;tre "tef:thesisRecord". 
+      </p>
+      		
+      		
+      			
+      <p> Il doit y avoir un et un seul &eacute;l&eacute;ment
+         				"titre" avec un attribut "xml:lang" ayant la valeur "fr" sous l'&eacute;l&eacute;ment tef:thesisRecord. 
+      </p>
+      			
+      			
+      <p> Il faut au moins un sujet en Fran&ccedil;ais </p>
+      			
+      <p> Il ne peut y avoir plus d'un &eacute;l&eacute;ment
+         				tef:sujetRameau sous l'&eacute;l&eacute;ment "tef:thesisRecord" 
+      </p>
+      			
+      <p> Il faut un et un seul r&eacute;sum&eacute; en
+         				Fran&ccedil;ais. 
+      </p>
+      			
+      <p> Il faut un et un seul r&eacute;sum&eacute; en
+         				Anglais. 
+      </p>
+      			
+      <p> Dans le bloc des md descriptives,
+         				il existe au moins un &eacute;l&eacute;ment dc:type dont l'attribut xsi:type a pour valeur
+         				"dcterms:DCMIType". 
+      </p>
+      			
+      <p> Dans le
+         				bloc des md descriptives, il doit exister un et un seul &eacute;l&eacute;ment dc:type ayant pour valeur
+         				"Electronic Thesis or Dissertation". 
+      </p>
+      			
+      <p> Il faut un dc:language ayant pour
+         				attribut @xsi:type='dcterms:RFC3066' (de pr&eacute;f&eacute;rence code de langue sur deux caract&egrave;res).
+         			
+      </p>
+      		
+      		
+      			
+      <p> S'il y a un &eacute;l&eacute;ment dcterms:alternative (traduction du titre et
+         				du sous-titre de la th&egrave;se) sous l'&eacute;l&eacute;ment tef:thesisRecord, il doit avoir un attribut
+         				"xml:lang". 
+      </p>
+      		
+      		
+      			
+      <p> Si un &eacute;l&eacute;ment
+         				dc:subject a pour attribut xsi:type (sch&eacute;ma d'encodage) 'tef:oaiSetLang', alors sa valeur
+         				est un des libell&eacute;s contenus dans le fichier tef_sets.xml 
+      </p>
+      		
+      	
+      <h2 id="tef_desc_version">R&egrave;gles sur les m&eacute;tadonn&eacute;es descriptives d'une version incompl&egrave;te</h2>
+      <h3>tef_desc_version</h3>
+      		
+      			
+      <p> La racine d'un bloc md de type "tef_desc_version" doit &ecirc;tre
+         				"tef:version". 
+      </p>
+      		
+      		
+      			
+      <p> Pour toute description de version incompl&egrave;te, il faut pr&eacute;ciser
+         				au moins un &eacute;l&eacute;ment "tef:manque" pour pr&eacute;ciser en quoi cette version est incompl&egrave;te.
+         			
+      </p>
+      		
+      		
+      			
+      <p> Toute version incompl&egrave;te "tef:manque"
+         				doit avoir pour fils l'un de ces deux &eacute;l&eacute;ments : "tef:ressourceID" (qui permet d'identifier
+         				une ressource externe) ou "tef:noteVersion" (qui permet de d&eacute;crire librement le contenu
+         				d'une version particuli&egrave;re), ou les deux. 
+      </p>
+      		
+      		
+      			
+      <p> Si une version incompl&egrave;te poss&egrave;de un
+         				&eacute;l&eacute;ment tef:ressourceID, la valeur de ce dernier doit correspondre &agrave; l'attribut ID d'une
+         				ressource externe, dans le bloc structMap. 
+      </p>
+      		
+      		
+      			
+      <p> Si une version incompl&egrave;te poss&egrave;de un &eacute;l&eacute;ment
+         				"dcterms:replaces", il doit avoir un attribut xsi:type = 'dcterms:URI'. 
+      </p>
+      		
+      	
+      <h2 id="tef_desc_edition">R&egrave;gles sur les m&eacute;tadonn&eacute;es descriptives d'&eacute;dition</h2>
+      <h3>tef_desc_edition</h3>
+      		
+      			
+      <p> La racine d'un bloc md de type
+         				"tef_desc_edition"est "tef:edition". 
+      </p>
+      		
+      		
+      			
+      <p> Dans chaque bloc md de
+         				type "tef_desc_edition", il doit y avoir un et un seul &eacute;l&eacute;ment "dcterms:medium" ayant pour
+         				attribut "xsi:type" dont la valeur est "dcterms:IMT". 
+      </p>
+      			
+      <p> Dans chaque bloc md de type "tef_desc_edition", il
+         				doit y avoir un et un seul &eacute;l&eacute;ment "dcterms:extent". 
+      </p>
+      			
+      <p> Dans chaque bloc md de type
+         				"tef_desc_edition", il ne doit pas y avoir plus d'un &eacute;l&eacute;ment "dcterms:issued". 
+      </p>
+      			
+      <p> Dans chaque bloc md de type
+         				"tef_desc_edition", il doit y avoir au moins un &eacute;l&eacute;ment "dc:identifier". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Dans chaque bloc "tef:editeur", il doit y avoir un et un
+         				seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      			
+      <p> Dans chaque bloc "tef:editeur", il doit y avoir au moins un
+         				&eacute;l&eacute;ment "tef:place". 
+      </p>
+      		
+      	
+      <h2 id="ted_desc_externe">R&egrave;gles sur les m&eacute;tadonn&eacute;es descriptives des ressources externes</h2>
+      <h3>tef_desc_externe</h3>
+      		
+      			
+      <p> La racine d'un bloc md de
+         				type "tef_desc_externe" est "tef:ressourceExterneDescription". 
+      </p>
+      		
+      	
+      <h2 id="tef_admin_these">R&egrave;gles sur les m&eacute;tadonn&eacute;es administratives de la th&egrave;se</h2>
+      <h3>tef_admin_these</h3>
+      		
+      			
+      <p> La racine du bloc md de type
+         				"tef_admin_these" est "thesisAdmin". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es administratives (md de type
+         				"tef_admin_these"), il faut un &eacute;l&eacute;ment "tef:auteur" (auteur de la th&egrave;se) qui contient la
+         				description de l'auteur. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es
+         				administratives (md de type "tef_admin_these"), il faut un et un seul &eacute;l&eacute;ment
+         				"dc:identifier" ayant un attribut "xsi:type" dont la valeur est 'tef:NNT' (num&eacute;ro national
+         				de th&egrave;se). 
+      </p>
+      			
+      <p> Parmi les
+         				m&eacute;tadonn&eacute;es administratives (md de type "tef_admin_these"), il faut un et un seul &eacute;l&eacute;ment
+         				"dcterms:dateAccepted" ayant un attribut xsi:type dont la valeur est "dcterms:W3CDTF". 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es administratives (md de
+         				type "tef_admin_these"), il faut un et un seul &eacute;l&eacute;ment "tef:thesis.degree" qui contient les
+         				m&eacute;tadonn&eacute;es sp&eacute;cifiques au dipl&ocirc;me obtenu &agrave; l&#8217;issue d&#8217;une soutenance de th&egrave;se. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es administratives (md de
+         				type "tef_admin_these"), il faut un et un seul &eacute;l&eacute;ment "tef:theseSurTravaux" qui permet de
+         				pr&eacute;ciser s'il s'agit d'une th&egrave;se constitu&eacute;e en partie d'articles publi&eacute;s par le doctorant
+         				avant la soutenance de sa th&egrave;se. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es administratives (md de type
+         				"tef_admin_these"), il faut un et un seul &eacute;l&eacute;ment "tef:avisJury" qui permet de pr&eacute;ciser si
+         				le jury autorise ou non la publication de la th&egrave;se apr&egrave;s la soutenance. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es administratives (md de type
+         				"tef_admin_these"), il faut au moins un &eacute;l&eacute;ment "tef:directeurThese" qui permet de d&eacute;crire
+         				la personne qui encadre et oriente le travail du doctorant. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es administratives (md de type
+         				"tef_admin_these"), il faut au moins un &eacute;lement "tef:oaiSetSpec" qui permet de pr&eacute;ciser un
+         				set OAI auquel est rattach&eacute;e la th&egrave;se. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description de l'auteur, il faut
+         				un et un seul &eacute;l&eacute;ment "tef:nom" (nom de famille de l'auteur). 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description de l'auteur, il
+         				faut un et un seul &eacute;l&eacute;ment "tef:prenom" (pr&eacute;nom de l'auteur). 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description de
+         				l'auteur, il faut un et un seul &eacute;l&eacute;ment "tef:dateNaissance" (date de naissance de l'auteur)
+         				dans le format de date AAAA/MM/JJ. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de
+         				description de l'auteur, il faut un et seul &eacute;l&eacute;ment "tef:nationalite" (nationalit&eacute; de
+         				l'auteur : code du pays sur 2 caract&egrave;res en majuscules ) ayant un attribut "scheme" (sch&eacute;ma
+         				d'encodage) dont la valeur est 'ISO-3166-1' . 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es
+         				sp&eacute;cifiques au dipl&ocirc;me obtenu ("tef:thesis.degree"), il faut un et un seul &eacute;l&eacute;ment
+         				"tef:thesis.degree.discipline" (contenant la discipline telle qu&#8217;elle figure sur la page de
+         				titre de la th&egrave;se) ayant un attribut "xml:lang" dont la valeur est la langue encod&eacute;e sur
+         				deux caract&egrave;res. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es sp&eacute;cifiques au dipl&ocirc;me
+         				obtenu ("tef:thesis.degree"), il faut au moins un &eacute;l&eacute;ment "tef:thesis.degree.grantor", qui
+         				permet de d&eacute;crire chaque &eacute;tablissement de soutenance. Dans le cas d&#8217;une th&egrave;se r&eacute;alis&eacute;e en
+         				co-tutelle, renseigner l&#8217;universit&eacute; de co-tutelle. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es sp&eacute;cifiques au dipl&ocirc;me obtenu ("tef:thesis.degree"),
+         				il faut un &eacute;l&eacute;ment "tef:thesis.degree.level", qui permet de pr&eacute;ciser le type de doctorat
+         				obtenu. Cet &eacute;l&eacute;ment a pour valeur 'Doctorat', 'Doctorat d'Etat' ou 'Doctorat de troisi&egrave;me
+         				cycle'. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es sp&eacute;cifiques au dipl&ocirc;me obtenu
+         				("tef:thesis.degree"), il faut un &eacute;l&eacute;ment "tef:nom" renseign&eacute; conform&eacute;ment aux normes
+         				bibliographiques en vigueur, en l'occurrence &agrave; la norme fran&ccedil;aise Z44-050. S'il s&#8217;agit d&#8217;une
+         				universit&eacute;, on ne garde que le nom de la ville accompagn&eacute;, s&#8217;il y a plusieurs universit&eacute;s
+         				dans la m&ecirc;me ville, du num&eacute;ro de I&#8217;universit&eacute; (en chiffres arabes). Dans les autres cas, on
+         				donne le nom de la ville o&ugrave; se trouve r&eacute;ellement l&#8217;&eacute;tablissement de soutenance, suivi du nom
+         				de l&#8217;&eacute;tablissement introduit par une virgule, espace (, ). Si l&#8217;&eacute;tablissement est couramment
+         				d&eacute;sign&eacute; par un sigle, on conserve celui-ci. 
+      </p>
+      			
+      <p> Parmi les
+         				m&eacute;tadonn&eacute;es sp&eacute;cifiques au dipl&ocirc;me obtenu ("tef:thesis.degree"), le lien vers les donn&eacute;es
+         				d'autorit&eacute; est obligatoire pour l'&eacute;tablissement de soutenance. L'&eacute;l&eacute;ment
+         				"tef:thesis.degree.grantor" doit donc poss&eacute;der soit "tef:autoriteExterne", soit
+         				"tef:autoriteInterne", soit les deux. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> L'&eacute;l&eacute;ment "tef:theseSurTravaux" doit prendre
+         				l'une des deux valeurs "oui" ou "non", toujours en minuscules. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> L'&eacute;l&eacute;ment "tef:avisJury" doit prendre l'une
+         				des deux valeurs "oui" ou "non", toujours en minuscules. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description du directeur de
+         				th&egrave;se, il faut un et un seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description du directeur de
+         				th&egrave;se, il faut un et un seul &eacute;l&eacute;ment "tef:prenom". 
+      </p>
+      			
+      <p> Parmi les
+         				m&eacute;tadonn&eacute;es de description du directeur de th&egrave;se, le lien vers les donn&eacute;es d'autorit&eacute; est
+         				obligatoire. L'&eacute;l&eacute;ment "tef:directeurThese" doit donc poss&eacute;der soit "tef:autoriteExterne",
+         				soit "tef:autoriteInterne", soit les deux. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description du pr&eacute;sident du
+         				jury, il faut un et un seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description du pr&eacute;sident du
+         				jury, il faut un et un seul un &eacute;l&eacute;ment "tef:prenom". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'un membre du jury,
+         				il faut un et un seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'un membre du
+         				jury, il faut un et un seul &eacute;l&eacute;mentr un &eacute;l&eacute;ment "tef:prenom". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'un rapporteur, il
+         				faut un et un seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'un rapporteur,
+         				il faut un et un seul &eacute;l&eacute;ment "tef:prenom". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'une &eacute;cole doctorale,
+         				il faut un et un seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Si l'attribut type de
+         				tef:partenaireRecherche a pour valeur "autreType", alors il poss&egrave;de l'attribut autreType. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'un partenaire de recherche,
+         				l'&eacute;l&eacute;ment "tef:partenaireRecherche" doit avoir un attribut qui renseigne le type de
+         				partenaire de recherche ayant particip&eacute; &agrave; la r&eacute;alisation de la th&egrave;se. 
+      </p>
+      			
+      <p> Le type de partenaire doit
+         				&ecirc;tre choisi dans cette liste : equipeRecherche, laboratoire, universite, entreprise,
+         				fondation, autreType. 
+      </p>
+      			
+      <p> Parmi les m&eacute;tadonn&eacute;es de description d'un partenaire de
+         				recherche, il faut un et un seul &eacute;l&eacute;ment "tef:nom". 
+      </p>
+      		
+      		
+      			
+      <p> Si le type de partenaire est "autreType', l'attribut autreType
+         				doit pr&eacute;ciser de quel autre type de partenaire il s'agit. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> La racine d'un bloc md de type "tef:MADSAuthority"
+         				doit &ecirc;tre "tef:personMADS". 
+      </p>
+      			
+      <p> Chaque bloc "tef:MADSAuthority" doit avoir un attribut "@authorityID". Cet identifiant
+         				doit avoir la m&ecirc;me valeur que l'&eacute;l&eacute;ment "tef:autoriteInterne" contenu dans le bloc de
+         				description de la personne (physique ou morale) mentionn&eacute;e dans la notice et sur laquelle
+         				portent ces donn&eacute;es d'autoriit&eacute; (&eacute;diteur, directeur de th&egrave;se, pr&eacute;sident du jury, membre
+         				dujury, rapporteur, &eacute;cole doctoral, partenre de recherche). 
+      </p>
+      		
+      	
+      <h3>tef_admin_these -- oai</h3>
+      		
+      			
+      <p> L'&eacute;l&eacute;ment tef:oaiSetSpec (code
+         				de set OAI) doit puiser sa valeur dans la liste contenue dans le fichier tef_sets.xml.
+         			
+      </p>
+      		
+      	
+      <h3>tef_admin_these -- these travaux</h3>
+      		
+      			
+      <p> Si les
+         				m&eacute;tadonn&eacute;es administratives indiquent qu'il s'agit d'une th&egrave;se sur travaux
+         				(tef:theseSurTravaux='oui'), alors dans le bloc structMap on doit trouver un div/div de type
+         				"TRAVAUX". 
+      </p>
+      		
+      	
+      <h2 id="tef_tech_fichier">R&egrave;gles sur les m&eacute;tadonn&eacute;es de conservation des fichiers</h2>
+      <h3>tef_tech_fichier : r&egrave;gles g&eacute;n&eacute;rales</h3>
+      		
+      			
+      <p> La racine d'un bloc md de type
+         				"tef_tech_fichier" doit &ecirc;tre "tef:meta_fichier". 
+      </p>
+      		
+      		
+      			
+      <p> L'&eacute;l&eacute;ment tef:mets_fichier doit avoir pour enfant un
+         				et un seul &eacute;l&eacute;ment tef:encodage. 
+      </p>
+      			
+      <p> L'&eacute;l&eacute;ment tef:mets_fichier doit avoir pour
+         				enfant un et un seul &eacute;l&eacute;ment tef:formatFichier. 
+      </p>
+      			
+      <p> L'&eacute;l&eacute;ment tef:mets_fichier doit avoir pour enfant un
+         				et un seul &eacute;l&eacute;ment tef:taille. 
+      </p>
+      			
+      <p> Il ne peut y avoir plus d'un &eacute;l&eacute;ment tef:note
+         				sous tef:meta_fichier. 
+      </p>
+      			
+      <p> Il ne peut y avoir plus d'un &eacute;l&eacute;ment
+         				tef:structureFichier sous tef:meta_fichier. 
+      </p>
+      			
+      <p> Il ne peut y avoir plus d'un
+         				&eacute;l&eacute;ment tef:AutreFormatFichier sous tef:meta_fichier. 
+      </p>
+      		
+      		
+      			
+      <p> Si l'&eacute;l&eacute;ment tef:formatFichier a pour valeur
+         				'autreFormat', alors il doit exister un &eacute;l&eacute;ment autreFormatFichier sous tef:meta_fichier.
+         			
+      </p>
+      		
+      		
+      			
+      <p> L'&eacute;l&eacute;ment tef:formatFichier doit avoir pour valeur 'OpenDocument' ou
+         				'PDF' ou 'PDF/A' ou 'HTML' ou 'RTF' ou 'TXT' ou 'XML' ou 'JPEG' ou 'GIF' ou 'PNG' ou 'TIFF'
+         				ou 'MP3' ou 'MPEG' ou 'QuickTime' ou ou 'autreFormat'. 
+      </p>
+      		
+      		
+      			
+      <p> L'&eacute;l&eacute;ment
+         				tef:formatFichier doit avoir pour valeur 'ASCII' ou 'Latin 1' ou 'Unicode'. 
+      </p>
+      		
+      	
+      <h2 id="tef_droits">R&egrave;gles sur les m&eacute;tadonn&eacute;es de droits</h2>
+      <h3>tef_droits</h3>
+      		
+      			
+      <p> La racine du bloc md de type
+         				"tef_droits_etablissement_these" est "metsRights:RightsDeclarationMD". 
+      </p>
+      		
+      		
+      			
+      <p> La racine du bloc md de type
+         				"tef_droits_auteur_these" est "metsRights:RightsDeclarationMD". 
+      </p>
+      		
+      		
+      			
+      <p> La racine du bloc md de type
+         				"tef_droits_externe" est "metsRights:RightsDeclarationMD". 
+      </p>
+      		
+      		
+      			
+      <p> La racine du bloc md de type
+         				"tef_droits_version" est "metsRights:RightsDeclarationMD". 
+      </p>
+      		
+      		
+      			
+      <p> Pour chaque bloc de md de droits
+         				(metsRights), le droit d'affichage (DISPLAY) sur Internet (GENERAL PUBLIC) doit &ecirc;tre
+         				explicitement renseign&eacute;. 
+      </p>
+      		
+      		
+      			
+      <p> Pour chaque bloc de md de droits
+         				(metsRights), le droit de reproduction (DUPLICATE) sur Internet (GENERAL PUBLIC) doit &ecirc;tre
+         				explicitement renseign&eacute;. 
+      </p>
+      		
+      		
+      			
+      <p> Pour
+         				chaque bloc de m&eacute;tadonn&eacute;es de type "tef_droits_etablissement_these", la restriction de type
+         				"TIME" doit commencer par "confidentialit&eacute;". 
+      </p>
+      		
+      		
+      			
+      <p> Pour chaque
+         				bloc de m&eacute;tadonn&eacute;es de droits dont le type n'est pas "tef_droits_etablissement_these", la
+         				restriction de type "TIME" doit commencer par "restriction". 
+      </p>
+      		
+      		
+      	
+      <h2 id="mets_fileSec">R&egrave;gles sur l'inventaire des fichiers (mets:fileSec)</h2>
+      <h3>mets:fileSec</h3>
+      		
+      			
+      <p>
+         				Dans la section des fichiers (mets:fileSec), il faut un et un seul groupe de fichiers (de
+         				1er niveau) avec un attribut USE ayant pour valeur "archive" ou "archive_et_diffusion".
+         			
+      </p>
+      		
+      		
+      			
+      <p> Tout
+         				fichier (de l'&eacute;dition d'archivage) doit obligatoirement &ecirc;tre associ&eacute; &agrave; un bloc de
+         				m&eacute;tadonn&eacute;es de conservation (de type "tef_tech_fichier") (via l'identifiant de ce bloc).
+         			
+      </p>
+      		
+      		
+      			
+      <p> Tout mets:file (de l'&eacute;dition d'archivage) doit poss&eacute;der un
+         				&eacute;l&eacute;ment mets:FLocat ayant un attribut xlink:href. Cet attribut permet de localiser chacun de
+         				ces fichiers, soit dans un r&eacute;pertoire de fichiers associ&eacute; &agrave; la notice TEF, soit sur
+         				Internet. 
+      </p>
+      		
+      		
+      			
+      <p> A chaque groupe de
+         				fichiers de 1er niveau (mets:fileGrp dans la section des fichiers mets:fileSec), doit
+         				correspondre un mets:div de type "EDITION" dans la carte de structure (mets:structMap). Ce
+         				lien s'effectue gr&acirc;ce aux identifiants (ID / FILEID). 
+      </p>
+      		
+      	
+      <h2 id="mets:structMap">R&egrave;gles sur les m&eacute;tadonn&eacute;es descriptives de la th&egrave;se</h2>
+      <h3>mets:structMap -- Comment composer la carte de structure (mets:structMap) ?</h3>
+      		
+      		
+      			
+      <p> La carte de structure (mets:structMap) est de type
+         				logique. 
+      </p>
+      			
+      <p> La carte de structure (mets:structMap) poss&egrave;de une seule
+         				racine mets:div. 
+      </p>
+      			
+      <p> La racine de la carte de structure
+         				(mets:structMap) est de TYPE "THESE". 
+      </p>
+      		
+      		
+      			
+      <p> Tous les mets:div doivent poss&eacute;der l'attribut CONTENTIDS, sauf
+         				les mets:div de TYPE "RESSOURCES_EXTERNES", "RESSOURCE_TIERS" ou "TRAVAUX" (pour lesquels
+         				facultatif mais pas interdit). L'attribut CONTENTIDS contient un URI permettant d'assigner
+         				un identifiant unique global (&agrave; l'&eacute;chelle du Web) &agrave; chaque entit&eacute; concern&eacute;e. 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Sous le mets:div de type
+         				"THESE", on doit trouver un et un seul &eacute;l&eacute;ment mets:div de type "VERSION_COMPLETE".
+         			
+      </p>
+      		
+      		
+      			
+      <p> Sous le mets:div
+         				de type "THESE", on peut trouver des &eacute;l&eacute;ments mets:div de type "VERSION_COMPLETE",
+         				"VERSION_INCOMPLETE", "RESSOURCES_EXTERNES", "RESSOURCE_TIERS" ou "TRAVAUX". 
+      </p>
+      		
+      		
+      		
+      			
+      <p> Sous un mets:div de type "VERSION_COMPLETE" ou
+         				"VERSION_INCOMPLETE", on doit trouver un ou plusieurs mets:div de type "EDITION".
+         			
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Bloc de ressources externes</h3>
+      		
+      			
+      <p>
+         				Toute mets:div de TYPE "RESSOURCES_EXTERNES" a pour enfant un mets:div de TYPE
+         				"RESSOURCE_TIERS" ou "TRAVAUX" ou "RESSOURCES_EXTERNES" 
+      </p>
+      		
+      		
+      			
+      <p> Toute
+         				mets:div de TYPE "RESSOURCES_EXTERNES" a pour descendant un mets:div de TYPE
+         				"RESSOURCE_TIERS" ou "TRAVAUX". 
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Lien vers un fichier pr&eacute;cis</h3>
+      		
+      			
+      <p> Si une
+         				ressource externe (mets:div de TYPE "RESSOURCE_TIERS" ou "TRAVAUX") poss&egrave;de un enfant
+         				mets:fptr, alors ce dernier doit poss&eacute;der un attribut FILEID qui correspond &agrave; un attribut ID
+         				d'un mets:file de l'inventaire des fichiers (mets:fileSec). L'&eacute;l&eacute;ment mets:fptr permet
+         				d'associer un fichier pr&eacute;cis &agrave; une ressource externe. 
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Quelles m&eacute;tadonn&eacute;es associ&eacute;es &agrave; une th&egrave;se ?</h3>
+      		
+      			
+      <p> Toute THESE doit
+         				&ecirc;tre associ&eacute;e &agrave; un bloc de m&eacute;tadonn&eacute;es descriptives de type "tef_desc_these". 
+      </p>
+      			
+      <p> Toute
+         				THESE doit &ecirc;tre associ&eacute;e &agrave; un bloc de m&eacute;tadonn&eacute;es de type "tef_admin_these". 
+      </p>
+      			
+      <p> Toute THESE doit &ecirc;tre associ&eacute;e &agrave; un bloc de m&eacute;tadonn&eacute;es de type
+         				"tef_droits_etablissement_these". 
+      </p>
+      			
+      <p> Toute THESE doit &ecirc;tre associ&eacute;e &agrave; un bloc de m&eacute;tadonn&eacute;es de type "tef_droits_auteur_these".
+         			
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Quelles m&eacute;tadonn&eacute;es associ&eacute;es &agrave; une version incompl&egrave;te?   M&eacute;tadonn&eacute;es descriptives</h3>
+      		
+      			
+      <p> Toute
+         				VERSION_INCOMPLETE de la th&egrave;se doit &ecirc;tre associ&eacute;e &agrave; des m&eacute;tadonn&eacute;es descriptives de
+         				type"tef_desc_version". 
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Quelles m&eacute;tadonn&eacute;es associ&eacute;es &agrave; une version ? M&eacute;tadonn&eacute;es de   droits</h3>
+      		
+      			
+      <p>
+         				Toute VERSION de la th&egrave;se doit &ecirc;tre associ&eacute;e &agrave; des m&eacute;tadonn&eacute;es administratives de
+         				type"tef_droits_version". 
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Quelles m&eacute;tadonn&eacute;es associ&eacute;es &agrave; une &eacute;dition ?</h3>
+      		
+      			
+      <p> Toute EDITION de
+         				la th&egrave;se doit &ecirc;tre associ&eacute;e &agrave; des m&eacute;tadonn&eacute;es de type "tef_desc_edition". 
+      </p>
+      		
+      	
+      <h3>mets:structMap -- Quelles m&eacute;tadonn&eacute;es associ&eacute;es &agrave; une ressource externe ?</h3>
+      		
+      			
+      <p>
+         				Toute ressource externe (RESSOURCE_TIERS ou TRAVAUX) doit &ecirc;tre associ&eacute;e &agrave; un bloc de
+         				m&eacute;tadonn&eacute;es de droits de type "tef_droits_externe". Si ce n'est pas le cas, c'est le groupe
+         				de RESSOURCES_EXTERNES qui les englobe qui doit &ecirc;tre associ&eacute; &agrave; ce bloc de m&eacute;tadonn&eacute;es. 
+      </p>
+      			
+      <p> Toute ressource
+         				externe (RESSOURCE_TIERS ou TRAVAUX) doit &ecirc;tre associ&eacute;e &agrave; un bloc de m&eacute;tadonn&eacute;es
+         				descriptives de type "tef_desc_externe". Si ce n'est pas le cas, c'est le groupe de
+         				RESSOURCES_EXTERNES qui les englobe qui doit &ecirc;tre associ&eacute; &agrave; ce bloc de m&eacute;tadonn&eacute;es. 
+      </p>
+      			
+      <p> Des
+         				m&eacute;tadonn&eacute;es administratives ne doivent pas &ecirc;tre associ&eacute;es en m&ecirc;me temps &agrave; une ressource
+         				externe individuelle et au groupe de ressources externes qui la comprend. 
+      </p>
+      			
+      <p> Des
+         				m&eacute;tadonn&eacute;es descriptives ne doivent pas &ecirc;tre associ&eacute;es en m&ecirc;me temps &agrave; une ressource externe
+         				individuelle et au groupe de ressources externes qui la comprend. 
+      </p>
+      		
+      	
+   </body>
+</html>

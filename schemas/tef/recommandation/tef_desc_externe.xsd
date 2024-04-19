@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.abes.fr/abes/documents/tef" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	targetNamespace="http://www.abes.fr/abes/documents/tef" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="1.0">
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+	<!--    	
+				Schéma XML d'espace de noms tef, qui déclare le contenu du bloc de métadonnées descriptives pour une ressource externe.
+				La racine de ce bloc est tef:ressourceExterneDescription.
+				tef:ressourceExterneDescription n'a pour enfants que des éléments Dublin Core (simple ou qualifié).
+		
+				Pour identifier/décrire une ressource externe, chacun est libre, mais on peut recommander une de ces trois méthodes :
+					. description structurée (titre, auteur....)
+					. dc:identifier
+					. dcterms:bibliographicCitation (citation/description non structurée)
+				Toutes ces méthodes sont du DC classique. Il suffit d'appeler les schémas DC pour permettre tout cela.
+		-->
+	<xs:element name="ressourceExterneDescription" type="dcterms:elementOrRefinementContainer" />
+</xs:schema>

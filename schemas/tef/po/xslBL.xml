@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+	xmlns:SRW="http://www.loc.gov/zing/srw/" xmlns:DIAG="http://www.loc.gov/zing/srw/diagnostic/"
+	xmlns:zng="urn:z3950:zng_prototype1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+	xmlns:tel="http://krait.kb.nl/coop/tel/handbook/telterms.html"
+	xmlns:mods="http://www.loc.gov/mods" xmlns:cld="http://www.ukoln.ac.uk/metadata/rslp/schema/"
+	xmlns:blap="http://labs.bl.uk/metadata/blap/terms.html" xmlns:ya="urn:yahoo:srch"
+	xmlns:rss="http://purl.org/rss/1.0/" xmlns:marc="http://www.loc.gov/MARC21/slim"
+	xmlns:xoomle="http://www.dentedreality.com.au/xoomle/docs/" xmlns:am="http://webservices.amazon.com/AWSECommerceService/2005-03-23" >
+	<xsl:output method="html"/>
+	<xsl:template match="/">
+		<html>
+			<head>
+			<style type="text/css">
+				div {border: 1px dashed olive; margin: 1%;}
+			</style></head>
+			<body>
+				<div>
+					<h1>Essai Sudoc 2.0</h1>
+				</div>
+				<div style="float:left;width:55%;">
+					<xsl:text>Titre : </xsl:text>
+					<xsl:value-of select="//dc:title"/>
+				</div>
+				<div style="float:left;width:40%;">
+					<!--<h1>Couverture</h1>-->
+					<xsl:variable name="image">
+						<xsl:text>http://images.amazon.com/images/P/</xsl:text>
+						<xsl:value-of select="substring-before(//dc:identifier[@xsi:type='lib:ISBN'], ' ')"/>
+						<xsl:text>.05._PE30_SCMZZZZZZZ_.jpg</xsl:text>
+					</xsl:variable>
+					<img src="{$image}" alt="couverture"/>
+				</div>
+				<div>
+					<h1>Rebond Google Scholar</h1>
+					<xsl:variable name="GS">
+						<xsl:text>http://scholar.google.com/scholar?q=</xsl:text>
+						<xsl:value-of select="//dc:title"/>
+						<xsl:text> author:</xsl:text>
+						<xsl:value-of select="//dc:creator[1]"/>
+					</xsl:variable>
+					<a href="{$GS}">Cette ressource est citée par d'autres...</a>
+				</div>
+				<div>
+					<h1>Rebond Google Review</h1>
+					<xsl:variable name="GR">
+						<xsl:text>http://www.google.com/search?q=review </xsl:text>
+						<xsl:value-of select="//dc:title"/>
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="//dc:creator[1]"/>
+					</xsl:variable>
+					<a href="{$GR}">Cette ressource est commentée par d'autres...</a>
+				</div>
+				<!--<div>
+					<h1>Rebond Google XML</h1>
+					<xsl:variable name="GX">
+						<xsl:text>http://xoomle.dentedreality.com.au/search/?key=ZfkrnleP8XrZ%2B1t9hbcJjWjUkt%2FY7gyT&amp;q=</xsl:text>
+						<xsl:value-of select="//dc:title"/>
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="//dc:creator[1]"/>
+					</xsl:variable>
+					<xsl:variable name="GnonX">
+						<xsl:text>http://www.google.com/search?q=</xsl:text>
+						<xsl:value-of select="//dc:title"/>
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="//dc:creator[1]"/>
+					</xsl:variable>
+					<a href="{$GnonX}">Titre-Auteur dans Google :  </a>
+					<xsl:value-of select="document($GX)/*/*[2]"/>
+				</div>-->
+				<div>
+					<xsl:variable name="GB">
+						<xsl:text>http://books.google.com/books?q=</xsl:text>
+						<xsl:value-of select="//dc:title"/>
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="//dc:creator[1]"/>
+					</xsl:variable>
+					<a href="{$GB}"><h1>Rebond Google Books</h1></a>
+				</div>
+				<!-- supprimer les points et autres dans les champs de départ -->
+				
+				<div>
+					<h1>Rebond xISBN</h1>
+					<xsl:variable name="xi">
+						<xsl:text>http://labs.oclc.org/xisbn/</xsl:text>
+						<xsl:value-of select="substring-before(//dc:identifier[@xsi:type='lib:ISBN'], ' ')"/>
+					</xsl:variable>
+					<xsl:variable name="loc1"
+						>http://www.loc.gov/z39voy?operation=searchRetrieve&amp;version=1.1&amp;query=bath.isbn=</xsl:variable>
+					<xsl:variable name="loc2"
+						>&amp;recordSchema=marcxml&amp;startRecord=1&amp;maximumRecords=20</xsl:variable>
+					<a href="{$xi}">Il existe d'autres éditions de cet ouvrage :</a>
+					<xsl:for-each select="document($xi)//isbn">
+						<xsl:variable name="loc">
+							<xsl:value-of select="$loc1"/>
+							<xsl:value-of select="."/>
+							<xsl:value-of select="$loc2"/>
+						</xsl:variable>
+						<p>
+							<xsl:value-of select="document($loc)//marc:datafield[@tag='250']"/>
+							<xsl:text>  </xsl:text>
+							<xsl:value-of select="document($loc)//marc:datafield[@tag='260']"/>
+							<xsl:text>  </xsl:text>
+							<xsl:value-of select="document($loc)//marc:datafield[@tag='300']"/>
+						</p>
+					</xsl:for-each>
+				</div>
+				<div>
+					<h1>Rebond Suggestions Amazon : </h1>
+					<xsl:variable name="am">
+						<xsl:text>http://webservices.amazon.com/onca/xml?Service=AWSECommerceService&amp;Operation=SimilarityLookup&amp;SubscriptionId=0525E2PQ81DD7ZTWTK82&amp;ItemId=</xsl:text>
+						<xsl:value-of select="substring-before(//dc:identifier[@xsi:type='lib:ISBN'], ' ')"/>
+					</xsl:variable>
+					<xsl:value-of select="$am"></xsl:value-of>
+					<xsl:for-each select="document($am)//*[local-name()='Item']">
+						<xsl:variable name="amurl">
+							<xsl:value-of select=".//*[local-name()='DetailPageURL']"></xsl:value-of>
+						</xsl:variable>
+						<p>
+							<a href="{$amurl}"><xsl:value-of select=".//*[local-name()='Title']"/></a>
+							<xsl:text> par </xsl:text>
+							<xsl:value-of select=".//*[local-name()='Author']"/>
+						</p>
+					</xsl:for-each>
+				</div>
+				<div>
+					<h1>Rebond Technorati</h1>
+					<xsl:variable name="tr">
+						<xsl:text>http://api.technorati.com/search?key=de8631f2e521482f9a4bd63585c0d3b2&amp;query=</xsl:text>
+						<xsl:value-of select="//dc:title"/>
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="substring-before(//dc:identifier[@xsi:type='lib:ISBN'], ' ')"/>
+					</xsl:variable>
+					<a href="{$tr}">Cette ressource est commentée par </a>
+					<h1><xsl:value-of select="document($tr)//querycount"/></h1>
+					<a href="{$tr}"> autres ressources</a>
+					<xsl:for-each select="document($tr)//item">
+						<p>
+							<a href="{nearestpermalink}">
+								<xsl:value-of select="title"/>
+							</a>
+						</p>
+					</xsl:for-each>
+				</div>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>

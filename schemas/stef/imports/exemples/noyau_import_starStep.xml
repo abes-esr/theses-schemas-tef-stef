@@ -1,0 +1,77 @@
+<mets:mets xmlns:mads="http://www.loc.gov/mads/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:suj="http://www.theses.fr/namespace/sujets" xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.abes.fr/abes/documents/stef/stef_schemas.xsd">
+	<mets:dmdSec ID="CODEETAB.IMPORT.DESCRIPTION_BIBLIOGRAPHIQUE">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_these">
+			<mets:xmlData>
+				<tef:thesisRecord>
+					<!-- Noyau STAR : Titre de la thèse et langue du titre-->
+					<dc:title xml:lang="fr">Titre en français</dc:title>
+				</tef:thesisRecord>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:amdSec>
+		<mets:techMD ID="CODEETAB.IMPORT.ADMINISTRATION">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_admin_these">
+				<mets:xmlData>
+					<tef:thesisAdmin>
+						<tef:auteur>
+							<!-- Noyau STAR : nom de l'auteur-->
+							<tef:nom>Nom auteur</tef:nom>
+							<!-- Noyau STAR : prénom de l'auteur-->
+							<tef:prenom>Prénom auteur</tef:prenom>
+							<!-- Noyau STAR : date de naissance de l'auteur-->
+							<tef:dateNaissance>1990-01-01</tef:dateNaissance>
+							<!-- !! Noyau si import dans STEP et STAR : il faut au moins une adresse mail (personnelle ou institutionnelle) !!!!-->
+							<tef:autoriteExterne autoriteSource="mailPerso">prenom.nom@gmail.com</tef:autoriteExterne> <!--et/ ou-->
+							<tef:autoriteExterne autoriteSource="mailPro">prenom.nom@monuniv.univ.fr</tef:autoriteExterne>
+							<!-- les autoriteExternes sont facultatives mais leur usage est vivement recommandé, par exemple :
+							* INE : numéro d'identifiant national étudiant							
+<tef:autoriteExterne autoriteSource="INE">code INE</tef:autoriteExterne>
+							* l'identifiant de l'étudiant dans l'annuaire du système d'information local
+<tef:autoriteExterne autoriteSource="CodeEtu">code étudiant local</tef:autoriteExterne>-->
+						</tef:auteur>
+						<!--Noyau STAR : date de soutenance (antérieure à la date du jour)-->
+						<dcterms:dateAccepted xsi:type="dcterms:W3CDTF">2013-04-15</dcterms:dateAccepted>
+						<tef:thesis.degree>
+							<!-- Noyau STAR : discipline de la thèse-->
+							<tef:thesis.degree.discipline xml:lang="fr">Discipline telle qu’elle figure sur la page de titre de la thèse </tef:thesis.degree.discipline>
+							<tef:thesis.degree.grantor>
+								<!-- Noyau STAR : nom de l'établissement de soutenance-->
+								<tef:nom>Etablissement de soutenance</tef:nom>
+								<!-- les autoriteExternes sont facultatives mais leur usage est recommandé, par exemple :
+								* code UA (Unité Administrative Immatriculée) attribué à chaque établissement d'enseignement
+<tef:autoriteExterne autoriteSource="codeUAI">code UAI</tef:autoriteExterne> 
+								* PPN : numéro national IdRef-Sudoc (http://www.idref.fr/autorites/autorites.html)
+<tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+							</tef:thesis.degree.grantor>
+							<!--Noyau STAR : mention du diplôme à recopier tel quel dans le fichier xml envoyé-->
+							<tef:thesis.degree.level>Doctorat</tef:thesis.degree.level>
+						</tef:thesis.degree>
+						<tef:directeurThese>
+							<!-- Noyau STAR : nom du directeur de thèse-->
+							<tef:nom>Nom directeur</tef:nom>
+							<!-- Noyau STAR : prénom du directeur de thèse-->
+							<tef:prenom>Prénom directeur</tef:prenom>
+							<!--le lien à l'autorité externe "numéro national IdRef-Sudoc" est facultatif mais vivement recommandé pour assurer l'existence d'une page unique dédiée au directeur sur theses.fr
+						<tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+						</tef:directeurThese>
+						<tef:ecoleDoctorale>
+							<!-- Noyau STAR : nom de l'école doctorale (cette donnée apparaîtra telle quelle sur theses.fr)-->
+							<tef:nom>Libellé en toutes lettres de l'école doctorale</tef:nom>
+							<!--le lien à l'autorité externe "numéro national IdRef-Sudoc" est facultatif mais vivement recommandé pour assurer l'existence d'une page unique dédiée à l'école doctorale sur theses.fr
+						<tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+							<!-- les autoriteExternes sont facultatives mais leur usage est recommandé, par exemple :
+							* code AFDUR : Annuaire des formations doctorales et des unités de recherche (https://appliweb.dgri.education.fr/annuaire/contact.jsp) 
+<tef:autoriteExterne autoriteSource="AFDUR">code AFDUR</tef:autoriteExterne>-->
+						</tef:ecoleDoctorale>
+					</tef:thesisAdmin>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+	</mets:amdSec>
+	<mets:structMap TYPE="logical">
+		<!--CONTENTIDS : identifiant local de la thèse (c'est à dire identiant dans l'application qui envoie l'import).
+    Le login du doctorant sera <code établissement_CONTENTIDS> (exemple : ABES_CONTENTIDS)-->
+		<mets:div TYPE="THESE" CONTENTIDS="noyauStarStepXXXXX" DMDID="CODEETAB.IMPORT.DESCRIPTION_BIBLIOGRAPHIQUE" ADMID="CODEETAB.IMPORT.ADMINISTRATION"/>
+	</mets:structMap>
+</mets:mets>

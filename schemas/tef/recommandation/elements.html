@@ -1,0 +1,727 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Les &eacute;l&eacute;ments de TEF</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="prev" href="references_biblio_info.html" title="R&eacute;f&eacute;rences biblioth&eacute;conomiques et informatiques">
+      <link rel="next" href="presentation_elements.html" title="Remarque sur la pr&eacute;sentation des &eacute;l&eacute;ments">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Les &eacute;l&eacute;ments de TEF</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="references_biblio_info.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">&nbsp;</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="presentation_elements.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="part" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h1 class="title"><a name="elements"></a>Les &eacute;l&eacute;ments de TEF
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="partintro" lang="fr">
+            <div></div>
+            <p>Squelette XML d'une fiche TEF (seuls les blocs marqu&eacute;s d'un * sont
+                     obligatoires) :
+            </p>
+            <p></p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p><a href="mets_mets.html" title="mets:mets">mets:mets</a> *
+                     </p>
+                     <div class="itemizedlist">
+                        <ul type="circle">
+                           <li>
+                              <p>
+                                                 <a href="mets_metsHdr.html" title="mets:metsHdr">mets:metsHdr</a>
+                                               
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p>
+                                                              <a href="mets_agent.html" title="mets:agent">mets:agent</a>
+                                                            
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_name.html" title="mets:name">mets:name</a>
+                                                                         
+                                                </p>
+                                             </li>
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_note.html" title="mets:note">mets:note</a>
+                                                                         
+                                                </p>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <p>
+                                                              <a href="mets_altRecordID.html" title="mets:altRecordID">mets:altRecordID</a>
+                                                            
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <p></p>
+                           </li>
+                           <li>
+                              <p><a href="mets_dmdSec.html" title="mets:dmdSec">mets:dmdSec</a> *
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap</a> * [de
+                                                            type "<span class="bold"><strong>tef_desc_these</strong></span>"]
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                         
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="tef_thesisRecord.html" title="tef:thesisRecord">tef:thesisRecord
+                                                                                           *</a>
+                                                                                      
+                                                         </p>
+                                                         <p>(...)</p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li>
+                              <p><a href="mets_dmdSec.html" title="mets:dmdSec">mets:dmdSec</a> *
+                                               (obligatoire pour d&eacute;crire les version incompl&egrave;tes)
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap</a> * [de
+                                                            type "<span class="bold"><strong>tef_desc_version</strong></span>"]
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                         
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="tef_version.html" title="tef:version">tef:version *</a>
+                                                                                      
+                                                         </p>
+                                                         <p>(...)</p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li>
+                              <p><a href="mets_dmdSec.html" title="mets:dmdSec">mets:dmdSec</a> *
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap *</a> [de
+                                                            type "<span class="bold"><strong>tef_desc_edition</strong></span>"]
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                         
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="tef_edition.html" title="tef:edition">tef:edition *</a>
+                                                                                      
+                                                         </p>
+                                                         <p>(...)</p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li>
+                              <p>
+                                                 <a href="mets_dmdSec.html" title="mets:dmdSec">mets:dmdSec</a>
+                                               
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap *</a> [de
+                                                            type "<span class="bold"><strong>tef_desc_externe</strong></span>"]
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                         
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="tef_ressourceExterneDescription.html" title="tef:ressourceExterneDescription">tef:ressourceExterneDescription
+                                                                                           *</a>
+                                                                                      
+                                                         </p>
+                                                         <p>(...)</p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li>
+                              <p><a href="mets_amdSec.html" title="mets:amdSec">mets:amdSec</a> *
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_techMD.html" title="mets:techMD">mets:techMD</a>
+                                                            *
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap *</a>
+                                                                         [de type "<span class="bold"><strong>tef_admin_these</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                                      
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p>
+                                                                                                     <a href="tef_thesisAdmin.html" title="tef:thesisAdmin">tef:thesisAdmin
+                                                                                                        *</a>
+                                                                                                   
+                                                                  </p>
+                                                                  <p>(...)</p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <p><a href="mets_techMD.html" title="mets:techMD">mets:techMD</a>
+                                                            *
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap *</a>
+                                                                         [de type "<span class="bold"><strong>tef_tech_fichier</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                                      
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p>
+                                                                                                     <a href="tef_meta_fichier.html" title="tef:meta_fichier">tef:meta_fichier
+                                                                                                        *</a>
+                                                                                                   
+                                                                  </p>
+                                                                  <p>(...)</p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <p>
+                                                              <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD *</a>
+                                                            
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap</a> *
+                                                                         [de type "<span class="bold"><strong>tef_droits_etablissement_these</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                                      
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p>
+                                                                                                     <a href="metsRights_RightsDeclarationMD.html" title="metsRights:RightsDeclarationMD">metsRights:RightsDeclarationMD
+                                                                                                        *</a>
+                                                                                                   
+                                                                  </p>
+                                                                  <p>(...)</p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <p>
+                                                              <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD *</a>
+                                                            
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap *</a>
+                                                                         [de type "<span class="bold"><strong>tef_droits_auteur_these</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                                      
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p>
+                                                                                                     <a href="metsRights_RightsDeclarationMD.html" title="metsRights:RightsDeclarationMD">metsRights:RightsDeclarationMD
+                                                                                                        *</a>
+                                                                                                   
+                                                                  </p>
+                                                                  <p>(...)</p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <p>
+                                                              <a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                            
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap *</a>
+                                                                         [de type "<span class="bold"><strong>tef_droits_externe</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                                      
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p>
+                                                                                                     <a href="metsRights_RightsDeclarationMD.html" title="metsRights:RightsDeclarationMD">metsRights:RightsDeclarationMD
+                                                                                                        *</a>
+                                                                                                   
+                                                                  </p>
+                                                                  <p>(...)</p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <p><a href="mets_rightsMD.html" title="mets:rightsMD">mets:rightsMD</a>
+                                                            *
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_mdWrap.html" title="mets:mdWrap">mets:mdWrap</a> *
+                                                                         [de type "<span class="bold"><strong>tef_droits_version</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p>
+                                                                                        <a href="mets_xmlData.html" title="mets:xmlData">mets:xmlData *</a>
+                                                                                      
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p>
+                                                                                                     <a href="metsRights_RightsDeclarationMD.html" title="metsRights:RightsDeclarationMD">metsRights:RightsDeclarationMD
+                                                                                                        *</a>
+                                                                                                   
+                                                                  </p>
+                                                                  <p>(...)</p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li>
+                              <p><a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a> *
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_fileGrp.html" title="mets:fileGrp">mets:fileGrp *</a> [
+                                                            obligatoire pour l'&eacute;dition d'archivage ]
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p>
+                                                                           <a href="mets_file.html" title="mets:file">mets:file *</a>
+                                                                         
+                                                </p>
+                                                <p></p>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li>
+                              <p><a href="mets_structMap.html" title="mets:structMap">mets:structMap</a>
+                                               *
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul type="disc">
+                                    <li>
+                                       <p><a href="mets_div.html" title="mets:div">mets:div</a> [ avec TYPE =
+                                                            "<span class="bold"><strong>THESE</strong></span> ] *
+                                       </p>
+                                       <div class="itemizedlist">
+                                          <ul type="circle">
+                                             <li>
+                                                <p><a href="mets_div.html" title="mets:div">mets:div</a> [ avec
+                                                                         TYPE = "<span class="bold"><strong>VERSION</strong></span>_COMPLETE" ] *
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p><a href="mets_div.html" title="mets:div">mets:div</a> [
+                                                                                      avec TYPE = "<span class="bold"><strong>EDITION</strong></span>" ] *
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p><a href="mets_fptr.html" title="mets:fptr">mets:fptr</a>
+                                                                                                   [lien vers un &eacute;l&eacute;ment de <span class="bold"><strong>
+                                                                                                             <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                                                                                                           </strong></span>]
+                                                                  </p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <p><a href="mets_div.html" title="mets:div">mets:div</a> [ avec
+                                                                         TYPE = "<span class="bold"><strong>VERSION</strong></span>_INCOMPLETE" ]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p><a href="mets_div.html" title="mets:div">mets:div</a> [
+                                                                                      avec TYPE = "<span class="bold"><strong>EDITION</strong></span>" ] *
+                                                         </p>
+                                                         <div class="itemizedlist">
+                                                            <ul type="circle">
+                                                               <li>
+                                                                  <p><a href="mets_fptr.html" title="mets:fptr">mets:fptr</a>
+                                                                                                   [lien vers un &eacute;l&eacute;ment de <span class="bold"><strong>
+                                                                                                             <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                                                                                                           </strong></span>]
+                                                                  </p>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <p><a href="mets_div.html" title="mets:div">mets:div</a> [ avec
+                                                                         TYPE = "<span class="bold"><strong>RESSOURCE_TIERS</strong></span>" ]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p><a href="mets_fptr.html" title="mets:fptr">mets:fptr</a>
+                                                                                      [lien &eacute;ventuel vers un &eacute;l&eacute;ment de <span class="bold"><strong>
+                                                                                                <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                                                                                              </strong></span>]
+                                                         </p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <p><a href="mets_div.html" title="mets:div">mets:div</a> [ avec
+                                                                         TYPE = "<span class="bold"><strong>TRAVAUX</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p><a href="mets_fptr.html" title="mets:fptr">mets:fptr</a>
+                                                                                      [lien &eacute;ventuel vers un &eacute;l&eacute;ment de <span class="bold"><strong>
+                                                                                                <a href="mets_fileSec.html" title="mets:fileSec">mets:fileSec</a>
+                                                                                              </strong></span>]
+                                                         </p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <p><a href="mets_div.html" title="mets:div">mets:div</a> [ avec
+                                                                         TYPE = "<span class="bold"><strong>RESSOURCES_EXTERNES</strong></span>"]
+                                                </p>
+                                                <div class="itemizedlist">
+                                                   <ul type="disc">
+                                                      <li>
+                                                         <p><a href="mets_div.html" title="mets:div">mets:div</a> [
+                                                                                      avec TYPE = "<span class="bold"><strong>RESSOURCE_TIERS</strong></span>" ] *
+                                                         </p>
+                                                      </li>
+                                                      <li>
+                                                         <p><a href="mets_div.html" title="mets:div">mets:div</a> [
+                                                                                      avec TYPE = "<span class="bold"><strong>TRAVAUX</strong></span>"] *
+                                                         </p>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="toc">
+               <p><b>Table des mati&egrave;res</b></p>
+               <dl>
+                  <dt><span class="chapter"><a href="presentation_elements.html">Remarque sur la pr&eacute;sentation des &eacute;l&eacute;ments</a></span></dt>
+                  <dt><span class="chapter"><a href="dc_coverage.html">dc:coverage</a></span></dt>
+                  <dt><span class="chapter"><a href="dc_identifier.html">dc:identifier</a></span></dt>
+                  <dt><span class="chapter"><a href="dc_language.html">dc:language</a></span></dt>
+                  <dt><span class="chapter"><a href="dc_subject.html">dc:subject</a></span></dt>
+                  <dt><span class="chapter"><a href="dc_title.html">dc:title</a></span></dt>
+                  <dt><span class="chapter"><a href="dc_type.html">dc:type</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_abstract.html">dcterms:abstract</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_alternative.html">dcterms:alternative</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_dateAccepted.html">dcterms:dateAccepted</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_extent.html">dcterms:extent</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_issued.html">dcterms:issued</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_medium.html">dcterms:medium</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_replaces.html">dcterms:replaces</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_spatial.html">dcterms:spatial</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_table.html">dcterms:tableOfContents</a></span></dt>
+                  <dt><span class="chapter"><a href="dcterms_temporal.html">dcterms:temporal</a></span></dt>
+                  <dt><span class="chapter"><a href="mads_description.html">mads:description</a></span></dt>
+                  <dt><span class="chapter"><a href="mads_namePart.html">mads:namePart</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_agent.html">mets:agent</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_altRecordID.html">mets:altRecordID</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_amdSec.html">mets:amdSec</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_div.html">mets:div</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_dmdSec.html">mets:dmdSec</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_file.html">mets:file</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_fileGrp.html">mets:fileGrp</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_fileSec.html">mets:fileSec</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_FLocat.html">mets:FLocat</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_fptr.html">mets:fptr</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_mdWrap.html">mets:mdWrap</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_mets.html">mets:mets</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_metsHdr.html">mets:metsHdr</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_name.html">mets:name</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_note.html">mets:note</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_rightsMD.html">mets:rightsMD</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_structMap.html">mets:structMap</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_techMD.html">mets:techMD</a></span></dt>
+                  <dt><span class="chapter"><a href="mets_xmlData.html">mets:xmlData</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_ConstraintDescription.html">metsRights:ConstraintDescription</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_Constraints.html">metsRights:Constraints</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_Context.html">metsRights:Context</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_Permissions.html">metsRights:Permissions</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_RightsDeclaration.html">metsRights:RightsDeclaration</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_RightsDeclarationMD.html">metsRights:RightsDeclarationMD</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_RightsHolder.html">metsRights:RightsHolder</a></span></dt>
+                  <dt><span class="chapter"><a href="metsRights_RightsHolderName.html">metsRights:RightsHolderName</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_auteur.html">tef:auteur</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_autoriteExterne.html">tef:autoriteExterne</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_autoriteFormatFichier.html">tef:autoriteFormatFichier</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_autoriteInterne.html">tef:autoriteInterne</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_avisJury.html">tef:avisJury</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_dateNaissance.html">tef:dateNaissance</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_directeurThese.html">tef:directeurTh&egrave;se</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_ecoleDoctorale.html">tef:ecoleDoctorale</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_editeur.html">tef:editeur</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_edition.html">tef:edition</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_elementdEntree.html">tef:elementdEntree</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_encodage.html">tef:encodage</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_formatFichier.html">tef:formatFichier</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_MADSAuthority.html">tef:MADSAuthority</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_manque.html">tef:manque</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_membreJury.html">tef:membreJury</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_meta_fichier.html">tef:meta_fichier</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_nationalite.html">tef:nationalite</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_nom.html">tef:nom</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_nomDeNaissance.html">tef:nomDeNaissance</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_noteFichier.html">tef:noteFichier</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_noteVersion.html">tef:noteVersion</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_oai_setSpec.html">tef:oai_setSpec</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_partenaireRecherche.html">tef:partenaireRecherche</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_personMADS.html">tef:personMADS</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_place.html">tef:place</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_prenom.html">tef:prenom</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_presidentJury.html">tef:presidentJury</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_rapporteur.html">tef:rapporteur</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_ressourceExterneDescription.html">tef:ressourceExterneDescription</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_ressourceID.html">tef:ressourceID</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_structureFichier.html">tef:structureFichier</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_subdivision.html">tef:subdivision</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_sujetRameau.html">tef:sujetRameau</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_taille.html">tef:taille</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_theseSurTravaux.html">tef:theseSurTravaux</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesis.degree.html">tef:thesis.degree</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesis.degree.discipline.html">tef:thesis.degree.discipline</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesis.degree.grantor.html">tef:thesis.degree.grantor</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesis.degree.level.html">tef:thesis.degree.level</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesis.degree.name.html">tef:thesis.degree.name</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesisAdmin.html">tef:thesisAdmin</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_thesisRecord.html">tef:thesisRecord</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauAuteurTitre.html">vedetteRameauAuteurTitre</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauCollectivite.html">vedetteRameauCollectivite</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauFamille.html">vedetteRameauFamille</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauNomCommun.html">tef:vedetteRameauNomCommun</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauNomGeographique.html">vedetteRameauNomGeographique</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauPersonne.html">vedetteRameauPersonne</a></span></dt>
+                  <dt><span class="chapter"><a href="vedetteRameauTitre.html">vedetteRameauTitre</a></span></dt>
+                  <dt><span class="chapter"><a href="tef_version.html">tef:version</a></span></dt>
+               </dl>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="references_biblio_info.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center">&nbsp;</td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="presentation_elements.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">R&eacute;f&eacute;rences biblioth&eacute;conomiques et informatiques&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Remarque sur la pr&eacute;sentation des &eacute;l&eacute;ments</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

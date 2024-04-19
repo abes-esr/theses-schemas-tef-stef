@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE webpage SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/website.dtd">
+<webpage id="recommandation">
+	<head>
+		<title>La recommandation</title>
+		<summary/>
+		<keywords>métadonnées, metadata, thèses, thesis, etd, recommandation afnor, afnor recommendation, xsl, xslt</keywords>
+	</head>
+	<note>
+		<para>Cette page pointe vers des documents normatifs</para>
+	</note>
+	
+	<section>
+		<title>Editions en ligne de la recommandation</title>
+		<para>Dans sa première version (TEF 1.0), la recommandation TEF se compose :</para>
+		<itemizedlist>
+			<listitem>
+				<para>d'un document rédigé qui présente les principes de TEF et chacun des éléments de métadonnées (édition <ulink url="http://www.abes.fr/abes/documents/tef/recommandation/index.html">HTML</ulink> ou <ulink url="http://www.abes.fr/abes/documents/tef/recommandation/tef_01.pdf">PDF</ulink>)</para>
+			</listitem>
+			<listitem>
+				<para>
+					d'un <ulink url="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_schema_01.xsd">schéma XML</ulink> qui sert à la fois de format d'échange et d'outil de validation
+				</para>
+			</listitem>
+		</itemizedlist>
+	</section>
+</webpage>

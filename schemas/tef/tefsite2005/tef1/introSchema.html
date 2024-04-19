@@ -1,0 +1,114 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Introduction au sch&eacute;ma</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="schemaXML.html" title="Le sch&eacute;ma XML">
+      <link rel="prev" href="schemaXML.html" title="Le sch&eacute;ma XML">
+      <link rel="next" href="XMLschema.html" title="Le sch&eacute;ma XML">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 1.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Introduction au sch&eacute;ma</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="schemaXML.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Le sch&eacute;ma XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="XMLschema.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="chapter" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="introSchema"></a>Introduction au sch&eacute;ma
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p>Pour automatiser le traitement des m&eacute;tadonn&eacute;es TEF, il faut associer un format informatique au vocabulaire TEF. Etant donn&eacute;
+            la vocation des notices TEF &agrave; &ecirc;tre diffus&eacute;es, exploit&eacute;es et &eacute;chang&eacute;es sur Internet, il &eacute;tait important de choisir un format
+            standard et largement r&eacute;pandu parmi les applications Internet. A ce titre, HTML, XML et RDF &eacute;taient tous des trois des candidats
+            l&eacute;gitimes pour le format TEF. Le format XML a &eacute;t&eacute; retenu.
+         </p>
+         <p>HTML n'a pas &eacute;t&eacute; retenu, en raison de la difficult&eacute; voire de l'impossibilit&eacute; &agrave; exprimer avec la seule balise &lt;meta&gt; la complexit&eacute;
+            du vocabulaire TEF. De plus, cette solution, utile &agrave; la diffusion des m&eacute;tadonn&eacute;es malgr&eacute; sa faible exploitation par les moteurs
+            d'indexation et de recherche du Web, n'&eacute;tait gu&egrave;re adapt&eacute;e &agrave; l'&eacute;change des notices. Il aurait fallu compl&eacute;ter le format HTML
+            par un autre format qui convienne mieux &agrave; l'&eacute;change.
+         </p>
+         <p>Par contre, RDF est sans aucun doute une solution prometteuse pour la diffusion, l'exploitation et l'&eacute;change des m&eacute;tadonn&eacute;es,
+            notamment sous la syntaxe XML (RDF/XML). C'est pr&eacute;cis&eacute;ment sa raison d'&ecirc;tre. Dans le cas de TEF, en particulier, il permettra
+            &agrave; terme une exploitation multiple des notices TEF en l'&eacute;tat, sans obliger &agrave; les convertir dans un vocabulaire plus r&eacute;pandu
+            comme Dublin Core notamment. Il faudra pour cela associer les notices TEF &agrave; un sch&eacute;ma RDF ou OWL qui pr&eacute;cisera les relations
+            s&eacute;mantiques entre les &eacute;l&eacute;ments de TEF et, par exemple, les &eacute;l&eacute;ments du Dublin Core ou les propri&eacute;t&eacute;s des FRBR. Par ailleurs,
+            formaliser TEF en RDF permettra d'expliciter la structure conceptuelle de TEF, notamment le fait qu'une notice TEF porte sur
+            plusieurs entit&eacute;s (la th&egrave;se comme texte valid&eacute;, les &eacute;ditions, l'auteur, le jury&#8230;). Malgr&eacute; ces atouts, investir dans une solution
+            RDF est apparu comme pr&eacute;matur&eacute;. Etant donn&eacute; les premiers usages pr&eacute;visibles des notices TEF (&eacute;change de notices valid&eacute;es,
+            conversion en DC-OAI, en Unimarc), le suppl&eacute;ment de complexit&eacute; apport&eacute; par RDF/XML semble superflu tant que les applications
+            et les donn&eacute;es RDF ne sont pas plus r&eacute;pandues. En d'autres termes, la formalisation RDF de TEF est souhaitable, mais non prioritaire.
+            
+         </p>
+         <p>La souplesse et la maturit&eacute; de la technologie XML<sup>[<a name="d0e17414" href="#ftn.d0e17414">12</a>]</sup> en sont les deux vertus cardinales qui justifient aujourd'hui le choix de XML comme format des m&eacute;tadonn&eacute;es TEF. Ce choix
+            n'est ni d&eacute;finitif, ni exclusif.
+         </p>
+         <p>La souplesse de XML est une vertu, mais aussi un risque. Il y a plusieurs mani&egrave;res d'exprimer en XML les m&eacute;tadonn&eacute;es TEF.
+            Si l'on veut pouvoir &eacute;changer ais&eacute;ment des notices TEF en XML, il faut &eacute;tablir un format d'&eacute;change pr&eacute;cis, qui sp&eacute;cifie la
+            mani&egrave;re dont une notice TEF sera encod&eacute;e en XML (nom, ordre, cardinalit&eacute; des &eacute;l&eacute;ments XML et de leurs attributs). C'est ce
+            que permettent de faire un sch&eacute;ma XML ou une DTD. Si l'on veut garantir que les notices &eacute;chang&eacute;es sont conformes au vocabulaire
+            TEF, on peut &eacute;tendre le contr&ocirc;le de validit&eacute; jusqu'au contenu des &eacute;l&eacute;ments et des attributs (type de donn&eacute;es autoris&eacute;es, liste
+            de valeurs permises). Une DTD ne permet pas de proc&eacute;der &agrave; cette validation en profondeur, ni de g&eacute;rer la coexistence des espaces
+            de noms.
+         </p>
+         <p>Il existe plusieurs types de sch&eacute;mas XML. W3C XML Schema a &eacute;t&eacute; choisi pour au moins deux raisons. Premi&egrave;rement, sa gestion
+            des types de donn&eacute;es est tr&egrave;s compl&egrave;te. Deuxi&egrave;mement, il semble s'imposer comme un standard largement r&eacute;pandu, privil&eacute;gi&eacute;
+            par des protocoles comme OAI-PMH ou SRU/SRW et bien support&eacute; par les logiciels les plus courants. 
+         </p>
+         <p>Malgr&eacute; le souci de proposer un sch&eacute;ma qui valide en profondeur les notices TEF, il faut garder &agrave; l'esprit qu'une notice XML
+            valide par rapport au sch&eacute;ma TEF n'est pas n&eacute;cessairement conforme au vocabulaire TEF. Ce d&eacute;calage tient notamment aux lacunes
+            de l'outil W3C XML Schema qui, par exemple, ne permet pas des validations conditionnelles. Ainsi, concernant l'&eacute;l&eacute;ment &lt;<span class="bold"><strong>
+                  					<a href="subdivision.html" title="subdivision">subdivision</a>
+                  				</strong></span>&gt;, rien ne permet de contr&ocirc;ler la pr&eacute;sence concomitante des attributs <span class="bold"><strong>autoriteSource</strong></span> et <span class="bold"><strong>autoriteExterne</strong></span> : le sch&eacute;ma TEF autorise qu'on ait l'un sans l'autre, et le vocabulaire l'interdit. Par ailleurs, le sch&eacute;ma XML ne peut pas
+            v&eacute;rifier que tel code sur deux lettres est bien issu de la norme ISO 639-1. Enfin, il ne peut pas v&eacute;rifier que telle valeur
+            ISO 639-1 correspond bien &agrave; la langue du document. En bref, le sch&eacute;ma TEF ne valide pas toute la structure du vocabulaire
+            TEF, ni la conformit&eacute; aux sch&eacute;mas d'encodage ou r&egrave;gles d'&eacute;criture que le vocabulaire prescrit, ni enfin l'exactitude des valeurs
+            renseign&eacute;es.
+         </p>
+         <div class="footnotes"><br><hr width="100" align="left">
+            <div class="footnote">
+               <p><sup>[<a name="ftn.d0e17414" href="#d0e17414">12</a>] </sup>Au sens de "plain vanilla XML", que l'on pourrait traduire par "XML nature", pour l'opposer &agrave; d'autres formats qui rajoutent
+                  une couche de contraintes &agrave; XML. RDF/XML en est le meilleur exemple. Rappelons que XML n'est qu'une des syntaxes possibles
+                  de RDF, et sans doute pas la plus profonde ni la plus lisible.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="schemaXML.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="schemaXML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="XMLschema.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Le sch&eacute;ma XML&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Le sch&eacute;ma XML</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

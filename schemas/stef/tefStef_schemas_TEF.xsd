@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 	Schéma pivot, qui rassemble tous les éléments de l'espace de noms TEF.
+		Il appelle 6 schémas TEF.
+-->
+<xs:schema xmlns="http://www.abes.fr/abes/documents/tef" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tef="http://www.abes.fr/abes/documents/tef" targetNamespace="http://www.abes.fr/abes/documents/tef" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="tef_desc_these.xsd"/>
+	<xs:include schemaLocation="tef_desc_version.xsd"/>
+	<xs:include schemaLocation="tef_desc_edition.xsd"/>
+	<xs:include schemaLocation="tef_desc_externe.xsd"/>
+	<xs:include schemaLocation="tefStef_admin_these.xsd"/>
+	<xs:include schemaLocation="tef_tech_fichier.xsd"/>
+</xs:schema>

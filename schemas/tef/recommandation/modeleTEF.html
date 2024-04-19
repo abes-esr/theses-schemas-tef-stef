@@ -1,0 +1,354 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Mod&eacute;lisation des m&eacute;tadonn&eacute;es de th&egrave;se</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="introduction.html" title="Introduction">
+      <link rel="prev" href="intro_md_pertinentes.html" title="Quelles sont les m&eacute;tadonn&eacute;es pertinentes pour TEF ?">
+      <link rel="next" href="TEF_en_XML.html" title="TEF en XML">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Mod&eacute;lisation des m&eacute;tadonn&eacute;es de th&egrave;se</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="intro_md_pertinentes.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Introduction</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="TEF_en_XML.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="chapter" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="modeleTEF"></a>Mod&eacute;lisation des m&eacute;tadonn&eacute;es de th&egrave;se
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>TEF n'est pas seulement un format de donn&eacute;es. TEF entend
+            structurer les informations portant sur les th&egrave;ses ind&eacute;pendamment d'une
+            syntaxe ou d'un langage particuliers. Certes, l'&eacute;laboration d'un format
+            XML est apparu comme une priorit&eacute; pour TEF, dans la mesure o&ugrave; XML (et
+                  les technologies de validation associ&eacute;es) se pr&ecirc;te le mieux &agrave; la
+                  cr&eacute;ation d'un format d'&eacute;change de m&eacute;tadonn&eacute;es (<span class="emphasis"><em>cf.</em></span>
+                  <a href="TEF_en_XML.html" title="TEF en XML">plus loin</a>). Pourtant, le coeur de TEF
+                  ne r&eacute;side pas dans sa syntaxe XML, mais plut&ocirc;t dans son mod&egrave;le
+                  conceptuel.
+         </p>
+         <p>Ce chapitre pr&eacute;sente le mod&egrave;le conceptuel<sup>[<a name="d0e265" href="#ftn.d0e265">7</a>]</sup> de TEF. En l'&eacute;tat, ce mod&egrave;le vise &agrave; lister de mani&egrave;re
+                  explicite les diff&eacute;rentes entit&eacute;s dont on parle implicitement quand on
+                  emploie le mot "th&egrave;se". Ainsi, malgr&eacute; les apparences grammaticales,
+                  aucune de ces phrases ne parle de la m&ecirc;me "chose" :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>Cette th&egrave;se traite de la danse traditionnelle.</p>
+               </li>
+               <li>
+                  <p>Cette th&egrave;se comprend 20 images.</p>
+               </li>
+               <li>
+                  <p>Cette th&egrave;se a 459 pages.</p>
+               </li>
+            </ul>
+         </div>
+         <p>La premi&egrave;re porte sur la th&egrave;se comme oeuvre, la deuxi&egrave;me sur la
+                  th&egrave;se comme version, la troisi&egrave;me sur la th&egrave;se comme &eacute;dition.
+         </p>
+         <p>En s'appuyant sur le mod&egrave;le FRBR<a href="glossaire.html#GlossFRBR">**</a>, le mod&egrave;le de TEF d&eacute;crit les diff&eacute;rentes
+                  entit&eacute;s en jeu, leurs propri&eacute;t&eacute;s et leurs relations.
+         </p>
+         <p>Les quatre entit&eacute;s principales du mod&egrave;le TEF sont :</p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>
+                                 <span class="bold"><strong>THESE</strong></span>
+                               
+                  </p>
+                  <p>Dans TEF, une th&egrave;se est une <span class="emphasis"><em>oeuvre</em></span> au
+                               sens des FRBR (FRBR Report 3.2.1).
+                  </p>
+                  <p>En tant que th&egrave;se, cette oeuvre a &eacute;t&eacute; &eacute;valu&eacute;e par un jury et
+                               sanctionn&eacute;e par un doctorat. En ce sens, dans TEF, la th&egrave;se n'a
+                               qu'une version de r&eacute;f&eacute;rence, &agrave; savoir celle qui a &eacute;t&eacute; accept&eacute;e par
+                               le jury, &eacute;ventuellement apr&egrave;s corrections.
+                  </p>
+                  <p>Par extension, une variante abr&eacute;g&eacute;e de ce texte officiel peut
+                               &ecirc;tre consid&eacute;r&eacute;e comme une autre <span class="bold"><strong>version</strong></span> de la th&egrave;se.
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s d'une th&egrave;se</em></span> : titre, titre
+                               traduit, sujet, type de ressource, langue, auteur, num&eacute;ro national,
+                               dipl&ocirc;me, directeur de th&egrave;se, autorisation du chef d'&eacute;tablissement,
+                               autorisation de l'auteur...
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>VERSION</strong></span>
+                               
+                  </p>
+                  <p>Dans TEF, une version est une <span class="emphasis"><em>expression</em></span>
+                               au sens des FRBR (FRBR Report 3.2.2).
+                  </p>
+                  <p>Une version de la th&egrave;se correspond soit au texte valid&eacute; par le
+                               jury, soit &agrave; une variante abr&eacute;g&eacute;e de ce texte. Dans le premier cas,
+                               la version sera dite "compl&egrave;te", dans le second "incompl&egrave;te". TEF
+                               consid&egrave;re qu'une version incompl&egrave;te est bien une version de la
+                               th&egrave;se, m&ecirc;me si elle n'&eacute;quivaut pas &agrave; la version compl&egrave;te. Il
+                               n'existe qu'une version compl&egrave;te. Il peut exister plusieurs versions
+                               incompl&egrave;tes, puisqu'il y a diff&eacute;rentes mani&egrave;res d'abr&eacute;ger un texte.
+                               Le texte contenu par le brouillon de la th&egrave;se ou par une &eacute;dition
+                               commerciale remani&eacute;e n'est pas consid&eacute;r&eacute; ici comme une version de la
+                               th&egrave;se.
+                  </p>
+                  <p>Une m&ecirc;me version peut exister sous diff&eacute;rentes
+                               &eacute;ditions.
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s d'une version</em></span> : contenu
+                               (ressources externes pr&eacute;sentes et manquantes), identifiant, &eacute;tat
+                               juridique.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>EDITION</strong></span>
+                               
+                  </p>
+                  <p>Dans TEF, une &eacute;dition est une
+                               <span class="emphasis"><em>manifestation</em></span> au sens des FRBR (FRBR Report
+                               3.2.3).
+                  </p>
+                  <p>Pour une version donn&eacute;e de la th&egrave;se, il peut exister, par
+                               exemple, une &eacute;dition XML et une &eacute;dition HTML. Il peut &eacute;galement
+                               exister deux &eacute;ditions XML diff&eacute;rentes ou deux &eacute;ditions PDF
+                               diff&eacute;rentes.
+                  </p>
+                  <p>TEF ne prend en compte que les &eacute;ditions &eacute;lectroniques d'une
+                               th&egrave;se, m&ecirc;me si une &eacute;dition &eacute;lectronique et une &eacute;dition imprim&eacute;e
+                               d'une m&ecirc;me th&egrave;se ont en commun la plupart de leurs
+                               m&eacute;tadonn&eacute;es.
+                  </p>
+                  <p>Une &eacute;dition peut correspondre &agrave; un seul fichier. C'est en
+                               g&eacute;n&eacute;ral le cas pour les &eacute;ditions PDF. Une &eacute;dition peut aussi
+                               correspondre &agrave; plusieurs fichiers. C'est en g&eacute;n&eacute;ral le cas pour les
+                               &eacute;ditions XML ou HTML.
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s d'une &eacute;dition</em></span> : format,
+                               taille, identifiant, &eacute;diteur, date d'&eacute;dition.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>FICHIER</strong></span>
+                               
+                  </p>
+                  <p>Dans TEF, un fichier est une <span class="emphasis"><em>partie de
+                                     manifestation</em></span> au sens des FRBR (FRBR Report 5.3.4.1). En
+                               l'occurrence, il s'agit d'une partie de manifestation &eacute;lectronique.
+                               Cette partie &eacute;tant un fichier informatique, elle est mat&eacute;riellement
+                               ind&eacute;pendante du tout. Un fichier d'image JPEG, par exemple, peut
+                               &ecirc;tre lu ind&eacute;pendamment des autres fichiers qui constituent la
+                               manifestation compl&egrave;te.
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s d'un fichier</em></span> : encodage,
+                               format, structure, taille...
+                  </p>
+                  <p>
+                                 
+                  </p>
+                  <div class="mediaobject"><a name="figure1"></a><img src="SimpleMuet.jpg" alt="Figure 1. Une th&egrave;se, une version, une &eacute;dition, un&#xA;                fichier&#xA;                (http://www.abes.fr/abes/documents/tef/recommandation/SimpleMuet.jpg)"><div class="caption">
+                        <p>Figure 1. Une th&egrave;se, une version, une &eacute;dition, un
+                                           fichier
+                        </p>
+                     </div>
+                  </div>
+                  <p>
+                               
+                  </p>
+                  <p>
+                                 
+                  </p>
+                  <div class="mediaobject"><img src="SimpleRepeteMuet.jpg" alt="Figure 2. Une th&egrave;se, une version, deux &eacute;ditions, un ou&#xA;                plusieurs fichiers par &eacute;dition&#xA;                (http://www.abes.fr/abes/documents/tef/recommandation/SimpleRepeteMuet.jpg)"><div class="caption">
+                        <p>Figure 2. Une th&egrave;se, une version, deux &eacute;ditions, un ou
+                                           plusieurs fichiers par &eacute;dition
+                        </p>
+                     </div>
+                  </div>
+                  <p>
+                               
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>
+                                 <span class="bold"><strong>RESSOURCE EXTERNE</strong></span>
+                               
+                  </p>
+                  <p>Dans TEF, une ressource externe est une ressource qui
+                               pr&eacute;existe &agrave; la th&egrave;se, que l'auteur a int&eacute;gr&eacute;e en tout ou partie dans
+                               son propre travail.
+                  </p>
+                  <p>Dans le cas des th&egrave;ses sur travaux, il s'agit en g&eacute;n&eacute;ral d'un
+                               article publi&eacute; auparavant par l'auteur et par d'&eacute;ventuels coauteurs
+                               ("<span class="bold"><strong>TRAVAUX</strong></span>"). Dans les autres cas,
+                               il peut s'agir de toutes sortes de ressources (images, textes,
+                               sch&eacute;mas, sons...) que l'auteur emprunte pour enrichir ou illustrer
+                               son propos ("<span class="bold"><strong>RESSOURCE_TIERS</strong></span>").
+                  </p>
+                  <p>Ces ressources externes sont incorpor&eacute;es &agrave; la th&egrave;se dans leur
+                               int&eacute;gralit&eacute; ou sous forme d'extrait. Dans le cas d'un extrait, il
+                               suffit d'en r&eacute;f&eacute;rencer la source, sans r&eacute;f&eacute;rencer ou d&eacute;crire
+                               l'extrait pour lui-m&ecirc;me.
+                  </p>
+                  <p>Une ressource externe (ou son extrait) peut correspondre &agrave; un
+                               fichier s&eacute;par&eacute;. C'est le cas d'une image pour l'&eacute;dition XML d'une
+                               th&egrave;se. Dans d'autres cas, la ressource externe est incluse dans le
+                               m&ecirc;me fichier que le reste de la th&egrave;se. C'est le cas d'une image dans
+                               une &eacute;dition PDF ou d'une longue citation textuelle dans un fichier
+                               XML.
+                  </p>
+                  <p>En termes FRBR, ces ressources externes peuvent &ecirc;tre
+                               interpr&eacute;t&eacute;es comme des oeuvres, des expressions ou des
+                               manifestations, selon les cas.
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s d'une ressource externe</em></span> :
+                               titre, auteur.... (et autres propri&eacute;t&eacute;s correspondant &agrave; des
+                               m&eacute;tadonn&eacute;es descriptives), autorisation des ayants droit.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p>
+                    
+         </p>
+         <div class="mediaobject"><img src="ComplexeMuet.jpg" alt="Figure 3. Une th&egrave;se, deux versions, trois &eacute;ditions, des&#xA;            ressources externes&#xA;            (http://www.abes.fr/abes/documents/tef/recommandation/ComplexeMuet.jpg)"><div class="caption">
+               <p>Figure 3. Une th&egrave;se, deux versions, trois &eacute;ditions, des
+                              ressources externes
+               </p>
+            </div>
+         </div>
+         <p>
+                  
+         </p>
+         <p>Autour de ces entit&eacute;s gravitent diff&eacute;rents agents. Il s'agit de
+                  personnes physiques ou de personnes morales.
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Auteur</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s de l'auteur</em></span> : nom, pr&eacute;nom, nom
+                               d'usage, date de naissance, nationalit&eacute;, autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Etablissement de soutenance</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s de l'&eacute;tablissement de
+                                     soutenance</em></span> : nom, autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Directeur de th&egrave;se</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s du directeur de th&egrave;se</em></span> : nom,
+                               pr&eacute;nom, autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Pr&eacute;sident du jury</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s du pr&eacute;sident du jury</em></span> : nom,
+                               pr&eacute;nom, autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Membre du jury</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s du membre du jury</em></span> : nom,
+                               pr&eacute;nom, autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Rapporteur</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s du rapporteur</em></span> : nom, pr&eacute;nom,
+                               autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p><span class="bold"><strong>Partenaire de recherche</strong></span>
+                               (Etablissement, Laboratoire, Equipe de recherche, Entreprise,
+                               Fondation...)
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s du partenaire de recherche</em></span> :
+                               nom, autorit&eacute;.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                                 <span class="bold"><strong>Editeur</strong></span>
+                               
+                  </p>
+                  <p><span class="emphasis"><em>Propri&eacute;t&eacute;s de l'&eacute;diteur</em></span> : nom, lieu
+                               d'&eacute;dition, autorit&eacute;.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="footnotes"><br><hr width="100" align="left">
+            <div class="footnote">
+               <p><sup>[<a name="ftn.d0e265" href="#d0e265">7</a>] </sup>Ce mod&egrave;le conceptuel sera compl&eacute;t&eacute;, affin&eacute; et formalis&eacute; &agrave;
+                            l'occasion de la conception du sch&eacute;ma RDF-S/OWL pour TEF. En l'&eacute;tat,
+                            il suffit &agrave; expliciter les entit&eacute;s principales de TEF et &agrave; justifier
+                            la forme qu'il prend en XML.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="intro_md_pertinentes.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="introduction.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="TEF_en_XML.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Quelles sont les m&eacute;tadonn&eacute;es pertinentes pour TEF ?&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;TEF en XML</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,167 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Validation XML</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="TEF_en_XML.html" title="TEF en XML">
+      <link rel="prev" href="intro_tef_droits_version.html" title="Les m&eacute;tadonn&eacute;es de droits de version :&#xA;        tef_droits_version">
+      <link rel="next" href="usages.html" title="Usages de TEF">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 2.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Validation XML</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="intro_tef_droits_version.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">TEF en XML</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="usages.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="validation"></a>Validation XML
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p>La validation au sens XML permet de v&eacute;rifier qu'un document XML
+            est bien conforme &agrave; un certain nombre de prescriptions (structure des
+            &eacute;l&eacute;ments XML, pr&eacute;sence des attributs, cardinalit&eacute;, type de donn&eacute;es).
+            Les sch&eacute;mas XML permettent &agrave; la fois de d&eacute;finir une structure g&eacute;n&eacute;rale
+            et de contr&ocirc;ler qu'un document XML particulier y est bien conforme.
+            Une telle op&eacute;ration de validation permet de garantir l'&eacute;change
+                    automatis&eacute; de notices TEF valides et compl&egrave;tes.
+         </p>
+         <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+            <h3 class="title">Important</h3>
+            <p>TEF s'appuie sur METS, mais n'en exploite pas toutes les
+               fonctionnalit&eacute;s. Par ailleurs, METS n'&eacute;tant qu'une envelope vide que
+               chacun peut compl&eacute;ter avec les m&eacute;tadonn&eacute;es qu'il juge utiles, il est
+               toujours possible d'ajouter un bloc de m&eacute;tadonn&eacute;es quelconque,
+               diff&eacute;rent des blocs TEF. Les outils de validation TEF ne signaleront
+               donc pas comme une erreur l'introduction de fonctionnalit&eacute;s METS ou
+                         de blocs de m&eacute;tadonn&eacute;es quelconques non pr&eacute;vus par la recommandation
+                         TEF. Du point de vue de TEF, ces ajouts sont permis mais
+                         indiff&eacute;rents. Sauf convention expresse entre les deux parties, un
+                         producteur de notices TEF ne peut s'attendre &agrave; ce que le partenaire
+                         auquel il envoie des notices TEF ainsi &eacute;tendues sache interpr&eacute;ter
+                         ces ajouts ext&eacute;rieurs. Seuls comptent les &eacute;l&eacute;ments METS, TEF, DC,
+                         DTERMS, MADS et METSRights qui sont d&eacute;crits dans la seconde partie
+                         de la recommandation.
+            </p>
+         </div>
+         <p>La recommandation TEF comprend un certain nombre de sch&eacute;mas.
+                    Certains de ces sch&eacute;mas pr&eacute;existent &agrave; TEF et sont donc r&eacute;utilis&eacute;s tels
+                    quels. Ces sch&eacute;mas externes &agrave; TEF sont le sch&eacute;ma METS, le sch&eacute;ma METS
+                    Rights, le sch&eacute;ma MADS et les sch&eacute;mas Dublin Core. Les autres sch&eacute;mas
+                    sont propres &agrave; TEF. Comme les sch&eacute;mas externes &agrave; TEF utilisent le
+                    langage <span class="emphasis"><em>W3C XML Schema</em></span>, ce dernier a &eacute;t&eacute; choisi
+                    pour &eacute;crire les sch&eacute;mas TEF. Tous ces sch&eacute;mas sont regroup&eacute;s &agrave; partir
+                    d'un sch&eacute;ma racine qui appelle tous les autres. L'organisation
+                    physique des sch&eacute;mas est la suivante :
+         </p><pre class="programlisting"><a href="http://www.abes.fr/abes/documents/tef/recommandation/tef_schemas.xsd" target="_top"><span class="bold"><strong>tef_schemas.xsd</strong></span></a> (espace de noms METS)
+
+ inclut  <span class="bold"><strong>mets1.5.xsd</strong></span>
+
+ importe <span class="bold"><strong>metsrights.xsd</strong></span>
+
+ importe <span class="bold"><strong>tef_schemas_TEF.xsd</strong></span>,      qui inclut     <span class="bold"><strong>tef_desc_these.xsd
+                                                  tef_desc_version.xsd
+                                                  tef_desc_edition.xsd
+                                                  tef_desc_externe.xsd
+                                                  tef_admin_these.xsd
+                                                  tef_tech_fichier.xsd</strong></span></pre><p>Il
+                    existe donc un sch&eacute;ma XML pour chaque bloc de m&eacute;tadonn&eacute;es. Le sch&eacute;ma
+                    tef_types.xsd est un sch&eacute;ma auxiliaire appel&eacute; par plusieurs sch&eacute;mas
+                    TEF.
+         </p>
+         <p>Mais, dans le format XML de TEF, les sch&eacute;mas W3C XML Schema ne
+                    sont pas seuls responsables de la validation XML. Une grande partie du
+                    travail de validation est confi&eacute;e &agrave; un sch&eacute;ma Schematron, qui est un
+                    langage de validation XML bas&eacute; sur des r&egrave;gles. De mani&egrave;re tr&egrave;s pr&eacute;cise
+                    et modulaire, il pr&eacute;voit des r&egrave;gles de validation de la forme suivante
+                    : "si tel &eacute;l&eacute;ment existe, alors tel attribut doit avoir telle valeur".
+                    La validation XML est effectu&eacute;e en Schematron et non en W3C XML Schema
+                    dans les cas suivants :
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li>
+                  <p>quand les contraintes d&eacute;sir&eacute;es ne sont pas pr&eacute;vues par les
+                                 sch&eacute;mas pr&eacute;existant &agrave; TEF. Pour respecter ces sch&eacute;mas &eacute;tablis, on
+                                 les r&eacute;utilise sans modification et on exprime les contraintes &agrave;
+                                 valider dans un sch&eacute;ma Schematron compl&eacute;mentaire ;
+                  </p>
+               </li>
+               <li>
+                  <p>quand le langage W3C XML Schema ne permet pas d'exprimer une
+                                 contrainte ;
+                  </p>
+               </li>
+               <li>
+                  <p>quand il s'agit de d&eacute;finir les valeurs possibles que peut
+                                 prendre un &eacute;l&eacute;ment ou un attribut ;
+                  </p>
+               </li>
+               <li>
+                  <p>quand il s'agit d'une contrainte de cardinalit&eacute;<sup>[<a name="d0e3142" href="#ftn.d0e3142">12</a>]</sup>.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p>En fait, la plupart des contraintes ont &eacute;t&eacute; d&eacute;port&eacute;es en
+                    Schematron. Les sch&eacute;mas W3C ont pour seule fonction de dessiner
+                    l'arbre des &eacute;l&eacute;ments et attributs. Ce parti pris donne une souplesse
+                    beaucoup plus grande dans l'impl&eacute;mentation de TEF. Dans Schematron,
+                    chaque r&egrave;gle est ind&eacute;pendante des autres. Dans le cadre d'une
+                    application locale de TEF, il devient tr&egrave;s ais&eacute; de rel&acirc;cher telle ou
+                    telle contrainte de cardinalit&eacute; en supprimant ou modifiant une seule
+                    r&egrave;gle. Cela permet d'impl&eacute;menter une validation XML de <a href="usages.html#adaptations">TEF &agrave; g&eacute;om&eacute;trie variable</a>, diff&eacute;rente
+                    selon les partenaires, les applications ou les &eacute;tapes d'un
+                    processus.
+         </p>
+         <p>On peut consulter soit le <a href="regles/regles.xml" target="_top">fichier
+                       source</a> des r&egrave;gles Schematron, soit une page qui liste ces
+                    <a href="regles/regles.html" target="_top">r&egrave;gles en langage
+                       naturel</a>.
+         </p>
+         <div class="footnotes"><br><hr width="100" align="left">
+            <div class="footnote">
+               <p><sup>[<a name="ftn.d0e3142" href="#d0e3142">12</a>] </sup>Cette affirmation ne concerne pas les contraintes de
+                                  cardinalit&eacute; incluses dans les sch&eacute;mas XML pr&eacute;existants &agrave;
+                                  TEF.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="intro_tef_droits_version.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="TEF_en_XML.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="usages.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Les m&eacute;tadonn&eacute;es de droits de version :
+                          tef_droits_version&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Usages de TEF</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

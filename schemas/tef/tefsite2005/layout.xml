@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE layout SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/layout.dtd">
+<layout>
+	<config param="navbgcolor" value="#BCD2EE"/>
+	<config param="homebanner-tabular" value="tef.jpg" altval="TEF"/>
+	<config param="banner-tabular" value="tef.jpg" altval="TEF"/>
+	<config param="homebanner" value="tef.jpg" altval="TEF"/>
+	<config param="banner" value="tef.jpg" altval="TEF"/>
+	<style src="tefsite.css" type="text/css"/>
+	<toc page="website.xml" filename="index.html">
+		<tocentry page="recommandation.xml" filename="recommandation.html">
+			<tocentry href="http://www.abes.fr/abes/documents/tef/recommandation/index.html" id="toc_rec_html">
+				<title>Edition HTML</title>
+			</tocentry>
+			<tocentry href="http://www.abes.fr/abes/documents/tef/recommandation/tef_01.pdf" id="toc_rec.pdf">
+				<title>Edition PDF</title>
+			</tocentry>
+			<tocentry href="http://www.abes.fr/abes/documents/tef/recommandation/xml/tef_schema_01.xsd" id="toc_rec_xsd">
+				<title>Schéma XML</title>
+			</tocentry>
+		</tocentry>
+		<tocentry page="documentation.xml" filename="documentation.html"/>
+		<tocentry page="outils.xml" filename="outils.html">
+			<tocentry page="convertir.xml" filename="convertir.html"/>
+		</tocentry>
+		<!--	<tocentry page="faq.xml" filename="faq.html"/> -->
+	</toc>
+</layout>

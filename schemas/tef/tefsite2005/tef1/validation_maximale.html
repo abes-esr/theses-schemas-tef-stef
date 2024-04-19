@@ -1,0 +1,86 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes</title>
+      <link rel="stylesheet" href="Traduc.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.67.2">
+      <link rel="start" href="index.html" title="Les m&eacute;tadonn&eacute;es des th&egrave;ses &eacute;lectroniques fran&ccedil;aises">
+      <link rel="up" href="contraintes_et_methode.html" title="Contraintes et m&eacute;thode">
+      <link rel="prev" href="contraintes_et_methode.html" title="Contraintes et m&eacute;thode">
+      <link rel="next" href="compatibilte_dc.html" title="Etre compatible avec le Dublin Core">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <h2 class="subtitle">TEF 1.0</h2>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="contraintes_et_methode.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Contraintes et m&eacute;thode</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="compatibilte_dc.html">Suivant</a></td>
+            </tr>
+         </table>
+         <hr>
+      </div>
+      <div class="sect1" lang="fr">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="validation_maximale"></a>Pouvoir exprimer le vocabulaire TEF dans un sch&eacute;ma XML qui en valide le maximum de contraintes
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <p></p>
+         <p>Un sch&eacute;ma XML permet de d&eacute;finir explicitement la structure des documents XML valides par rapport &agrave; ce sch&eacute;ma. Dans une premi&egrave;re
+            approximation, le sch&eacute;ma XML ne fait que formaliser en XML le vocabulaire. Pourtant, si l&#8217;on veut automatiser au maximum l&#8217;exploitation
+            des m&eacute;tadonn&eacute;es TEF, alors il faut s&#8217;assurer que chaque notice TEF en XML est bien conforme aux contraintes impos&eacute;es par le
+            vocabulaire TEF (contraintes de cardinalit&eacute;, hi&eacute;rarchie des &eacute;l&eacute;ments, typage des valeurs, attributs de langue, de sch&eacute;ma d&#8217;encodage&#8230;).
+            C&#8217;est pr&eacute;cis&eacute;ment ce que permet aussi un sch&eacute;ma XML, con&ccedil;u comme outil de validation. Le sch&eacute;ma XML TEF est pr&eacute;sent&eacute; <a href="schemaXML.html" title="Le sch&eacute;ma XML">plus bas.</a>
+            				
+         </p>
+         <p>Ce qui importe ici, c&#8217;est que cette contrainte fonctionnelle a en retour un impact sur la conception m&ecirc;me du vocabulaire.
+            Pour distinguer entre le r&eacute;sum&eacute; fran&ccedil;ais et le r&eacute;sum&eacute; anglais, TEF aurait pu s&#8217;en tenir aux recommandations Dublin Core en
+            ajoutant un attribut de langue (xml&nbsp;:lang) &agrave; l&#8217;&eacute;l&eacute;ment dc.abstract. Pourtant, cette solution aurait interdit au sch&eacute;ma XML
+            d&#8217;imposer la pr&eacute;sence de 
+         </p><pre class="programlisting">&lt;dc.abstract xml:lang="fr"&gt;</pre><p> C'est pourquoi TEF a cr&eacute;&eacute; un nouvel &eacute;l&eacute;ment <span class="bold"><strong>
+                  						<a href="abstractF.html" title="abstractF">abstractF</a>
+                  					</strong></span>, qui correspond &agrave; la notion pr&eacute;cise de r&eacute;sum&eacute; fran&ccedil;ais et aux contraintes particuli&egrave;res qui portent sur celle-ci. D'une mani&egrave;re
+            g&eacute;n&eacute;rale, TEF a pris le parti de d&eacute;clarer, dans le vocabulaire et donc dans le sch&eacute;ma XML, un &eacute;l&eacute;ment pour chaque notion.
+            C'est encore ce principe qui justifie l'existence d'un &eacute;l&eacute;ment pour chacun des r&ocirc;les que peut endosser un contributeur ou
+            la multiplication des &eacute;l&eacute;ments pour exprimer les identifiants (<span class="bold"><strong>
+                  						<a href="NNT.html" title="NNT">NNT</a>
+                  					</strong></span>, <span class="bold"><strong>
+                  						<a href="nationalThesisPID.html" title="nationalThesisPID">nationalThesisPID</a>
+                  					</strong></span>,  <span class="bold"><strong>
+                  						<a href="URI.html" title="URI">URI</a>
+                  					</strong></span>, <span class="bold"><strong>
+                  						<a href="otherEditionID.html" title="otherEditionID">otherEditionID</a>
+                  					</strong></span>).
+         </p>
+         <p>Le choix et la structuration des &eacute;l&eacute;ments ont donc bien &eacute;t&eacute; solidaires de la conception d&#8217;un sch&eacute;ma XML, mais le premier niveau
+            de TEF (vocabulaire) peut se comprendre et s&#8217;utiliser ind&eacute;pendamment de son format XML.
+         </p>
+      </div>
+      <div class="navfooter">
+         <hr>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="contraintes_et_methode.html">Pr&eacute;c&eacute;dent</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="contraintes_et_methode.html">Niveau sup&eacute;rieur</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="compatibilte_dc.html">Suivant</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Contraintes et m&eacute;thode&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Etre compatible avec le Dublin Core</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.abes.fr/abes/documents/tef" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:mads="http://www.loc.gov/mads/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/" targetNamespace="http://www.abes.fr/abes/documents/tef"
+	elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:include schemaLocation="tef_types.xsd"/>
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+	<xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+	<!--
+	Ce schéma comprend tous les éléments descriptifs (bibliographiques) qui n'ont pas aussi une fonction administrative. 
+	Dans le cas contraire, ces éléments descriptifs se trouvent dans le schéma tef_admin_these.xsd.	
+-->
+	<xs:element name="thesisRecord" type="thesisRecordType"/>
+	<xs:complexType name="thesisRecordType">
+		<xs:sequence>
+			<xs:element ref="dc:title"/>
+			<xs:element ref="dcterms:alternative" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="dc:subject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="sujetRameau" type="ControlledType" minOccurs="0"/>
+			<xs:element ref="dcterms:abstract" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="dcterms:tableOfContents" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="dc:type" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="dc:language" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="dc:relation" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="dc:coverage" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Ajout de tef:oaiSets pour utiliser les sets oai de tef dans dc:subject
+	Une règle Schematron impose de prendre une valeur dans la liste des sets, en l'occurrence un
+	libellé dans une langue.
+	On doit ajouter xml:lang -->
+	<xs:complexType name="oaiSetLang">
+		<xs:simpleContent>
+			<xs:restriction base="dc:SimpleLiteral">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+				<xs:attribute ref="xml:lang" use="required"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- 	===================================================================
+	 				Rameau (structuré ou en simple chaine de caractères)
+	===================================================================  -->
+	<xs:complexType name="ControlledType" mixed="true">
+		<xs:sequence>
+			<xs:element ref="vedetteRameauPersonne" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="vedetteRameauCollectivite" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="vedetteRameauFamille" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="vedetteRameauAuteurTitre" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="vedetteRameauTitre" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="vedetteRameauNomCommun" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="vedetteRameauNomGeographique" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="xml:lang" default="fr"/>
+	</xs:complexType>
+	<xs:element name="vedetteRameauPersonne">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="autrePartieDuNom"/>
+											<xs:enumeration value="qualificatifsSaufDates"/>
+											<xs:enumeration value="chiffresRomains"/>
+											<xs:enumeration value="dates"/>
+											<xs:enumeration value="formeDeveloppeeInitialesPrenom"/>
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="adresseAffiliation"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vedetteRameauCollectivite">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="subdivisionOuNom"/>
+											<xs:enumeration value="ajoutOuQualificatif"/>
+											<xs:enumeration value="numeroCongresSession"/>
+											<xs:enumeration value="lieuCongres"/>
+											<xs:enumeration value="dateCongres"/>
+											<xs:enumeration value="elementRejete"/>
+											<xs:enumeration value="autrePartieDuNom"/>
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vedetteRameauFamille">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="dates"/>
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vedetteRameauAuteurTitre">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="subdivisionTitre"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vedetteRameauTitre">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="numeroDePartie"/>
+											<xs:enumeration value="nomDePartie"/>
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="dateDePublication"/>
+											<xs:enumeration value="sousVedetteDeForme"/>
+											<xs:enumeration value="langue"/>
+											<xs:enumeration value="autresInformations"/>
+											<xs:enumeration value="versionOuDate"/>
+											<xs:enumeration value="instrumentMusical"/>
+											<xs:enumeration value="numeroMorceauMusique"/>
+											<xs:enumeration value="clefMusique"/>
+											<xs:enumeration value="arrangementMusique"/>
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vedetteRameauNomCommun">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="vedetteRameauNomGeographique">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementdEntree">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="non_empty_token">
+								<xs:attribute name="type" use="required">
+									<xs:simpleType>
+										<xs:restriction base="non_empty_token">
+											<xs:enumeration value="subdivisionDeForme"/>
+											<xs:enumeration value="subdivisionDeSujet"/>
+											<xs:enumeration value="subdivisionGeographique"/>
+											<xs:enumeration value="subdivisionChronologique"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="autoriteExterne" type="non_empty_token" use="optional"/>
+								<xs:attribute name="autoriteSource" type="non_empty_token" use="optional"
+									default="Sudoc"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

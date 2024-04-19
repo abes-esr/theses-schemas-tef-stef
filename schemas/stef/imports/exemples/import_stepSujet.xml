@@ -1,0 +1,137 @@
+<mets:mets xmlns:mads="http://www.loc.gov/mads/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:suj="http://www.theses.fr/namespace/sujets" xmlns:tef="http://www.abes.fr/abes/documents/tef" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.abes.fr/abes/documents/stef/stef_schemas.xsd">
+	<!--les commentaire préfixés :
+* Noyau STEP : données minimum pour crééer la fiche par import
+* STEP statut sujet : les données à ajouter au noyau STEP pour atteindre le statut "sujet" qui permet la publication de la fiche de la thèse en préparation sur theses.fr
+* STEP facultatif : données STEP (spécifiques aux thèses en préparation = non TEF) qui peuvent être renseignées mais ne sont pas obligatoires
+* facultatif : données TEF qui peuvent être renseignées mais ne sont pas obligatoires-->
+	<mets:dmdSec ID="CODEETAB.IMPORT.DESCRIPTION_BIBLIOGRAPHIQUE">
+		<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_desc_these">
+			<mets:xmlData>
+				<tef:thesisRecord>
+					<!--STEP statut sujet : Titre de la thèse et langue du titre, la balise ne doit pas être vide-->
+					<dc:title xml:lang="fr">Titre en français</dc:title>
+					<!--facultatif : Titre traduit de la thèse et langue du titre traduit -->
+					<!--<dcterms:alternative xml:lang="en">Titre traduit en anglais</dcterms:alternative>-->
+					<!--facultatif : mot clef libre et langue du mot clef libre (élément répétable)-->
+					<!--<dc:subject xml:lang="fr">Mot clef en français</dc:subject>
+						<dc:subject xml:lang="en">Mot clef en anglais</dc:subject>-->
+					<!--facultatif : Description du projet de thèse et langue de la description (élément répétable)-->
+					<!--<dcterms:abstract xml:lang="fr">Description en français</dcterms:abstract>
+						<dcterms:abstract xml:lang="en">Descripiton en anglais</dcterms:abstract>-->
+				</tef:thesisRecord>
+			</mets:xmlData>
+		</mets:mdWrap>
+	</mets:dmdSec>
+	<mets:amdSec>
+		<mets:techMD ID="CODEETAB.IMPORT.ADMINISTRATION">
+			<mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="tef_admin_these">
+				<mets:xmlData>
+					<tef:thesisAdmin>
+						<tef:auteur>
+							<!-- Noyau STEP : nom de l'auteur-->
+							<tef:nom>Nom auteur</tef:nom>
+							<!-- Noyau STEP (statut inscription) : prénom de l'auteur-->
+							<tef:prenom>Prénom auteur</tef:prenom>
+							<!-- Noyau STEP : date de naissance de l'auteur-->
+							<tef:dateNaissance>1990-01-01</tef:dateNaissance>
+							<!--facultatif : nationalité du doctorant selon la nome "ISO-3166-1" (2 caractères)-->
+							<!--<tef:nationalite scheme="ISO-3166-1">FR</tef:nationalite>-->
+							<!-- STEP facultatif : adresse postale du doctorant-->
+							<!--<suj:adresseDoctorant>N° nom de la rue</suj:adresseDoctorant>
+							<suj:codePostalDoctorant>00000</suj:codePostalDoctorant>
+							<suj:villeAdresseDoctorant>nom de la ville</suj:villeAdresseDoctorant>
+							<suj:paysAdresseDoctorant>Pays</suj:paysAdresseDoctorant>
+							<suj:telephoneDoctorant>12345678</suj:telephoneDoctorant>-->
+							<!-- Noyau STEP : il faut au moins une adresse mail (personnelle ou institutionnelle) -->
+							<tef:autoriteExterne autoriteSource="mailPerso">prenom.nom@gmail.com</tef:autoriteExterne>
+							<!--et/ ou-->
+							<tef:autoriteExterne autoriteSource="mailPro">prenom.nom@monuniv.univ.fr</tef:autoriteExterne>
+							<!-- les autoriteExternes sont facultatives mais leur usage est vivement recommandé, par exemple :
+							* INE : numéro d'identifiant national étudiant							
+<tef:autoriteExterne autoriteSource="INE">code INE</tef:autoriteExterne>
+							* l'identifiant de l'étudiant dans l'annuaire du système d'information local
+<tef:autoriteExterne autoriteSource="CodeEtu">code étudiant local</tef:autoriteExterne>-->
+						</tef:auteur>
+						<!-- STEP statut soutenu : date de soutenance 
+						<dcterms:dateAccepted xsi:type="dcterms:W3CDTF">date de soutenance inférieure à la date du jour (format AAAa-MM-JJ)</dcterms:dateAccepted>-->
+						<tef:thesis.degree>
+							<!-- STEP statut sujet : discipline de la thèse-->
+							<tef:thesis.degree.discipline xml:lang="fr">Discipline telle qu’elle figure sur la page de titre de la thèse </tef:thesis.degree.discipline>
+							<tef:thesis.degree.grantor>
+								<!-- Noyau STEP : nom de l'établissement de soutenance-->
+								<tef:nom>Etablissement de soutenance</tef:nom>
+								<!-- les autoriteExternes sont facultatives mais leur usage est recommandé, par exemple :
+								* code UA (Unité Administrative Immatriculée) attribué à chaque établissement d'enseignement
+<tef:autoriteExterne autoriteSource="codeUAI">code UAI</tef:autoriteExterne> 
+								* PPN : numéro national IdRef-Sudoc (http://www.idref.fr/autorites/autorites.html)
+<tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+							</tef:thesis.degree.grantor>
+							<!--facultatif : le 2nd tef:thesis.degree.grantor est l'établissement étrager de cotutelle-->
+							<!--<tef:thesis.degree.grantor>
+								<tef:nom>Etablissement de cotutelle internationale</tef:nom>
+								 <tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>
+								</tef:thesis.degree.grantor>-->
+							<!-- Noyau STEP : mention du diplôme à recopier tel quel dans le fichier xml envoyé-->
+							<tef:thesis.degree.level>Doctorat</tef:thesis.degree.level>
+							<!-- STEP facultatif : date de 1ère inscription en doctorat 						
+							<suj:datePremiereInscriptionDoctorat>AAAA-MM-JJ</suj:datePremiereInscriptionDoctorat>-->
+							<!-- STEP facultatif  : date de première inscription dans l'établissement (peut-être la même ou antérieure à la date de 1ère inscription en doctorat)
+							<suj:dateInscriptionEtab>AAAA-MM-JJ</suj:dateInscriptionEtab>-->
+							<!-- STEP facultatif  : contract doctoral : oui / non
+							<suj:contratDoctoral>oui</suj:contratDoctoral>-->
+						</tef:thesis.degree>
+						<!-- STEP facultatif : les évenements au cours de la vie de la thèse en préparation
+						<suj:vie derogationDixAns="non" commentDixAns="">-->	
+							<!-- STEP facultatif : informations sur la soutenance
+								<suj:soutenancePrevue>
+								<suj:datePrevue>date de soutenance prévisionnelle (format AAAa-MM-JJ) comprise entre date du jour et 6 prochains mois</suj:datePrevue>
+								<suj:heurePrevue>14:00</suj:heurePrevue>
+								<suj:lieuPrevu>lieu de la soutenance</suj:lieuPrevu>
+								<suj:publiciteSoutenance>oui si publique / non si huis clos</suj:publiciteSoutenance>
+							</suj:soutenancePrevue>-->							
+							<!-- STEP facultatif : date d'abandon de la thèse
+							<suj:dateAbandon>date d'abandon (format AAAa-MM-JJ)</suj:dateAbandon>-->
+						<!--</suj:vie>-->
+						<tef:directeurThese>
+							<!--STEP statut sujet : nom du directeur de thèse-->
+							<tef:nom>Nom directeur</tef:nom>
+							<!--STEP statut sujet : prénom du directeur de thèse-->
+							<tef:prenom>Prénom directeur</tef:prenom>
+							<!--le lien à l'autorité externe "numéro national IdRef-Sudoc" est facultatif mais vivement recommandé pour assurer l'existence d'une page unique dédiée au directeur sur theses.fr
+						<tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+						</tef:directeurThese>
+						<!--facultatif : le bloc tef:directeurThese est répétable-->
+						<tef:ecoleDoctorale>
+							<!--STEP statut sujet : nom de l'école doctorale (cette donnée apparaîtra telle quelle sur theses.fr)-->
+							<tef:nom>Libellé en toutes lettres de l'école doctorale</tef:nom>
+							<!--le lien à l'autorité externe "numéro national IdRef-Sudoc" est facultatif mais vivement recommandé pour assurer l'existence d'une page unique dédiée à l'école doctorale sur theses.fr
+						<tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+							<!-- les autoriteExternes sont facultatives mais leur usage est recommandé, par exemple :
+							* code AFDUR : Annuaire des formations doctorales et des unités de recherche (https://appliweb.dgri.education.fr/annuaire/contact.jsp) 
+<tef:autoriteExterne autoriteSource="AFDUR">code AFDUR</tef:autoriteExterne>-->
+						</tef:ecoleDoctorale>
+						<!--facultatif : partenaire de recherche (l'attribut type peut prendre les valeurs suivantes pour qualifié le partenaire : "laboratoire", "equipeRecherche", "entreprise", "fondation") 
+ nom du partenaire (cette donnée apparaîtra telle quelle sur theses.fr)-->
+						<!--<tef:partenaireRecherche type="laboratoire">
+								<tef:nom>Libellé en toutes lettres du partenaire de recherche </tef:nom>-->
+						<!--le lien à l'autorité externe "numéro national IdRef-Sudoc" est facultatif mais vivement recommandé pour assurer l'existence d'une page unique dédiée au partenaire de recherche sur theses.fr
+						        <tef:autoriteExterne autoriteSource="Sudoc">PPN</tef:autoriteExterne>-->
+						<!-- les autoriteExternes sont facultatives mais leur usage est recommandé, par exemple :
+									code AFDUR : Annuaire des formations doctorales et des unités de recherche (https://appliweb.dgri.education.fr/annuaire/contact.jsp) 
+<tef:autoriteExterne autoriteSource="AFDUR">code AFDUR</tef:autoriteExterne>-->
+						<!-- STEP facultatif : le doctorant bénéficie d'une convention Cifre (oui/non)
+								<suj:cifre>non</suj:cifre>-->
+						<!--</tef:partenaireRecherche>-->
+						<!--STEP statut sujet : domaine de la thèse (voir la documentation TEF sur la classification par domaines : http://www.abes.fr/abes/documents/tef/recommandation/adminMeta.html#intro_oai et la liste des domaines : http://www.abes.fr/abes/documents/tef/recommandation/oai_sets.html-->
+						<tef:oaiSetSpec>ddc:000</tef:oaiSetSpec>
+					</tef:thesisAdmin>
+				</mets:xmlData>
+			</mets:mdWrap>
+		</mets:techMD>
+	</mets:amdSec>
+	<mets:structMap TYPE="logical">
+		<!--CONTENTIDS : identifiant local de la thèse (c'est à dire identiant dans l'application qui envoie l'import).
+    Le login du doctorant sera <code établissement_CONTENTIDS> (exemple : ABES_CONTENTIDS)-->
+		<mets:div TYPE="THESE" CONTENTIDS="stepSujetXXXXX" DMDID="CODEETAB.IMPORT.DESCRIPTION_BIBLIOGRAPHIQUE" ADMID="CODEETAB.IMPORT.ADMINISTRATION"/>
+	</mets:structMap>
+</mets:mets>

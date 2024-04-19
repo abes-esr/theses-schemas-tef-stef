@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<rdf:RDF xmlns="info:tef#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tef="info:tef#"
+	xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:frbre="http://purl.org/vocab/frbr/extended#"
+	xmlns:metsRights="http://cosimo.stanford.edu/sdr/metsrights/"
+	xmlns:dcterms="http://purl.org/dc/terms/" xmlns:mads="http://www.loc.gov/mads/"
+	xmlns:thesis="http://www.ndltd.org/standards/metadata/etdms/1.0/"
+	xmlns:cc="http://web.resource.org/cc/" xmlns:dcrdf="http://web.resource.org/cc/33"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:trust="http://trust.mindswap.org/trustFiles/314.owl#"
+	xmlns:dcam="http://purl.org/dc/dcam/">
+<!-- 
+		TEF en RDF - premier essai.
+
+Esquisse de schéma OWL à cette adresse : http://www.abes.fr/abes/documents/tef/rdf/tef_owl_04072007.xml
+
+Auteur : Yann Nicolas, ABES (Agence Bibliographique de l'Enseignement Supérieur)
+Blog TEF : http://tefsav.canalblog.com/archives/rdf/index.html
+
+Pour tout commentaire, correction ou renseignement : nicolas chez abes point fr
+Merci !
+
+	. 4 juillet 2007 :
+		. création
+		. à faire : aligner systématiquement avec évolutions du DC : DC en RDF + domaines/ranges for RDF
+-->
+	<Thesis rdf:about="http://www.dom.fr/1998LY020073">
+		<dc:title xml:lang="fr">Géographie du bal en France</dc:title>
+		<dcterms:alternative xml:lang="en">Dancing in France</dcterms:alternative>
+		<!-- Hésitation : skos ?? -->
+		<dcterms:subject>
+			<tef:VedetteRameau>
+				<tef:elementdEntree>
+					<tef:RameauCommun rdf:about="info:abes/aut/8953216">
+						<rdf:value>Bals</rdf:value>
+					</tef:RameauCommun>
+				</tef:elementdEntree>
+				<tef:subdivision>
+					<tef:RameauGeographique rdf:about="info:abes/aut/8953217">
+						<rdf:value>France</rdf:value>
+					</tef:RameauGeographique>
+				</tef:subdivision>
+			</tef:VedetteRameau>
+		</dcterms:subject>
+		<!--Sans les expansions des autorités :-->
+		<!--<dcterms:subject>
+			<tef:VedetteRameau>
+				<tef:elementdEntree>
+					<tef:RameauCommun rdf:about="info:abes/aut/8953216"/>
+				</tef:elementdEntree>
+				<tef:subdivision>
+					<tef:RameauGeographique rdf:about="info:abes/aut/8953217"/>
+				</tef:subdivision>
+			</tef:VedetteRameau>
+		</dcterms:subject>-->
+		<dc:sujet xml:lang="fr">pouvoirs locaux</dc:sujet>
+		<dc:sujet xml:lang="en">local government</dc:sujet>
+		<dcterms:abstract xml:lang="fr">La sortie au bal concerne chaque année 30 % des français, le
+			double dans plusieurs régions. A rebours (...) est bien plus avancée qu'on le croit
+			généralement.</dcterms:abstract>
+		<dcterms:abstract xml:lang="en">30 % of the French go out dancing every year - twice as many
+			in some regions. Though (...) is far more advanced than is usually thought.</dcterms:abstract>
+		<rdf:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+		<rdf:type rdf:resource="http://www.ndltd.org/standards/metadata/etdms/1.0/ETD-MS"/>
+		<rdf:type rdf:resource="info:tef#TheseSurTravaux"/>
+		<!-- On n'utilise pas dc:creator, mais sa sous-propriété tef:auteur, car celle-ci est "functional" (OWL)
+			et non celle-là. -->
+		<tef:auteur rdf:nodeID="wyz"/>
+		<!-- Hésitation : NNT à déclarer comme sous-ppté de dc:identifier
+			ou alors utiliser dc:identifier avec un type NNT -->
+		<tef:NNT>1998LY020073</tef:NNT>
+		<dcterms:dateAccepted>1998-12-04</dcterms:dateAccepted>
+		<tef:avisJury>oui</tef:avisJury>
+		<!-- scheme="ISO-3166-1" à mettre dans le schéma ? -->
+		<!-- Hésitation : utiliser plutot les codes de fonctions MARC (MARC Relators) ??
+			Cf. http://dublincore.org/usage/documents/relators/ -->
+		<!-- Thesis advisor [ths] -->
+		<tef:directeurThese>
+			<foaf:Person>
+				<foaf:family_name>Houssel</foaf:family_name>
+				<foaf:givenname>Jean-Pierre</foaf:givenname>
+				<tef:autorite rdf:resource="info:abes/aut/ppn/112233445"/>
+			</foaf:Person>
+		</tef:directeurThese>
+		<tef:jury rdf:nodeID="jury"/>
+		<!--Degree grantor [dgg]-->
+		<tef:thesis.degree.grantor>
+			<foaf:Organization>
+				<foaf:name>Lyon 2</foaf:name>
+				<tef:autorite rdf:resource="info:abes/aut/ppn/123456789"/>
+			</foaf:Organization>
+		</tef:thesis.degree.grantor>
+		<tef:thesis.degree.level rdf:resource="info:tef#Doctorat"></tef:thesis.degree.level>
+		<!-- admettons que l'université a convainci l'auteur de faire diffuser l'auteur de choisir la licence Creative Commons
+			très libérale by/3.0/ (simple attribution)-->
+		<dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+		<frbr:realization rdf:resource="info:abes/star/ISAL/houss/vc"/>
+		<frbr:realization rdf:nodeID="versions2"/>
+	</Thesis>
+	<!-- =============================== versions ============================= -->
+	<Version rdf:about="http://www.dom.fr/1998LY020073/vc">
+		<!-- Plutôt créer une sous-classe de tef:Version contenant la version complète ? -->
+		<tef:complet>oui</tef:complet>
+		<dcterms:hasPart rdf:nodeID="rext"/>
+		<!-- Exemple d'une rext qui est une partie d'une autre ressource -->
+		<dcterms:hasPart>
+			<frbr:Endeavour>
+				<dcterms:isPartOf rdf:resource="http://dx.doi.org/10.1000/182"/>
+			</frbr:Endeavour>
+		</dcterms:hasPart>
+		<!-- La version complète est diffusable, mais aux conditions plus restrictives de la ressource
+			 externe nommée ici "rext".-->
+		<dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/3.0/"/>
+		<frbr:embodiment rdf:nodeID="ed2"/>
+	</Version>
+	<Version rdf:nodeID="versions2">
+		<!-- Créer une sous-classe de tef:Version contenant les versions complètes ou 
+			 dire que cette version est une partie de la version complète ?? -->
+		<complet>non</complet>
+		<!-- Comme on ne peut exprimer la négation en RDF, il faut créer tef:manque qui est l'inverse
+			 de dcterms:hasPart -->
+		<tef:manque rdf:nodeID="rext"/>
+		<!-- La version complète est diffusable librement, sans prendre en compte les conditions restrictives
+			qui s'appliquent à la ressource externe-->
+		<dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+		<frbr:embodiment rdf:nodeID="ed1"/>
+	</Version>
+	<!-- =============================== éditions ============================= -->
+	<!-- En essayant de suivre les propositions de : http://dublincore.org/documents/2007/06/04/dc-rdf/ -->
+	<Edition rdf:nodeID="ed2">
+		<dcterms:medium>
+			<dcterms:MediaType>
+				<dcam:memberOf rdf:resource="http://purl.org/dc/terms/"/>
+				<rdf:value>text/html</rdf:value>
+			</dcterms:MediaType>
+		</dcterms:medium>
+		<!--<dcterms:medium>
+			<dcterms:IMT>
+			<rdf:value>text/html</rdf:value>
+			</dcterms:IMT>
+			</dcterms:medium>-->
+
+		<!-- Hésitation : faut-il distinguer la valeur (rdf:value) et l'unité de mesure ? 
+		<dcterms:extent>2 Mo</dcterms:extent>-->
+		<dc:identifier>http://www.dom.fr/docs/1998LY020073/xml</dc:identifier>
+		<frbre:hasPartManifestation rdf:nodeID="fi1"/>
+	</Edition>
+	<Edition rdf:nodeID="ed1">
+		<dcterms:medium>
+			<dcterms:MediaType>
+				<dcam:memberOf rdf:resource="http://purl.org/dc/terms/"/>
+				<rdf:value>text/pdf</rdf:value>
+			</dcterms:MediaType>
+		</dcterms:medium>
+		<!-- Ancien encodage de DC en RDF :
+			<dcterms:medium>
+			<dcterms:IMT>
+				<rdf:value>text/pdf</rdf:value>
+			</dcterms:IMT>
+		</dcterms:medium>-->
+		<!--<tef:dcterms.extent>1 : 3 Mo</tef:dcterms.extent>-->
+		<dc:identifier>http://www.dom.fr/docs/1998LY020073/pdf</dc:identifier>
+	</Edition>
+	<!-- =============================== fichiers ============================= -->
+	<Fichier rdf:nodeID="fi1">
+		<tef:encodage>ASCII</tef:encodage>
+		<tef:formatFichier>XML 1.0</tef:formatFichier>
+		<tef:noteFichier>??</tef:noteFichier>
+		<tef:structureFichier>blabla</tef:structureFichier>
+		<tef:tailleEnOctets>0</tef:tailleEnOctets>
+	</Fichier>
+	<!-- ============================ Ressources externes ======================= -->
+	<RessourceTiers rdf:nodeID="rext">
+		<dc:creator>HERVIEU, B</dc:creator>
+		<dc:creator>VIARD, J</dc:creator>
+		<dc:title>Au bonheur des campagnes (et des provinces)</dc:title>
+		<dc:date>1996</dc:date>
+		<dc:publisher>Ed. de l’Aube</dc:publisher>
+		<!-- licence -->
+		<dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/3.0/"/>
+	</RessourceTiers>
+	<!-- =============================== auteur ============================= -->
+	<foaf:Person rdf:nodeID="wyz">
+		<foaf:family_name>Ciron</foaf:family_name>
+		<foaf:givenname>Michelle</foaf:givenname>
+		<tef:nomDeNaissance>Morand</tef:nomDeNaissance>
+		<!-- Typer avec xsd  -->
+		<tef:dateNaissance>1900-12-12</tef:dateNaissance>
+		<tef:nationalite>FR</tef:nationalite>
+		<tef:autorite rdf:resource="info:abes/aut/789578458"/>
+	</foaf:Person>
+	<!-- =============================== jury ============================= -->
+	<foaf:Group rdf:nodeID="jury">
+		<foaf:member>
+			<foaf:Person>
+				<foaf:family_name>Simiand</foaf:family_name>
+				<foaf:givenname>François</foaf:givenname>
+				<tef:autorite rdf:nodeID="opujd"/>
+			</foaf:Person>
+		</foaf:member>
+		<foaf:member>
+			<foaf:Person>
+				<foaf:family_name>Weber</foaf:family_name>
+				<foaf:givenname>Max</foaf:givenname>
+			</foaf:Person>
+		</foaf:member>
+	</foaf:Group>
+	<!-- =============================== notice d'autorité ============================= -->
+	<tef:MADSAuthority rdf:nodeID="opujd">
+		<!-- Il faudrait ici décrire la notice d'autorité d'une part mais aussi 
+		décrire la personne décrite par la notice d'autorité, et ce selon les propriétés 
+		du vocabulaire FRANAR. -->
+	</tef:MADSAuthority>
+	<!-- =============================== Confiance ============================= -->
+	<!-- Le jury fait confiance à l'auteur pour ce qui concerne l'étude scientifique 
+		 des coutumes et du folklore (390 en Dewey). -->
+	<foaf:Group rdf:ID="jury">
+		<trust:trustsRegarding>
+			<trust:TopicalTrust>
+				<trust:trustSubject rdf:resource="info:ddc/22/fr/390"/>
+				<trust:trustedPerson rdf:resource="#wyz"/>
+				<trust:trustValue>8</trust:trustValue>
+			</trust:TopicalTrust>
+		</trust:trustsRegarding>
+	</foaf:Group>
+</rdf:RDF>

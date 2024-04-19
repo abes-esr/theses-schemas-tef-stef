@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Y:\po\rss_archimed.xsl"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<channel rdf:about="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm">
+		<title>Les nouveautés du portail Sudoc</title>
+	</channel>
+	<image rdf:resource="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/abes.jpg"/>
+	<item rdf:about="http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news">
+		<title>Les thèses de l'INP Toulouse</title>
+		<link>http://www.portail-sudoc.abes.fr/RSS/Actus/fr/nouveautes.htm#news</link>
+		<description>Les thèses de l'Institut National Polytechnique de Toulouse viennent d'être chargées dans la base thèses. 
+			Vous pouvez les interroger par les index courants (titre, auteur, sujet) mais également en texte intégral en 
+			passant l'écran "Recherche sur... thèses" puis texte intégral</description>
+		<date>20050304</date>
+	</item>
+</rdf:RDF>
