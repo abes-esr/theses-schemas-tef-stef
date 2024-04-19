@@ -7,4 +7,4 @@ Cette recommandation propose à la fois une modélisation de ces métadonnées e
 
 Site statique (pages HTML et documents XML), servi par un container docker, basé sur une image nginx, avec la configuration par défaut.
 
-Pour un déploiement dans le SI de l'Abes, il faut se référer aux configurations suivantes : https://git.abes.fr/depots/theses-docker/
+Pour un déploiement dans le SI de l'Abes, il faut se référer aux configurations suivantes : https://github.com/abes-esr/theses-docker/
